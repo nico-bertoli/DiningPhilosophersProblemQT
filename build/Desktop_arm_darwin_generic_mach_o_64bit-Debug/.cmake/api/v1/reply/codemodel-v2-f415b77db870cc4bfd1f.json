@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d2f0ed3816b2f87d170a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MultithreadingExperiments",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "MultithreadingExperiments::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MultithreadingExperiments-Debug-f5012dccd61e54ce26da.json",
+					"name" : "MultithreadingExperiments",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MultithreadingExperiments_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MultithreadingExperiments_autogen-Debug-9537bc4d8e6e18080b62.json",
+					"name" : "MultithreadingExperiments_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MultithreadingExperiments_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MultithreadingExperiments_autogen_timestamp_deps-Debug-eb34a88521ccc1a1dafd.json",
+					"name" : "MultithreadingExperiments_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/nicolo.bertoli/Documents/Doc Local/QtProjects/MultithreadingExperiments/build/Desktop_arm_darwin_generic_mach_o_64bit-Debug",
+		"source" : "/Users/nicolo.bertoli/Documents/Doc Local/QtProjects/MultithreadingExperiments"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
