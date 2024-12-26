@@ -1,5 +1,4 @@
-#ifndef DIALOG_H
-#define DIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -27,4 +26,3 @@ private slots:
 private:
     Ui::Dialog *ui;
 };
-#endif // DIALOG_H

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1468</width>
-    <height>770</height>
+    <width>876</width>
+    <height>990</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -120,7 +120,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="pagePhilosophers">
+     <widget class="PhilPage" name="pagePhilosophers">
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -169,17 +169,49 @@
             <enum>QFrame::Shadow::Raised</enum>
            </property>
            <layout class="QGridLayout" name="gridLayout">
-            <item row="0" column="2">
-             <widget class="QFrame" name="philosopher1Frame">
+            <item row="2" column="1">
+             <widget class="QPushButton" name="fork34">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="Res.qrc">
+                <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
+                <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
+                <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
+                <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>130</width>
+                <height>130</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+              <property name="default">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QFrame" name="phil3">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
               <property name="frameShadow">
                <enum>QFrame::Shadow::Raised</enum>
               </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <layout class="QHBoxLayout" name="horizontalLayout">
                <item>
-                <widget class="QPushButton" name="fork3Left_2">
+                <widget class="QPushButton" name="forkLeft_3">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -211,7 +243,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="philosopher3_2">
+                <widget class="QPushButton" name="imgPhil_3">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -243,7 +275,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="fork3Left_5">
+                <widget class="QPushButton" name="forkRight_3">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -309,157 +341,17 @@
               </property>
              </widget>
             </item>
-            <item row="0" column="4">
-             <widget class="QPushButton" name="fork12">
-              <property name="enabled">
-               <bool>false</bool>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset resource="Res.qrc">
-                <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>130</width>
-                <height>130</height>
-               </size>
-              </property>
-              <property name="checkable">
-               <bool>false</bool>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
-              </property>
-              <property name="default">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="2">
-             <widget class="QFrame" name="philosopher3Frame">
-              <property name="frameShape">
-               <enum>QFrame::Shape::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Shadow::Raised</enum>
-              </property>
-              <layout class="QHBoxLayout" name="horizontalLayout">
-               <item>
-                <widget class="QPushButton" name="fork3Left">
-                 <property name="enabled">
-                  <bool>false</bool>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
-                 </property>
-                 <property name="iconSize">
-                  <size>
-                   <width>130</width>
-                   <height>130</height>
-                  </size>
-                 </property>
-                 <property name="checkable">
-                  <bool>false</bool>
-                 </property>
-                 <property name="autoDefault">
-                  <bool>false</bool>
-                 </property>
-                 <property name="default">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="philosopher3">
-                 <property name="enabled">
-                  <bool>false</bool>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="icon">
-                  <iconset>
-                   <normalon>:/philosophers/res/philosophers/philosopherThinking.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/philosopherThinking.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/philosopherThinking.png</disabledon>
-                  </iconset>
-                 </property>
-                 <property name="iconSize">
-                  <size>
-                   <width>130</width>
-                   <height>130</height>
-                  </size>
-                 </property>
-                 <property name="checkable">
-                  <bool>false</bool>
-                 </property>
-                 <property name="autoDefault">
-                  <bool>false</bool>
-                 </property>
-                 <property name="default">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="fork3Right">
-                 <property name="enabled">
-                  <bool>false</bool>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
-                 </property>
-                 <property name="iconSize">
-                  <size>
-                   <width>130</width>
-                   <height>130</height>
-                  </size>
-                 </property>
-                 <property name="checkable">
-                  <bool>false</bool>
-                 </property>
-                 <property name="autoDefault">
-                  <bool>false</bool>
-                 </property>
-                 <property name="default">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
             <item row="1" column="1">
-             <widget class="QFrame" name="philosopher4Frame">
+             <widget class="QFrame" name="phil4">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
               <property name="frameShadow">
                <enum>QFrame::Shadow::Raised</enum>
               </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <layout class="QVBoxLayout" name="verticalLayout_6">
                <item>
-                <widget class="QPushButton" name="fork3Left_3">
+                <widget class="QPushButton" name="forkRight_4">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -491,7 +383,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="philosopher3_3">
+                <widget class="QPushButton" name="imgPhil_4">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -523,7 +415,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="fork3Right_3">
+                <widget class="QPushButton" name="forkLeft_4">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -555,51 +447,19 @@
                 </widget>
                </item>
               </layout>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QPushButton" name="fork34">
-              <property name="enabled">
-               <bool>false</bool>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset resource="Res.qrc">
-                <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>130</width>
-                <height>130</height>
-               </size>
-              </property>
-              <property name="checkable">
-               <bool>false</bool>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
-              </property>
-              <property name="default">
-               <bool>false</bool>
-              </property>
              </widget>
             </item>
             <item row="1" column="4">
-             <widget class="QFrame" name="philosopher2Frame">
+             <widget class="QFrame" name="phil2">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
               <property name="frameShadow">
                <enum>QFrame::Shadow::Raised</enum>
               </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <layout class="QVBoxLayout" name="verticalLayout_4">
                <item>
-                <widget class="QPushButton" name="fork3Left_4">
+                <widget class="QPushButton" name="forkRight_2">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -631,7 +491,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="philosopher3_4">
+                <widget class="QPushButton" name="imgPhil_2">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -663,7 +523,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="fork3Right_4">
+                <widget class="QPushButton" name="forkLeft_2">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -727,6 +587,146 @@
               <property name="default">
                <bool>false</bool>
               </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QPushButton" name="fork12">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="Res.qrc">
+                <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
+                <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
+                <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
+                <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>130</width>
+                <height>130</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+              <property name="default">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QFrame" name="phil1">
+              <property name="frameShape">
+               <enum>QFrame::Shape::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Shadow::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QPushButton" name="forkLeft">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Res.qrc">
+                   <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>130</width>
+                   <height>130</height>
+                  </size>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="autoDefault">
+                  <bool>false</bool>
+                 </property>
+                 <property name="default">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="imgPhil">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normalon>:/philosophers/res/philosophers/philosopherThinking.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/philosopherThinking.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/philosopherThinking.png</disabledon>
+                  </iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>130</width>
+                   <height>130</height>
+                  </size>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="autoDefault">
+                  <bool>false</bool>
+                 </property>
+                 <property name="default">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="forkRight">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Res.qrc">
+                   <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>130</width>
+                   <height>130</height>
+                  </size>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="autoDefault">
+                  <bool>false</bool>
+                 </property>
+                 <property name="default">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </widget>
             </item>
            </layout>
@@ -821,6 +821,14 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PhilPage</class>
+   <extends>QWidget</extends>
+   <header>PhilPage.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="Res.qrc"/>
  </resources>

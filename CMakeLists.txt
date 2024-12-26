@@ -23,9 +23,13 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(MultithreadingExperiments
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        PagePhilosopers.h PagePhilosopers.cpp
+
         Res.qrc
         Res.qrc
+        PhilPage.h PhilPage.cpp
+        Phil.h Phil.cpp
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET MultithreadingExperiments APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
