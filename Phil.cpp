@@ -9,15 +9,19 @@ Phil::Phil(QWidget *parent):QWidget{parent}
 void Phil::showEvent(QShowEvent *event)
 {
     Init();
+
+    forkPrev->hide();
+    forkNext->hide();
 }
 
 void Phil::Init()
 {
-    static int isSetup = false;
-    if(isSetup)
+    if(isInit)
         return;
 
     int index = this->objectName().at(4).digitValue();
+
+    qInfo() <<  QString::number(index);
 
     assert(index != -1);
 
@@ -29,5 +33,5 @@ void Phil::Init()
     assert(forkPrev != nullptr);
     assert(forkNext != nullptr);
 
-    isSetup = true;
+    isInit = true;
 }

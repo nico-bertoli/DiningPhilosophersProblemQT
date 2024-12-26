@@ -9,6 +9,7 @@ class Phil : public QWidget
     Q_OBJECT
 
 //--------------------------------- Fields
+    bool isInit = false;
     int index;
     QWidget* forkPrev;
     QWidget* forkNext;

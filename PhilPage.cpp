@@ -8,12 +8,12 @@ PhilPage::PhilPage(QWidget *parent): QWidget{parent}
 
 void PhilPage::showEvent(QShowEvent *event)
 {
-    SetupReferences();
+    Init();
 }
 
-void PhilPage::SetupReferences()
+void PhilPage::Init()
 {
-    static int isSetup = false;
+    static bool isSetup = false;
     if(isSetup)
         return;
 
