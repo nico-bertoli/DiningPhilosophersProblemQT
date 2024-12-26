@@ -1,5 +1,6 @@
 #include "PhilPage.h"
 #include "QPushButton"
+#include "QtLogging"
 
 PhilPage::PhilPage(QWidget *parent): QWidget{parent}
 {
@@ -18,7 +19,7 @@ void PhilPage::Init()
         return;
 
     for(int i = 0; i < PHILS_COUNT; ++i){
-        phils[i] = this->findChild<Phil*>("phil"+QString::number(i));
+        phils[i] = this->findChild<PhilView*>("phil"+QString::number(i));
         assert(phils[i] != nullptr);
     }
 
@@ -27,6 +28,13 @@ void PhilPage::Init()
         assert(forks[i] != nullptr);
     }
 
+    QPushButton* btnStart = this->findChild<QPushButton*>("btnStart");
+    connect(btnStart, &QPushButton::clicked, this, &PhilPage::SlotOnStartButtonPressed);
+
     isSetup = true;
 }
 
+void PhilPage::SlotOnStartButtonPressed()
+{
+    qInfo("start pressed");
+}

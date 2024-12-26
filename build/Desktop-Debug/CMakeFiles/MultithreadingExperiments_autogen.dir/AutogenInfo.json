@@ -318,15 +318,15 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/Phil.h",
-			"MU",
-			"EWIEGA46WW/moc_Phil.cpp",
-			null
-		],
-		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.h",
 			"MU",
 			"EWIEGA46WW/moc_PhilPage.cpp",
+			null
+		],
+		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilView.h",
+			"MU",
+			"EWIEGA46WW/moc_PhilView.cpp",
 			null
 		],
 		[
@@ -392,12 +392,12 @@
 	"SOURCES" : 
 	[
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/Phil.cpp",
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.cpp",
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilView.cpp",
 			"MU",
 			null
 		],

@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QWidget>
-#include "Phil.h"
+#include "PhilView.h"
 
 class PhilPage : public QWidget
 {
@@ -13,7 +13,7 @@ class PhilPage : public QWidget
 private:
     static const size_t PHILS_COUNT = 4;
     QWidget* forks [PHILS_COUNT];
-    Phil* phils [PHILS_COUNT];
+    PhilView* phils [PHILS_COUNT];
 
 //---------------------------------------- Methods
 public:
@@ -26,6 +26,9 @@ private:
     void Init();
 
 signals:
+
+private slots:
+    void SlotOnStartButtonPressed();
 };
 
 #endif // PHILPAGE_H
