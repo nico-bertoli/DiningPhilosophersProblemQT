@@ -1,5 +1,6 @@
 #include "Phil.h"
 
-Phil::Phil(QWidget *parent)
-    : QWidget{parent}
-{}
+Phil::Phil(QWidget *parent):QWidget{parent}
+{
+
+}

@@ -8,17 +8,17 @@ PhilPage::PhilPage(QWidget *parent): QWidget{parent}
 
 void PhilPage::showEvent(QShowEvent *event)
 {
-    QObject* phil = this->findChild<QObject*>("phil1");
-    if (phil != nullptr)
-        qInfo("trovato");
-    else
-        qInfo("non trovato");
+    for(int i = 0; i < PHILS_COUNT; ++i){
+        phils[i] = this->findChild<Phil*>("phil"+QString::number(i));
+        assert(phils[i] != nullptr);
+    }
 
-    QWidget* fork12 = this->findChild<QWidget*>("fork12");
-    if (fork12 != nullptr)
-        qInfo("fork12 trovata");
-    else
-        qInfo("fork12 non trovata");
+    for(int i = 0; i < PHILS_COUNT; ++i){
+        forks[i] = this->findChild<QWidget*>("fork"+QString::number(i));
+        assert(forks[i] != nullptr);
+    }
+
+    qInfo("show event called");
 }
 
 

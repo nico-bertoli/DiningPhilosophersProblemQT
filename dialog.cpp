@@ -9,7 +9,6 @@ Dialog::Dialog(QWidget *parent):QDialog(parent)
 {
     ui->setupUi(this);
 
-
     //-------------------- buttons connections
     connect(ui->btnPhilosophers,&QPushButton::clicked,this,&Dialog::SlotShowPhilosopersPage);
     connect(ui->btnMainMenu,&QPushButton::clicked,this,&Dialog::SlotShowMainMenu);

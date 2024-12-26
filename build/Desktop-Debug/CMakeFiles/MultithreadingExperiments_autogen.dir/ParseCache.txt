@@ -309,6 +309,7 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qwidget.h
+ mdp:C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/Phil.h
  mdp:C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.h
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/main.cpp
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/Phil.cpp
