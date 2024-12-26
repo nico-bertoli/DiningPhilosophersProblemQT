@@ -8,6 +8,15 @@ PhilPage::PhilPage(QWidget *parent): QWidget{parent}
 
 void PhilPage::showEvent(QShowEvent *event)
 {
+    SetupReferences();
+}
+
+void PhilPage::SetupReferences()
+{
+    static int isSetup = false;
+    if(isSetup)
+        return;
+
     for(int i = 0; i < PHILS_COUNT; ++i){
         phils[i] = this->findChild<Phil*>("phil"+QString::number(i));
         assert(phils[i] != nullptr);
@@ -18,7 +27,6 @@ void PhilPage::showEvent(QShowEvent *event)
         assert(forks[i] != nullptr);
     }
 
-    qInfo("show event called");
+    isSetup = true;
 }
-
 
