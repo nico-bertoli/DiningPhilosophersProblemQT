@@ -61,9 +61,9 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
         SetForkAvailable(Direction::Left, false);
 
         SetState(State::HungryLeftFork);
-        while(forksAvailability[GetRightForkId()] == false)
+        while(IsForkAvailable(Direction::Right) == false)
             {/*wait fork*/}
-        SetForkAvailable(Direction::Right, true);
+        SetForkAvailable(Direction::Right, false);
 
         SetState(State::Eating);
         double stopEatingTime = TimeHelper::Instance().GetTime() + RandomUtils::GetRandomDouble(eatMinTime,eatMaxTime);
@@ -78,14 +78,14 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
 void PhilThread::SetForkAvailable(Direction dir, bool availability)
 {
     if(dir == Direction::Left)
-        forksAvailability[GetLeftForkId()] = availability;
+        forksAvailability[GetLeftForkIndex()] = availability;
     else
-         forksAvailability[GetRightForkId()] = availability;
+         forksAvailability[GetRightForkIndex()] = availability;
 }
 
 bool PhilThread::IsForkAvailable(Direction dir)
 {
-    return dir==Direction::Left ? forksAvailability[GetLeftForkId()] : forksAvailability[GetRightForkId()];
+    return dir==Direction::Left ? forksAvailability[GetLeftForkIndex()] : forksAvailability[GetRightForkIndex()];
 }
 
 void PhilThread::SetState(State newState)
@@ -93,7 +93,8 @@ void PhilThread::SetState(State newState)
     if(state == newState)
         return;
 
-    qInfo() << "[phil " << index << "]"<< GetStateString(state) <<" -> "<< GetStateString(newState);
+    if(index == 1)
+    qInfo() << "[phil " << index << "]"<< GetStateString(state) <<" -> "<< GetStateString(newState) << "[" << TimeHelper::Instance().GetTime() << "]";
     state = newState;
     SignalStateChanged();
 }

@@ -18,11 +18,7 @@ void ForkView::AttachToThreadPhil(PhilThread* philThread, Direction philDirectio
 
 void ForkView::SlotOnThreadStateChanged()
 {
-    Direction updatedPhilDir = sender() == leftPhilThread ? Direction::Left : Direction::Right;
-    PhilThread* updatedPhil = updatedPhilDir == Direction::Right ? rightPhilThread : leftPhilThread;
-
-
-    if(updatedPhil->IsForkAvailable(DirectionUtils::GetOppositeDirection(updatedPhilDir)))
+    if(leftPhilThread->IsForkAvailable(Direction::Right) && rightPhilThread->IsForkAvailable(Direction::Left))
         show();
     else
         hide();
