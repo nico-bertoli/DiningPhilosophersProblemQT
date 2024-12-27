@@ -28,6 +28,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Res.qrc
         PhilPage.h PhilPage.cpp
         PhilView.h PhilView.cpp
+        PhilThread.h PhilThread.cpp
+        RandomUtils.h
+
+        Singleton.h
+        TimeHelper.h
 
 
     )

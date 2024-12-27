@@ -1,6 +1,7 @@
 #include "PhilPage.h"
 #include "QPushButton"
 #include "QtLogging"
+#include "PhilThread.h"
 
 PhilPage::PhilPage(QWidget *parent): QWidget{parent}
 {
@@ -10,6 +11,11 @@ PhilPage::PhilPage(QWidget *parent): QWidget{parent}
 void PhilPage::showEvent(QShowEvent *event)
 {
     Init();
+
+    // if(philThreads != nullptr)
+    //     for(auto philThread : philThreads)
+    //         if(philThread != nullptr)
+    //             delete(philThread);
 }
 
 void PhilPage::Init()
@@ -19,8 +25,8 @@ void PhilPage::Init()
         return;
 
     for(int i = 0; i < PHILS_COUNT; ++i){
-        phils[i] = this->findChild<PhilView*>("phil"+QString::number(i));
-        assert(phils[i] != nullptr);
+        philViews[i] = this->findChild<PhilView*>("phil"+QString::number(i));
+        assert(philViews[i] != nullptr);
     }
 
     for(int i = 0; i < PHILS_COUNT; ++i){
@@ -37,4 +43,9 @@ void PhilPage::Init()
 void PhilPage::SlotOnStartButtonPressed()
 {
     qInfo("start pressed");
+
+    for(int i = 0; i < PHILS_COUNT; ++i)
+    {
+        philThreads[i] = new PhilThread(philViews[i], PhilThread::Algorithm::BusyWaiting, 1,5,1,5);
+    }
 }

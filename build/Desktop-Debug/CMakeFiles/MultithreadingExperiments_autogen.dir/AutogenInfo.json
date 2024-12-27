@@ -324,9 +324,33 @@
 			null
 		],
 		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThread.h",
+			"MU",
+			"EWIEGA46WW/moc_PhilThread.cpp",
+			null
+		],
+		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilView.h",
 			"MU",
 			"EWIEGA46WW/moc_PhilView.cpp",
+			null
+		],
+		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/RandomUtils.h",
+			"MU",
+			"EWIEGA46WW/moc_RandomUtils.cpp",
+			null
+		],
+		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/Singleton.h",
+			"MU",
+			"EWIEGA46WW/moc_Singleton.cpp",
+			null
+		],
+		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/TimeHelper.h",
+			"MU",
+			"EWIEGA46WW/moc_TimeHelper.cpp",
 			null
 		],
 		[
@@ -393,6 +417,11 @@
 	[
 		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThread.cpp",
 			"MU",
 			null
 		],

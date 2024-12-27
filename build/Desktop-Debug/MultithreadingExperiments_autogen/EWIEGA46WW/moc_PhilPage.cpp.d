@@ -145,13 +145,9 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
   C:/Qt/6.8.1/msvc2022_64/include/QtGui/qtransform.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtGui/qwindowdefs_win.h \
-  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/QPushButton \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/QWidget \
-  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qabstractbutton.h \
-  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h \
-  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qwidget.h \
-  C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilView.h
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qwidget.h
