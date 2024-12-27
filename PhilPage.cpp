@@ -2,6 +2,7 @@
 #include "QPushButton"
 #include "QtLogging"
 #include "PhilThread.h"
+#include "PhilView.h"
 
 PhilPage::PhilPage(QWidget *parent): QWidget{parent}
 {
@@ -46,6 +47,6 @@ void PhilPage::SlotOnStartButtonPressed()
 
     for(int i = 0; i < PHILS_COUNT; ++i)
     {
-        philThreads[i] = new PhilThread(philViews[i], PhilThread::Algorithm::BusyWaiting, 1,5,1,5);
+        philThreads[i] = new PhilThread(philViews[i],4,i, 1,5,1,5);
     }
 }

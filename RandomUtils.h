@@ -1,24 +1,25 @@
-#ifndef RANDOMUTILS_H
-#define RANDOMUTILS_H
+#ifndef RANDOM_UTILS_H
+#define RANDOM_UTILS_H
 
 #include <cmath>
 
 namespace RandomUtils
 {
-inline double GetRandomDouble(double min, double max)
-{
-    double r = rand() / static_cast<double>(RAND_MAX);
-    return ((max - min) * r + min);
+    inline double GetRandomDouble(double min, double max)
+    {
+        double r = rand() / static_cast<double>(RAND_MAX);
+        return ((max - min) * r + min);
+    }
+
+    inline int GetRandomInt(int minInclusive, int maxInclusive)
+    {
+        return minInclusive + std::rand() % (maxInclusive - minInclusive + 1);
+    }
+
+    inline bool GetRandomBool()
+    {
+        return GetRandomInt(0, 1) == 0;
+    }
 }
 
-inline int GetRandomInt(int minInclusive, int maxInclusive)
-{
-    return minInclusive + std::rand() % (maxInclusive - minInclusive + 1);
-}
-
-inline bool GetRandomBool()
-{
-    return GetRandomInt(0, 1) == 0;
-}
-}
-#endif // RANDOMUTILS_H
+#endif

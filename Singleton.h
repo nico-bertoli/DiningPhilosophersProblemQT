@@ -1,9 +1,10 @@
-#pragma once
+#ifndef SINGLETON_H
+#define SINGLETON_H
 
 template <typename T>
 class Singleton
 {
-    //---------------------------------------------------------- Fields
+//---------------------------------------------------------- Fields
 public:
     static T& Instance()
     {
@@ -11,7 +12,7 @@ public:
         return instance;
     }
 
-    //---------------------------------------------------------- Fields
+//---------------------------------------------------------- Methods
 public:
     //prevent copy
     Singleton(const Singleton&) = delete;
@@ -24,3 +25,5 @@ protected:
     Singleton() = default;
     virtual ~Singleton() = default;
 };
+
+#endif
