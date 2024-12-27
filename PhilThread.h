@@ -5,8 +5,11 @@
 #include <atomic>
 #include <QObject>
 #include "QString"
+#include "DirectionUtils.h"
 
 class PhilView;
+
+using Direction = DirectionUtils::Direction;
 
 class PhilThread : public QObject
 {
@@ -15,10 +18,9 @@ class PhilThread : public QObject
 public:
 enum class Algorithm{BusyWaiting};
 enum class State {Thinking, HungryNoForks, HungryLeftFork, HungryRightFork, Eating};
+// enum class ForkDir{Left,Right};
 
 private:
-
-    enum class ForkDir{Left,Right};
     State state = State::Thinking;
     size_t index;
 
@@ -41,19 +43,16 @@ public:
 
     State GetState(){return state;}
     QString GetStateString(State state);
-
     static void SetupPhilsCount(size_t newPhilsCount){philsCount = newPhilsCount;}
+    bool IsForkAvailable(Direction dir);
 
 private:
     void PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eatMinTime, float eatMaxTime);
 
     size_t GetLeftForkId(){return index;}
     size_t GetRightForkId(){return (index+1)%philsCount;}
-    void SetForkAvailable(ForkDir dir, bool availability);
-    bool IsForkAvailable(ForkDir dir);
-
+    void SetForkAvailable(Direction dir, bool availability);
     void SetState(State newState);
-
     void MainThreadSetup();
 
 signals:

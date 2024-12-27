@@ -31,7 +31,7 @@ void PhilPage::Init()
     }
 
     for(int i = 0; i < PHILS_COUNT; ++i){
-        forks[i] = this->findChild<QWidget*>("fork"+QString::number(i));
+        forks[i] = this->findChild<ForkView*>("fork"+QString::number(i));
         assert(forks[i] != nullptr);
     }
 
@@ -52,5 +52,8 @@ void PhilPage::SlotOnStartButtonPressed()
         qInfo()<<"starting phil "<<i;
         philThreads[i] = new PhilThread(i, 1,5,1,5);
         philViews[i]->AttachToPhilThread(philThreads[i]);
+
+        forks[i]->AttachToThreadPhil(philThreads[i],Direction::Left);
+        forks[(i-1)%PHILS_COUNT]->AttachToThreadPhil(philThreads[i],Direction::Right);
     }
 }

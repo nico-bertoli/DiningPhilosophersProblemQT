@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QWidget>
+#include "ForkView.h"
 
 class PhilView;
 class PhilThread;
@@ -18,7 +19,7 @@ private:
     static const size_t PHILS_COUNT = 4;
 
     //todo remove raw pointers
-    QWidget* forks [PHILS_COUNT];
+    ForkView* forks [PHILS_COUNT];
     PhilView* philViews [PHILS_COUNT];
     PhilThread* philThreads[PHILS_COUNT];
 

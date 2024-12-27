@@ -99,4 +99,5 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/qxptype_traits.h \
-  C:/Qt/6.8.1/msvc2022_64/include/QtCore/qyieldcpu.h
+  C:/Qt/6.8.1/msvc2022_64/include/QtCore/qyieldcpu.h \
+  C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/DirectionUtils.h

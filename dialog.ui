@@ -164,7 +164,7 @@
            </property>
            <layout class="QGridLayout" name="gridLayout">
             <item row="5" column="3">
-             <widget class="QPushButton" name="fork1">
+             <widget class="ForkView" name="fork1">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -196,7 +196,7 @@
              </widget>
             </item>
             <item row="5" column="1">
-             <widget class="QPushButton" name="fork2">
+             <widget class="ForkView" name="fork2">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -228,7 +228,7 @@
              </widget>
             </item>
             <item row="3" column="3">
-             <widget class="QPushButton" name="fork0">
+             <widget class="ForkView" name="fork0">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -260,7 +260,7 @@
              </widget>
             </item>
             <item row="3" column="1">
-             <widget class="QPushButton" name="fork3">
+             <widget class="ForkView" name="fork3">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -803,6 +803,11 @@
    <extends>QWidget</extends>
    <header>philview.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ForkView</class>
+   <extends>QPushButton</extends>
+   <header>ForkView.h</header>
   </customwidget>
  </customwidgets>
  <resources>

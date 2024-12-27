@@ -318,6 +318,18 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/DirectionUtils.h",
+			"MU",
+			"EWIEGA46WW/moc_DirectionUtils.cpp",
+			null
+		],
+		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.h",
+			"MU",
+			"EWIEGA46WW/moc_ForkView.cpp",
+			null
+		],
+		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.h",
 			"MU",
 			"EWIEGA46WW/moc_PhilPage.cpp",
@@ -415,6 +427,11 @@
 	"SETTINGS_FILE" : "C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/build/Desktop-Debug/CMakeFiles/MultithreadingExperiments_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.cpp",
+			"MU",
+			null
+		],
 		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.cpp",
 			"MU",

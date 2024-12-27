@@ -56,36 +56,36 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
             {/*think*/}
 
         SetState(State::HungryNoForks);
-        while(IsForkAvailable(ForkDir::Left) == false)
+        while(IsForkAvailable(Direction::Left) == false)
             {/*wait fork*/}
-        SetForkAvailable(ForkDir::Left, false);
+        SetForkAvailable(Direction::Left, false);
 
         SetState(State::HungryLeftFork);
         while(forksAvailability[GetRightForkId()] == false)
             {/*wait fork*/}
-        SetForkAvailable(ForkDir::Right, true);
+        SetForkAvailable(Direction::Right, true);
 
         SetState(State::Eating);
         double stopEatingTime = TimeHelper::Instance().GetTime() + RandomUtils::GetRandomDouble(eatMinTime,eatMaxTime);
         while(TimeHelper::Instance().GetTime() < stopEatingTime)
             {/*eat*/}
 
-        SetForkAvailable(ForkDir::Left, true);
-        SetForkAvailable(ForkDir::Right, true);
+        SetForkAvailable(Direction::Left, true);
+        SetForkAvailable(Direction::Right, true);
     }
 }
 
-void PhilThread::SetForkAvailable(ForkDir dir, bool availability)
+void PhilThread::SetForkAvailable(Direction dir, bool availability)
 {
-    if(dir == ForkDir::Left)
+    if(dir == Direction::Left)
         forksAvailability[GetLeftForkId()] = availability;
     else
          forksAvailability[GetRightForkId()] = availability;
 }
 
-bool PhilThread::IsForkAvailable(ForkDir dir)
+bool PhilThread::IsForkAvailable(Direction dir)
 {
-    return dir==ForkDir::Left ? forksAvailability[GetLeftForkId()] : forksAvailability[GetRightForkId()];
+    return dir==Direction::Left ? forksAvailability[GetLeftForkId()] : forksAvailability[GetRightForkId()];
 }
 
 void PhilThread::SetState(State newState)
