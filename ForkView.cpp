@@ -1,9 +1,10 @@
 #include "ForkView.h"
 #include "QPushButton"
+#include "PhilPage.h"
 
 ForkView::ForkView(QWidget *parent) : QPushButton{parent}
 {
-
+    setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
 }
 
 void ForkView::AttachToThreadPhil(PhilThread* philThread, Direction philDirection)

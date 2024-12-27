@@ -26,6 +26,7 @@ private:
 //---------------------------------------- Methods
 public:
     explicit PhilPage(QWidget *parent = nullptr);
+    static QString BUTTONS_BACKGROUND_COLOR;
 
 protected:
     void showEvent(QShowEvent *event) override;

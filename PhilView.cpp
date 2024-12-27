@@ -1,5 +1,6 @@
 #include "PhilView.h"
 #include "PhilThread.h"
+#include "PhilPage.h"
 #include <QtLogging>
 
 PhilView::PhilView(QWidget *parent):QWidget{parent}
@@ -17,28 +18,35 @@ void PhilView::SlotOnThreadStateChanged()
 {
     PhilThread::State state = philThread->GetState();
 
+    QIcon icon;
     switch(state)
     {
     case PhilThread::State::Thinking:
         forkNext->hide();
         forkPrev->hide();
+        icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Eating.png"), QIcon::Disabled);
         break;
     case PhilThread::State::HungryNoForks:
         forkNext->hide();
         forkPrev->hide();
+        icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Hungry.png"), QIcon::Disabled);
         break;
     case PhilThread::State::HungryLeftFork:
         forkNext->hide();
         forkPrev->show();
+        icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Hungry.png"), QIcon::Disabled);
         break;
     case PhilThread::State::HungryRightFork:
         forkNext->show();
         forkPrev->hide();
+        icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Hungry.png"), QIcon::Disabled);
     case PhilThread::State::Eating:
         forkNext->show();
         forkPrev->show();
+        icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Eating.png"), QIcon::Disabled);
         break;
     }
+    btnPhil->setIcon(icon);
 }
 
 void PhilView::showEvent(QShowEvent *event)
@@ -65,6 +73,10 @@ void PhilView::Init()
     assert(btnPhil != nullptr);
     assert(forkPrev != nullptr);
     assert(forkNext != nullptr);
+
+    btnPhil->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
+    forkPrev->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
+    forkNext->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
 
     isInit = true;
 }

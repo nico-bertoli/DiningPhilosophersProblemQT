@@ -173,10 +173,14 @@
               </property>
               <property name="icon">
                <iconset resource="Res.qrc">
-                <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -185,6 +189,9 @@
                </size>
               </property>
               <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <property name="checked">
                <bool>false</bool>
               </property>
               <property name="autoDefault">
@@ -205,10 +212,14 @@
               </property>
               <property name="icon">
                <iconset resource="Res.qrc">
-                <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -217,6 +228,9 @@
                </size>
               </property>
               <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <property name="checked">
                <bool>false</bool>
               </property>
               <property name="autoDefault">
@@ -237,10 +251,14 @@
               </property>
               <property name="icon">
                <iconset resource="Res.qrc">
-                <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -249,6 +267,9 @@
                </size>
               </property>
               <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <property name="checked">
                <bool>false</bool>
               </property>
               <property name="autoDefault">
@@ -269,10 +290,14 @@
               </property>
               <property name="icon">
                <iconset resource="Res.qrc">
-                <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -281,6 +306,9 @@
                </size>
               </property>
               <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <property name="checked">
                <bool>false</bool>
               </property>
               <property name="autoDefault">
@@ -304,10 +332,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -316,6 +348,9 @@
                   </size>
                  </property>
                  <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
                   <bool>false</bool>
                  </property>
                  <property name="autoDefault">
@@ -335,11 +370,9 @@
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset>
-                   <normalon>:/philosophers/res/philosophers/philosopherThinking.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/philosopherThinking.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/philosopherThinking.png</disabledon>
-                  </iconset>
+                  <iconset resource="Res.qrc">
+                   <normaloff>:/philosophers/res/philosophers/Thinking.png</normaloff>
+                   <disabledoff>:/philosophers/res/philosophers/Thinking.png</disabledoff>:/philosophers/res/philosophers/Thinking.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -348,6 +381,9 @@
                   </size>
                  </property>
                  <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
                   <bool>false</bool>
                  </property>
                  <property name="autoDefault">
@@ -368,10 +404,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -380,6 +420,9 @@
                   </size>
                  </property>
                  <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
                   <bool>false</bool>
                  </property>
                  <property name="autoDefault">
@@ -406,10 +449,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -418,6 +465,9 @@
                   </size>
                  </property>
                  <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
                   <bool>false</bool>
                  </property>
                  <property name="autoDefault">
@@ -437,11 +487,9 @@
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset>
-                   <normalon>:/philosophers/res/philosophers/philosopherThinking.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/philosopherThinking.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/philosopherThinking.png</disabledon>
-                  </iconset>
+                  <iconset resource="Res.qrc">
+                   <normaloff>:/philosophers/res/philosophers/Thinking.png</normaloff>
+                   <disabledoff>:/philosophers/res/philosophers/Thinking.png</disabledoff>:/philosophers/res/philosophers/Thinking.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -450,6 +498,9 @@
                   </size>
                  </property>
                  <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
                   <bool>false</bool>
                  </property>
                  <property name="autoDefault">
@@ -470,10 +521,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -482,6 +537,9 @@
                   </size>
                  </property>
                  <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
                   <bool>false</bool>
                  </property>
                  <property name="autoDefault">
@@ -508,10 +566,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -520,6 +582,9 @@
                   </size>
                  </property>
                  <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
                   <bool>false</bool>
                  </property>
                  <property name="autoDefault">
@@ -539,11 +604,9 @@
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset>
-                   <normalon>:/philosophers/res/philosophers/philosopherThinking.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/philosopherThinking.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/philosopherThinking.png</disabledon>
-                  </iconset>
+                  <iconset resource="Res.qrc">
+                   <normaloff>:/philosophers/res/philosophers/Thinking.png</normaloff>
+                   <disabledoff>:/philosophers/res/philosophers/Thinking.png</disabledoff>:/philosophers/res/philosophers/Thinking.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -552,6 +615,9 @@
                   </size>
                  </property>
                  <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
                   <bool>false</bool>
                  </property>
                  <property name="autoDefault">
@@ -572,10 +638,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -584,6 +654,9 @@
                   </size>
                  </property>
                  <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
                   <bool>false</bool>
                  </property>
                  <property name="autoDefault">
@@ -610,10 +683,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -622,6 +699,9 @@
                   </size>
                  </property>
                  <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
                   <bool>false</bool>
                  </property>
                  <property name="autoDefault">
@@ -641,11 +721,9 @@
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset>
-                   <normalon>:/philosophers/res/philosophers/philosopherThinking.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/philosopherThinking.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/philosopherThinking.png</disabledon>
-                  </iconset>
+                  <iconset resource="Res.qrc">
+                   <normaloff>:/philosophers/res/philosophers/Thinking.png</normaloff>
+                   <disabledoff>:/philosophers/res/philosophers/Thinking.png</disabledoff>:/philosophers/res/philosophers/Thinking.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -654,6 +732,9 @@
                   </size>
                  </property>
                  <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
                   <bool>false</bool>
                  </property>
                  <property name="autoDefault">
@@ -674,10 +755,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Sprite-f001.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Sprite-f001.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Sprite-f001.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Sprite-f001.png</disabledon>:/philosophers/res/philosophers/Sprite-f001.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -686,6 +771,9 @@
                   </size>
                  </property>
                  <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
                   <bool>false</bool>
                  </property>
                  <property name="autoDefault">

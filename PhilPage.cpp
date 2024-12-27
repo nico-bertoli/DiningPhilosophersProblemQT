@@ -4,6 +4,8 @@
 #include "PhilThread.h"
 #include "PhilView.h"
 
+QString PhilPage::BUTTONS_BACKGROUND_COLOR = " #46474f;";
+
 PhilPage::PhilPage(QWidget *parent): QWidget(parent)
 {
 

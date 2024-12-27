@@ -1,7 +1,8 @@
 <RCC>
     <qresource prefix="/philosophers">
-        <file>res/philosophers/PhilosopherEating.png</file>
-        <file>res/philosophers/philosopherThinking.png</file>
-        <file>res/philosophers/Sprite-f001.png</file>
+        <file>res/philosophers/Eating.png</file>
+        <file>res/philosophers/Fork.png</file>
+        <file>res/philosophers/Hungry.png</file>
+        <file>res/philosophers/Thinking.png</file>
     </qresource>
 </RCC>
