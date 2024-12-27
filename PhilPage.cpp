@@ -50,7 +50,7 @@ void PhilPage::SlotOnStartButtonPressed()
     for(int i = 0; i < PHILS_COUNT; ++i)
     {
         qInfo()<<"starting phil "<<i;
-        philThreads[i] = new PhilThread(i, 1,5,1,5);
+        philThreads[i] = new PhilThread(i, 1,5, 20,20);
         philViews[i]->AttachToPhilThread(philThreads[i]);
 
         forks[i]->AttachToThreadPhil(philThreads[i],Direction::Left);

@@ -21,7 +21,6 @@ void ForkView::SlotOnThreadStateChanged()
     Direction updatedPhilDir = sender() == leftPhilThread ? Direction::Left : Direction::Right;
     PhilThread* updatedPhil = updatedPhilDir == Direction::Right ? rightPhilThread : leftPhilThread;
 
-    qInfo() << "sender is right: " << (updatedPhilDir == Direction::Right);
 
     if(updatedPhil->IsForkAvailable(DirectionUtils::GetOppositeDirection(updatedPhilDir)))
         show();

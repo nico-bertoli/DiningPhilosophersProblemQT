@@ -49,8 +49,8 @@ public:
 private:
     void PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eatMinTime, float eatMaxTime);
 
-    size_t GetLeftForkId(){return index;}
-    size_t GetRightForkId(){return (index+1)%philsCount;}
+    size_t GetLeftForkId(){return index -1 > 0 ? index -1 : philsCount - 1;}
+    size_t GetRightForkId(){return index;}
     void SetForkAvailable(Direction dir, bool availability);
     void SetState(State newState);
     void MainThreadSetup();
