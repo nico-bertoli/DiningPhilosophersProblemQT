@@ -1,4 +1,3 @@
-#include <future>
 #include "PhilThread.h"
 #include "RandomUtils.h"
 #include "TimeHelper.h"
@@ -7,12 +6,11 @@
 
 // bool* PhilThread::forksAvailability = nullptr;
 std::atomic<bool>* PhilThread::forksAvailability = nullptr;
-size_t PhilThread::philsCount;
+size_t PhilThread::philsCount = 0;
 
 PhilThread::PhilThread
 (
     PhilView* philView,
-    size_t philsCount,
     size_t index,
     float thinkMinTime,
     float thinkMaxTime,
@@ -21,37 +19,48 @@ PhilThread::PhilThread
 )
     : index{index}
 {
-    philsCount = philsCount;
-    if(forksAvailability == nullptr)
-        forksAvailability = new std::atomic<bool>[philsCount] {false,false,false,false};
+    if(index == 0)
+        MainThreadSetup();
 
-    auto fut = std::async
-        (
-            std::launch::async,
-            &PhilThread::PhilBehaviour,
-            this,
-            thinkMinTime,
-            thinkMaxTime,
-            eatMinTime,
-            eatMaxTime
-        );
+    future = std::async
+    (
+        std::launch::async,
+        &PhilThread::PhilBehaviour,
+        this,
+        thinkMinTime,
+        thinkMaxTime,
+        eatMinTime,
+        eatMaxTime
+    );
+}
+
+void PhilThread::MainThreadSetup()
+{
+    assert(index == 0);
+
+    if(forksAvailability == nullptr)
+        forksAvailability = new std::atomic<bool>[philsCount];
+
+    for(int i = 0; i<philsCount; ++i)
+        forksAvailability[i] = true;
 }
 
 void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eatMinTime, float eatMaxTime)
 {
     while(true)
     {
+        SetState(State::Thinking);
         double stopThinkingTime = TimeHelper::Instance().GetTime() + RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
 
         while(TimeHelper::Instance().GetTime() < stopThinkingTime)
             {/*think*/}
 
-        SetState(State::Hungry);
-
+        SetState(State::HungryNoForks);
         while(IsForkAvailable(ForkDir::Left) == false)
             {/*wait fork*/}
         SetForkAvailable(ForkDir::Left, false);
 
+        SetState(State::HungryLeftFork);
         while(forksAvailability[GetRightForkId()] == false)
             {/*wait fork*/}
         SetForkAvailable(ForkDir::Right, true);
@@ -97,8 +106,14 @@ QString PhilThread::GetStateString(State state)
     case State::Eating:
         stateString = "Eating";
         break;
-    case State::Hungry:
+    case State::HungryNoForks:
         stateString = "Hungry";
+        break;
+    case State::HungryLeftFork:
+        stateString = "HungryLeftFork";
+        break;
+    case State::HungryRightFork:
+        stateString = "HungryRightFork";
         break;
     }
 
