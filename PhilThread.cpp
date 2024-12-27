@@ -10,14 +10,14 @@ size_t PhilThread::philsCount = 0;
 
 PhilThread::PhilThread
 (
-    PhilView* philView,
     size_t index,
     float thinkMinTime,
     float thinkMaxTime,
     float eatMinTime,
-    float eatMaxTime
+    float eatMaxTime,
+    QObject* parent
 )
-    : index{index}
+    : QObject(parent), index(index)
 {
     if(index == 0)
         MainThreadSetup();
@@ -90,8 +90,12 @@ bool PhilThread::IsForkAvailable(ForkDir dir)
 
 void PhilThread::SetState(State newState)
 {
+    if(state == newState)
+        return;
+
     qInfo() << "[phil " << index << "]"<< GetStateString(state) <<" -> "<< GetStateString(newState);
     state = newState;
+    SignalStateChanged();
 }
 
 QString PhilThread::GetStateString(State state)

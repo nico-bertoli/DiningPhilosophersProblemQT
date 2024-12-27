@@ -3,18 +3,21 @@
 
 #include <future>
 #include <atomic>
+#include <QObject>
 #include "QString"
 
 class PhilView;
 
-class PhilThread
+class PhilThread : public QObject
 {
+    Q_OBJECT
 //-------------------------------------------- Fields
 public:
 enum class Algorithm{BusyWaiting};
+enum class State {Thinking, HungryNoForks, HungryLeftFork, HungryRightFork, Eating};
 
 private:
-    enum class State {Thinking, HungryNoForks, HungryLeftFork, HungryRightFork, Eating};
+
     enum class ForkDir{Left,Right};
     State state = State::Thinking;
     size_t index;
@@ -26,15 +29,18 @@ private:
 
 //-------------------------------------------- Methods
 public:
-    PhilThread
+    explicit PhilThread
     (
-        PhilView* philView,
         size_t index,
         float thinkMinTime,
         float thinkMaxTime,
         float eatMinTime,
-        float eatMaxTime
+        float eatMaxTime,
+        QObject* parent = nullptr
     );
+
+    State GetState(){return state;}
+    QString GetStateString(State state);
 
     static void SetupPhilsCount(size_t newPhilsCount){philsCount = newPhilsCount;}
 
@@ -47,9 +53,11 @@ private:
     bool IsForkAvailable(ForkDir dir);
 
     void SetState(State newState);
-    QString GetStateString(State state);
 
     void MainThreadSetup();
+
+signals:
+    void SignalStateChanged();
 };
 
 #endif // PHILTHREAD_H

@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QPushButton>
 
+class PhilThread;
+
 class PhilView : public QWidget
 {
     Q_OBJECT
@@ -15,9 +17,12 @@ class PhilView : public QWidget
     QWidget* forkNext;
     QPushButton* btnPhil;
 
+    PhilThread* philThread;
+
 //--------------------------------- Methods
 public:
     explicit PhilView(QWidget *parent = nullptr);
+    void AttachToPhilThread(PhilThread* philThread);
 
 protected:
     void showEvent(QShowEvent *event) override;
@@ -25,7 +30,8 @@ protected:
 private:
     void Init();
 
-signals:
+private slots:
+    void SlotOnThreadStateChanged();
 };
 
 #endif // PHILVIEW_H

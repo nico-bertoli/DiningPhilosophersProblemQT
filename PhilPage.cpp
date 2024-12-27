@@ -4,7 +4,7 @@
 #include "PhilThread.h"
 #include "PhilView.h"
 
-PhilPage::PhilPage(QWidget *parent): QWidget{parent}
+PhilPage::PhilPage(QWidget *parent): QWidget(parent)
 {
 
 }
@@ -50,6 +50,7 @@ void PhilPage::SlotOnStartButtonPressed()
     for(int i = 0; i < PHILS_COUNT; ++i)
     {
         qInfo()<<"starting phil "<<i;
-        philThreads[i] = new PhilThread(philViews[i],i, 1,5,1,5);
+        philThreads[i] = new PhilThread(i, 1,5,1,5);
+        philViews[i]->AttachToPhilThread(philThreads[i]);
     }
 }
