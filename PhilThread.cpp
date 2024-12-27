@@ -93,7 +93,6 @@ void PhilThread::SetState(State newState)
     if(state == newState)
         return;
 
-    if(index == 1)
     qInfo() << "[phil " << index << "]"<< GetStateString(state) <<" -> "<< GetStateString(newState) << "[" << TimeHelper::Instance().GetTime() << "]";
     state = newState;
     SignalStateChanged();
