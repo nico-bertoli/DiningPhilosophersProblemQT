@@ -21,8 +21,6 @@ void PhilView::Init()
 
     int index = this->objectName().at(4).digitValue();
 
-    qInfo() <<  QString::number(index);
-
     assert(index != -1);
 
     btnPhil = this->findChild<QPushButton*>("btnPhil"+QString::number(index));

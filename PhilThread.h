@@ -2,6 +2,7 @@
 #define PHILTHREAD_H
 
 #include <atomic>
+#include "QString"
 
 class PhilView;
 
@@ -40,6 +41,9 @@ private:
     size_t GetRightForkId(){return (index+1)%philsCount;}
     void SetForkAvailable(ForkDir dir, bool availability);
     bool IsForkAvailable(ForkDir dir);
+
+    void SetState(State newState);
+    QString GetStateString(State state);
 };
 
 #endif // PHILTHREAD_H

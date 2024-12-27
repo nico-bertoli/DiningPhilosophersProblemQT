@@ -2,6 +2,8 @@
 #include "PhilThread.h"
 #include "RandomUtils.h"
 #include "TimeHelper.h"
+#include "QtLogging"
+#include "QDebug"
 
 // bool* PhilThread::forksAvailability = nullptr;
 std::atomic<bool>* PhilThread::forksAvailability = nullptr;
@@ -44,7 +46,7 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
         while(TimeHelper::Instance().GetTime() < stopThinkingTime)
             {/*think*/}
 
-        state = State::Hungry;
+        SetState(State::Hungry);
 
         while(IsForkAvailable(ForkDir::Left) == false)
             {/*wait fork*/}
@@ -54,7 +56,7 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
             {/*wait fork*/}
         SetForkAvailable(ForkDir::Right, true);
 
-        state = State::Eating;
+        SetState(State::Eating);
         double stopEatingTime = TimeHelper::Instance().GetTime() + RandomUtils::GetRandomDouble(eatMinTime,eatMaxTime);
         while(TimeHelper::Instance().GetTime() < stopEatingTime)
             {/*eat*/}
@@ -75,6 +77,32 @@ void PhilThread::SetForkAvailable(ForkDir dir, bool availability)
 bool PhilThread::IsForkAvailable(ForkDir dir)
 {
     return dir==ForkDir::Left ? forksAvailability[GetLeftForkId()] : forksAvailability[GetRightForkId()];
+}
+
+void PhilThread::SetState(State newState)
+{
+    qInfo() << "[phil " << index << "]"<< GetStateString(state) <<" -> "<< GetStateString(newState);
+    state = newState;
+}
+
+QString PhilThread::GetStateString(State state)
+{
+    QString stateString = "NOT FOUND";
+
+    switch(state)
+    {
+    case State::Thinking:
+        stateString = "Thinking";
+        break;
+    case State::Eating:
+        stateString = "Eating";
+        break;
+    case State::Hungry:
+        stateString = "Hungry";
+        break;
+    }
+
+    return stateString;
 }
 
 

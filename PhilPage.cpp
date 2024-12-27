@@ -47,6 +47,7 @@ void PhilPage::SlotOnStartButtonPressed()
 
     for(int i = 0; i < PHILS_COUNT; ++i)
     {
+        qInfo()<<"starting phil "<<i;
         philThreads[i] = new PhilThread(philViews[i],4,i, 1,5,1,5);
     }
 }
