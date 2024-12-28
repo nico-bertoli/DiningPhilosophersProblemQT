@@ -13,9 +13,11 @@ class PhilView : public QWidget
 //--------------------------------- Fields
     bool isInit = false;
     int index;
-    QWidget* forkPrev;
-    QWidget* forkNext;
+    QWidget* forkRight;
+    QWidget* forkLeft;
     QPushButton* btnPhil;
+    QWidget* forkRightPlaceHolder;
+    QWidget* forkLeftPlaceHolder;
 
     PhilThread* philThread;
 

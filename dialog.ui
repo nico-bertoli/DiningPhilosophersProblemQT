@@ -167,7 +167,7 @@
              <widget class="PhilView" name="phil3" native="true">
               <layout class="QVBoxLayout" name="verticalLayout_4">
                <item>
-                <widget class="QPushButton" name="forkNext3">
+                <widget class="QPushButton" name="forkLeft3">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -263,7 +263,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="forkPrev3">
+                <widget class="QPushButton" name="forkRight3">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -422,7 +422,7 @@
              <widget class="PhilView" name="phil2" native="true">
               <layout class="QHBoxLayout" name="horizontalLayout_6">
                <item>
-                <widget class="QPushButton" name="forkNext2">
+                <widget class="QPushButton" name="forkLeft2">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -518,7 +518,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="forkPrev2">
+                <widget class="QPushButton" name="forkRight2">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -626,7 +626,7 @@
              <widget class="PhilView" name="phil1" native="true">
               <layout class="QVBoxLayout" name="verticalLayout_3">
                <item>
-                <widget class="QPushButton" name="forkPrev1">
+                <widget class="QPushButton" name="forkRight1">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -722,7 +722,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="forkNext1">
+                <widget class="QPushButton" name="forkLeft1">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -830,7 +830,7 @@
              <widget class="PhilView" name="phil0" native="true">
               <layout class="QHBoxLayout" name="horizontalLayout_2">
                <item>
-                <widget class="QPushButton" name="forkPrev0">
+                <widget class="QPushButton" name="forkRight0">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -926,7 +926,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="forkNext0">
+                <widget class="QPushButton" name="forkLeft0">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>

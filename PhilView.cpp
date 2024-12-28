@@ -22,27 +22,27 @@ void PhilView::SlotOnThreadStateChanged()
     switch(state)
     {
     case PhilThread::State::Thinking:
-        forkNext->hide();
-        forkPrev->hide();
+        forkLeft->hide();
+        forkRight->hide();
         icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Thinking.png"), QIcon::Disabled);
         break;
     case PhilThread::State::HungryNoForks:
-        forkNext->hide();
-        forkPrev->hide();
+        forkLeft->hide();
+        forkRight->hide();
         icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Hungry.png"), QIcon::Disabled);
         break;
     case PhilThread::State::HungryLeftFork:
-        forkNext->hide();
-        forkPrev->show();
+        forkLeft->hide();
+        forkRight->show();
         icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Hungry.png"), QIcon::Disabled);
         break;
     case PhilThread::State::HungryRightFork:
-        forkNext->show();
-        forkPrev->hide();
+        forkLeft->show();
+        forkRight->hide();
         icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Hungry.png"), QIcon::Disabled);
     case PhilThread::State::Eating:
-        forkNext->show();
-        forkPrev->show();
+        forkLeft->show();
+        forkRight->show();
         icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Eating.png"), QIcon::Disabled);
         break;
     }
@@ -53,8 +53,8 @@ void PhilView::showEvent(QShowEvent *event)
 {
     Init();
 
-    forkPrev->hide();
-    forkNext->hide();
+    forkRight->hide();
+    forkLeft->hide();
 }
 
 void PhilView::Init()
@@ -67,16 +67,16 @@ void PhilView::Init()
     assert(index != -1);
 
     btnPhil = this->findChild<QPushButton*>("btnPhil"+QString::number(index));
-    forkPrev = this->findChild<QWidget*>("forkPrev"+QString::number(index));
-    forkNext = this->findChild<QWidget*>("forkNext"+QString::number(index));
+    forkRight = this->findChild<QWidget*>("forkRight"+QString::number(index));
+    forkLeft = this->findChild<QWidget*>("forkLeft"+QString::number(index));
 
     assert(btnPhil != nullptr);
-    assert(forkPrev != nullptr);
-    assert(forkNext != nullptr);
+    assert(forkRight != nullptr);
+    assert(forkLeft != nullptr);
 
     btnPhil->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
-    forkPrev->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
-    forkNext->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
+    forkRight->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
+    forkLeft->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
 
     isInit = true;
 }
