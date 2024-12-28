@@ -21,22 +21,6 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_6">
    <item>
-    <widget class="QPushButton" name="btnMainMenu">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="text">
-      <string>Back</string>
-     </property>
-     <property name="autoDefault">
-      <bool>false</bool>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -117,6 +101,41 @@
      <widget class="PhilPage" name="pagePhilosophers">
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
+        <widget class="QWidget" name="panelTop" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="btnBack">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Back</string>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>99999</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
         <layout class="QGridLayout" name="gridLayout_2">
          <property name="sizeConstraint">
           <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
@@ -133,20 +152,123 @@
          <property name="bottomMargin">
           <number>10</number>
          </property>
-         <item row="1" column="2">
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
+         <item row="4" column="1">
+          <widget class="PhilsControlPanel" name="ControlPanel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
            </property>
-           <property name="sizeHint" stdset="0">
+           <property name="minimumSize">
             <size>
-             <width>40</width>
-             <height>20</height>
+             <width>0</width>
+             <height>0</height>
             </size>
            </property>
-          </spacer>
+           <property name="maximumSize">
+            <size>
+             <width>99999</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Shape::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Shadow::Raised</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="1" column="0">
+             <widget class="QSpinBox" name="spinBoxSleepMinDur">
+              <property name="suffix">
+               <string>s</string>
+              </property>
+              <property name="prefix">
+               <string>Sleep min duration: </string>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>2</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="spinBoxEatMaxDur">
+              <property name="suffix">
+               <string>s</string>
+              </property>
+              <property name="prefix">
+               <string>Eat max duration: </string>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>4</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QSpinBox" name="spinBoxSleepMaxDur">
+              <property name="suffix">
+               <string>s</string>
+              </property>
+              <property name="prefix">
+               <string>Sleep max duration: </string>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>4</number>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" colspan="2">
+             <widget class="QPushButton" name="btnStart">
+              <property name="text">
+               <string>Start</string>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="spinBoxEatMinDur">
+              <property name="frame">
+               <bool>true</bool>
+              </property>
+              <property name="specialValueText">
+               <string/>
+              </property>
+              <property name="keyboardTracking">
+               <bool>true</bool>
+              </property>
+              <property name="showGroupSeparator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="suffix">
+               <string>s</string>
+              </property>
+              <property name="prefix">
+               <string>Eat min duration: </string>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>2</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
          </item>
-         <item row="1" column="0">
+         <item row="2" column="0">
           <spacer name="horizontalSpacer">
            <property name="orientation">
             <enum>Qt::Orientation::Horizontal</enum>
@@ -159,7 +281,46 @@
            </property>
           </spacer>
          </item>
-         <item row="1" column="1">
+         <item row="2" column="2">
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="1">
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="3" column="1">
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="1">
           <widget class="QFrame" name="PhilsGridPanel">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -1600,148 +1761,6 @@
                 </widget>
                </item>
               </layout>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <spacer name="verticalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Orientation::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="2" column="1">
-          <spacer name="verticalSpacer">
-           <property name="orientation">
-            <enum>Qt::Orientation::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="3" column="1">
-          <widget class="PhilsControlPanel" name="ControlPanel">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>99999</width>
-             <height>100</height>
-            </size>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::Shape::StyledPanel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Shadow::Raised</enum>
-           </property>
-           <layout class="QGridLayout" name="gridLayout_3">
-            <item row="1" column="0">
-             <widget class="QSpinBox" name="spinBoxSleepMinDur">
-              <property name="suffix">
-               <string>s</string>
-              </property>
-              <property name="prefix">
-               <string>Sleep min duration: </string>
-              </property>
-              <property name="maximum">
-               <number>99</number>
-              </property>
-              <property name="value">
-               <number>2</number>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QSpinBox" name="spinBoxEatMaxDur">
-              <property name="suffix">
-               <string>s</string>
-              </property>
-              <property name="prefix">
-               <string>Eat max duration: </string>
-              </property>
-              <property name="maximum">
-               <number>99</number>
-              </property>
-              <property name="value">
-               <number>4</number>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QSpinBox" name="spinBoxSleepMaxDur">
-              <property name="suffix">
-               <string>s</string>
-              </property>
-              <property name="prefix">
-               <string>Sleep max duration: </string>
-              </property>
-              <property name="maximum">
-               <number>99</number>
-              </property>
-              <property name="value">
-               <number>4</number>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0" colspan="2">
-             <widget class="QPushButton" name="btnStart">
-              <property name="text">
-               <string>Start</string>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QSpinBox" name="spinBoxEatMinDur">
-              <property name="frame">
-               <bool>true</bool>
-              </property>
-              <property name="specialValueText">
-               <string/>
-              </property>
-              <property name="keyboardTracking">
-               <bool>true</bool>
-              </property>
-              <property name="showGroupSeparator" stdset="0">
-               <bool>false</bool>
-              </property>
-              <property name="suffix">
-               <string>s</string>
-              </property>
-              <property name="prefix">
-               <string>Eat min duration: </string>
-              </property>
-              <property name="maximum">
-               <number>99</number>
-              </property>
-              <property name="value">
-               <number>2</number>
-              </property>
              </widget>
             </item>
            </layout>

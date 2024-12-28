@@ -16,12 +16,10 @@ public:
     Dialog(QWidget *parent = nullptr);
     ~Dialog();
 
-private:
-    void Refresh();
+    void ShowMainMenu();
 
 private slots:
     void SlotShowPhilosopersPage();
-    void SlotShowMainMenu();
 
 private:
     Ui::Dialog *ui;

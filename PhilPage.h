@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QWidget>
+#include <QPushButton>
 #include "ForkView.h"
 
 class PhilView;
@@ -35,6 +36,9 @@ protected:
 
 private:
     void Init();
+
+private slots:
+    void SlotOnBackButtonClicked();
 };
 
 #endif // PHILPAGE_H

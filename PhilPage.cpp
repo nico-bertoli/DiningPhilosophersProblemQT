@@ -5,6 +5,7 @@
 #include "PhilView.h"
 #include "QFrame"
 #include "QGridLayout"
+#include "dialog.h"
 
 QString PhilPage::BUTTONS_BACKGROUND_COLOR = " #46474f;";
 
@@ -44,9 +45,9 @@ void PhilPage::Init()
     //force fixed size for grid layout
     QWidget* philsGridPanel = this->findChild<QWidget*>("PhilsGridPanel");
     philsGridPanel->setFixedSize(800,800);
-
     philsGridPanel->layout()->setAlignment(philsGridPanel->layout()->widget(), Qt::AlignCenter);
 
+    //todo check this is needed
     auto rootLayout = this->layout();
     for (int i = 0; i < rootLayout->count(); ++i)
     {
@@ -54,6 +55,9 @@ void PhilPage::Init()
         if (item->widget())
             rootLayout->setAlignment(item->widget(), Qt::AlignCenter);
     }
+
+    QPushButton* btnBack = this->findChild<QPushButton*>("btnBack");
+    connect(btnBack, &QPushButton::clicked, this, &PhilPage::SlotOnBackButtonClicked);
 
     isSetup = true;
 }
@@ -71,4 +75,9 @@ void PhilPage::StartSimulation(float minSleepDur, float maxSleepDur, float minEa
         int rightForkIndex = i==0 ? PHILS_COUNT-1 : i-1;
         forks[rightForkIndex]->AttachToThreadPhil(philThreads[i],Direction::Right);
     }
+}
+
+void PhilPage::SlotOnBackButtonClicked()
+{
+    dynamic_cast<Dialog*>(this->parent()->parent())->ShowMainMenu();
 }
