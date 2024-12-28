@@ -39,9 +39,6 @@ void PhilPage::Init()
         assert(forks[i] != nullptr);
     }
 
-    QPushButton* btnStart = this->findChild<QPushButton*>("btnStart");
-    connect(btnStart, &QPushButton::clicked, this, &PhilPage::SlotOnStartButtonPressed);
-
     PhilThread::SetupPhilsCount(PHILS_COUNT);
 
     //force fixed size for grid layout
@@ -61,14 +58,13 @@ void PhilPage::Init()
     isSetup = true;
 }
 
-void PhilPage::SlotOnStartButtonPressed()
+void PhilPage::StartSimulation(float minSleepDur, float maxSleepDur, float minEatDur, float maxEatDur)
 {
     qInfo("start pressed");
 
     for(int i = 0; i < PHILS_COUNT; ++i)
     {
-        qInfo()<<"starting phil "<<i;
-        philThreads[i] = new PhilThread(i, 7,7, 2,4);
+        philThreads[i] = new PhilThread(i, minSleepDur, maxSleepDur, minEatDur, maxEatDur);
         philViews[i]->AttachToPhilThread(philThreads[i]);
 
         forks[i]->AttachToThreadPhil(philThreads[i],Direction::Left);

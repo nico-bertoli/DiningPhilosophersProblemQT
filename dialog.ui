@@ -1632,7 +1632,7 @@
           </spacer>
          </item>
          <item row="3" column="1">
-          <widget class="QFrame" name="FrameBottom">
+          <widget class="PhilsControlPanel" name="ControlPanel">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -1659,7 +1659,7 @@
            </property>
            <layout class="QGridLayout" name="gridLayout_3">
             <item row="1" column="0">
-             <widget class="QSpinBox" name="spinBoxSleepMinDuration">
+             <widget class="QSpinBox" name="spinBoxSleepMinDur">
               <property name="suffix">
                <string>s</string>
               </property>
@@ -1675,7 +1675,7 @@
              </widget>
             </item>
             <item row="2" column="1">
-             <widget class="QSpinBox" name="spinBoxEatMaxDuration">
+             <widget class="QSpinBox" name="spinBoxEatMaxDur">
               <property name="suffix">
                <string>s</string>
               </property>
@@ -1691,7 +1691,7 @@
              </widget>
             </item>
             <item row="2" column="0">
-             <widget class="QSpinBox" name="spinBoxSleepMaxDuration">
+             <widget class="QSpinBox" name="spinBoxSleepMaxDur">
               <property name="suffix">
                <string>s</string>
               </property>
@@ -1717,7 +1717,7 @@
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QSpinBox" name="spinBoxEatMinDuration">
+             <widget class="QSpinBox" name="spinBoxEatMinDur">
               <property name="frame">
                <bool>true</bool>
               </property>
@@ -1772,6 +1772,12 @@
    <class>ForkView</class>
    <extends>QWidget</extends>
    <header>ForkView.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PhilsControlPanel</class>
+   <extends>QFrame</extends>
+   <header>PhilsControlPanel.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

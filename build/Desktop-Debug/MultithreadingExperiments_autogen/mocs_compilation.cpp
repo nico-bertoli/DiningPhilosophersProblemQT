@@ -3,4 +3,5 @@
 #include "EWIEGA46WW/moc_PhilPage.cpp"
 #include "EWIEGA46WW/moc_PhilThread.cpp"
 #include "EWIEGA46WW/moc_PhilView.cpp"
+#include "EWIEGA46WW/moc_PhilsControlPanel.cpp"
 #include "EWIEGA46WW/moc_dialog.cpp"

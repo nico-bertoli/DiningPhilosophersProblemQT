@@ -15,6 +15,8 @@ class PhilPage : public QWidget
 template<typename T> using unique_ptr = std::unique_ptr<T>;
 
 //---------------------------------------- Fields
+public:
+    static QString BUTTONS_BACKGROUND_COLOR;
 private:
     static const size_t PHILS_COUNT = 4;
 
@@ -26,18 +28,13 @@ private:
 //---------------------------------------- Methods
 public:
     explicit PhilPage(QWidget *parent = nullptr);
-    static QString BUTTONS_BACKGROUND_COLOR;
+    void StartSimulation(float minSleepDur, float maxSleepDur, float minEatDur, float maxEatDur);
 
 protected:
     void showEvent(QShowEvent *event) override;
 
 private:
     void Init();
-
-signals:
-
-private slots:
-    void SlotOnStartButtonPressed();
 };
 
 #endif // PHILPAGE_H

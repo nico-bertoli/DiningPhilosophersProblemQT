@@ -34,6 +34,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         TimeHelper.h
         ForkView.h ForkView.cpp
         DirectionUtils.h
+        PhilsControlPanel.h PhilsControlPanel.cpp
 
     )
 # Define target properties for Android with Qt 6 as:
