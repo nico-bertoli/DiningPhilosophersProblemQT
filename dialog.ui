@@ -1657,9 +1657,67 @@
            <property name="frameShadow">
             <enum>QFrame::Shadow::Raised</enum>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="1" column="0">
+             <widget class="QSpinBox" name="spinBoxSleepMinDuration">
+              <property name="suffix">
+               <string>s</string>
+              </property>
+              <property name="prefix">
+               <string>Sleep min duration: </string>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>2</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
              <widget class="QSpinBox" name="spinBoxEatMaxDuration">
+              <property name="suffix">
+               <string>s</string>
+              </property>
+              <property name="prefix">
+               <string>Eat max duration: </string>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>4</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QSpinBox" name="spinBoxSleepMaxDuration">
+              <property name="suffix">
+               <string>s</string>
+              </property>
+              <property name="prefix">
+               <string>Sleep max duration: </string>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>4</number>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" colspan="2">
+             <widget class="QPushButton" name="btnStart">
+              <property name="text">
+               <string>Start</string>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="spinBoxEatMinDuration">
               <property name="frame">
                <bool>true</bool>
               </property>
@@ -1676,36 +1734,13 @@
                <string>s</string>
               </property>
               <property name="prefix">
-               <string>Eat max duration: </string>
+               <string>Eat min duration: </string>
               </property>
               <property name="maximum">
-               <number>20</number>
+               <number>99</number>
               </property>
               <property name="value">
-               <number>5</number>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSpinBox" name="spinBoxEatMinDuration">
-              <property name="suffix">
-               <string>s</string>
-              </property>
-              <property name="prefix">
-               <string>Eat min duration </string>
-              </property>
-              <property name="maximum">
-               <number>20</number>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btnStart">
-              <property name="text">
-               <string>Start</string>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
+               <number>2</number>
               </property>
              </widget>
             </item>
