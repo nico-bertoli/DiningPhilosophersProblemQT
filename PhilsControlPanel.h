@@ -14,8 +14,8 @@ class PhilsControlPanel : public QFrame
 private:
     bool isInit = false;
 
-    QSpinBox* speenBoxSleepMinDur;
-    QSpinBox* speenBoxSleepMaxDur;
+    QSpinBox* spinBoxSleepMinDur;
+    QSpinBox* spinBoxSleepMaxDur;
     QSpinBox* spinBoxEatMinDur;
     QSpinBox* spinBoxEatMaxDur;
     QPushButton* btnStartSimulation;
@@ -30,9 +30,14 @@ protected:
 
 private:
     void Init();
+    void ForceSpinBoxesValid(QSpinBox* spinBoxValChanged, QSpinBox* spinBoxForceValid, bool mustChangedValBeGreater);
 
 private slots:
     void SlotOnStartButtonPressed();
+    void SlotOnSleepMinDurChanged();
+    void SlotOnSleepMaxDurChanged();
+    void SlotOnEatMinDurChanged();
+    void SlotOnEatMaxDurChanged();
 };
 
 #endif // PHILSCONTROLPANEL_H
