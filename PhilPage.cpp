@@ -3,6 +3,7 @@
 #include "QtLogging"
 #include "PhilThread.h"
 #include "PhilView.h"
+#include "QFrame"
 
 QString PhilPage::BUTTONS_BACKGROUND_COLOR = " #46474f;";
 
@@ -41,6 +42,10 @@ void PhilPage::Init()
     connect(btnStart, &QPushButton::clicked, this, &PhilPage::SlotOnStartButtonPressed);
 
     PhilThread::SetupPhilsCount(PHILS_COUNT);
+
+    //force fixed size for grid layout
+    QFrame* gridLayout = this->findChild<QFrame*>("PhilsGridPanel");
+    gridLayout->setFixedSize(800,800);
 
     isSetup = true;
 }
