@@ -4,6 +4,7 @@
 #include "PhilThread.h"
 #include "PhilView.h"
 #include "QFrame"
+#include "QGridLayout"
 
 QString PhilPage::BUTTONS_BACKGROUND_COLOR = " #46474f;";
 
@@ -44,8 +45,18 @@ void PhilPage::Init()
     PhilThread::SetupPhilsCount(PHILS_COUNT);
 
     //force fixed size for grid layout
-    QFrame* gridLayout = this->findChild<QFrame*>("PhilsGridPanel");
-    gridLayout->setFixedSize(800,800);
+    QWidget* philsGridPanel = this->findChild<QWidget*>("PhilsGridPanel");
+    philsGridPanel->setFixedSize(800,800);
+
+    philsGridPanel->layout()->setAlignment(philsGridPanel->layout()->widget(), Qt::AlignCenter);
+
+    auto rootLayout = this->layout();
+    for (int i = 0; i < rootLayout->count(); ++i)
+    {
+        QLayoutItem *item = rootLayout->itemAt(i);
+        if (item->widget())
+            rootLayout->setAlignment(item->widget(), Qt::AlignCenter);
+    }
 
     isSetup = true;
 }
@@ -57,7 +68,7 @@ void PhilPage::SlotOnStartButtonPressed()
     for(int i = 0; i < PHILS_COUNT; ++i)
     {
         qInfo()<<"starting phil "<<i;
-        philThreads[i] = new PhilThread(i, 0.5,5, 1,2);
+        philThreads[i] = new PhilThread(i, 7,7, 2,4);
         philViews[i]->AttachToPhilThread(philThreads[i]);
 
         forks[i]->AttachToThreadPhil(philThreads[i],Direction::Left);
