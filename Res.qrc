@@ -4,5 +4,6 @@
         <file>res/philosophers/Fork.png</file>
         <file>res/philosophers/Hungry.png</file>
         <file>res/philosophers/Thinking.png</file>
+        <file>res/philosophers/Knife.png</file>
     </qresource>
 </RCC>

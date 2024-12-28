@@ -223,14 +223,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
-                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
-                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
-                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
-                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Knife.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Knife.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Knife.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Knife.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Knife.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Knife.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Knife.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Knife.png</selectedon>:/philosophers/res/philosophers/Knife.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -468,14 +468,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
-                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
-                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
-                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
-                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Knife.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Knife.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Knife.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Knife.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Knife.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Knife.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Knife.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Knife.png</selectedon>:/philosophers/res/philosophers/Knife.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -617,14 +617,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
-                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
-                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
-                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
-                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Knife.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Knife.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Knife.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Knife.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Knife.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Knife.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Knife.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Knife.png</selectedon>:/philosophers/res/philosophers/Knife.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -822,14 +822,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
-                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
-                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
-                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
-                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Knife.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Knife.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Knife.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Knife.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Knife.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Knife.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Knife.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Knife.png</selectedon>:/philosophers/res/philosophers/Knife.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -1176,14 +1176,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
-                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
-                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
-                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
-                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Knife.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Knife.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Knife.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Knife.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Knife.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Knife.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Knife.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Knife.png</selectedon>:/philosophers/res/philosophers/Knife.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -1434,14 +1434,14 @@
                  </property>
                  <property name="icon">
                   <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
-                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
-                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
-                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
-                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
+                   <normaloff>:/philosophers/res/philosophers/Knife.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Knife.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Knife.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Knife.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Knife.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Knife.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Knife.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Knife.png</selectedon>:/philosophers/res/philosophers/Knife.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
