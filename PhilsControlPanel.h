@@ -16,8 +16,8 @@ private:
 
     QSpinBox* speenBoxSleepMinDur;
     QSpinBox* speenBoxSleepMaxDur;
-    QSpinBox* speenBoxEatMinDur;
-    QSpinBox* speenBoxEatMaxDur;
+    QSpinBox* spinBoxEatMinDur;
+    QSpinBox* spinBoxEatMaxDur;
     QPushButton* btnStartSimulation;
     PhilPage* philPage;
 

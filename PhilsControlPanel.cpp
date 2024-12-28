@@ -15,8 +15,8 @@ void PhilsControlPanel::Init()
 
     speenBoxSleepMinDur = this->findChild<QSpinBox*>("spinBoxSleepMinDur");
     speenBoxSleepMaxDur = this->findChild<QSpinBox*>("spinBoxSleepMaxDur");
-    speenBoxEatMinDur = this->findChild<QSpinBox*>("speenBoxEatMinDur");
-    speenBoxEatMaxDur = this->findChild<QSpinBox*>("speenBoxEatMaxDur");
+    spinBoxEatMinDur = this->findChild<QSpinBox*>("spinBoxEatMinDur");
+    spinBoxEatMaxDur = this->findChild<QSpinBox*>("spinBoxEatMaxDur");
     btnStartSimulation = this->findChild<QPushButton*>("btnStart");
     philPage = dynamic_cast<PhilPage*>(this->parent());
 
@@ -29,6 +29,12 @@ void PhilsControlPanel::Init()
 
 void PhilsControlPanel::SlotOnStartButtonPressed()
 {
-    philPage->StartSimulation(1,2,1,2);
+    philPage->StartSimulation
+    (
+        speenBoxSleepMinDur->value(),
+        speenBoxSleepMaxDur->value(),
+        spinBoxEatMinDur->value(),
+        spinBoxEatMaxDur->value()
+    );
 }
 
