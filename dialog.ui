@@ -167,8 +167,14 @@
              <widget class="PhilView" name="phil2" native="true">
               <property name="minimumSize">
                <size>
-                <width>0</width>
+                <width>400</width>
                 <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>400</width>
+                <height>16777215</height>
                </size>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -404,6 +410,18 @@
             </item>
             <item row="4" column="1">
              <widget class="PhilView" name="phil3" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>400</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>400</height>
+               </size>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_4">
                <item>
                 <widget class="QPushButton" name="forkLeftPlaceHolder3">
@@ -637,6 +655,18 @@
             </item>
             <item row="4" column="3">
              <widget class="PhilView" name="phil1" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>400</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>400</height>
+               </size>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_3">
                <item>
                 <widget class="QPushButton" name="forkRightPlaceHolder1">
@@ -872,8 +902,14 @@
              <widget class="PhilView" name="phil0" native="true">
               <property name="minimumSize">
                <size>
-                <width>0</width>
+                <width>400</width>
                 <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>400</width>
+                <height>16777215</height>
                </size>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout">
@@ -1108,104 +1144,19 @@
              </widget>
             </item>
             <item row="3" column="1">
-             <widget class="ForkView" name="fork0" native="true">
-              <layout class="QVBoxLayout" name="verticalLayout_7">
-               <item>
-                <widget class="QPushButton" name="btnFork0">
-                 <property name="enabled">
-                  <bool>false</bool>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>130</width>
-                   <height>130</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>130</width>
-                   <height>130</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="Res.qrc">
-                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
-                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
-                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
-                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
-                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
-                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
-                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
-                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
-                 </property>
-                 <property name="iconSize">
-                  <size>
-                   <width>120</width>
-                   <height>105</height>
-                  </size>
-                 </property>
-                 <property name="checkable">
-                  <bool>false</bool>
-                 </property>
-                 <property name="checked">
-                  <bool>false</bool>
-                 </property>
-                 <property name="autoDefault">
-                  <bool>false</bool>
-                 </property>
-                 <property name="default">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="btnPHolderFork0">
-                 <property name="enabled">
-                  <bool>false</bool>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>130</width>
-                   <height>130</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>130</width>
-                   <height>130</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="iconSize">
-                  <size>
-                   <width>120</width>
-                   <height>105</height>
-                  </size>
-                 </property>
-                 <property name="checkable">
-                  <bool>false</bool>
-                 </property>
-                 <property name="checked">
-                  <bool>false</bool>
-                 </property>
-                 <property name="autoDefault">
-                  <bool>false</bool>
-                 </property>
-                 <property name="default">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item row="5" column="1">
              <widget class="ForkView" name="fork3" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>150</height>
+               </size>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_9">
                <item>
                 <widget class="QPushButton" name="btnFork3">
@@ -1301,8 +1252,20 @@
               </layout>
              </widget>
             </item>
-            <item row="5" column="3">
+            <item row="5" column="1">
              <widget class="ForkView" name="fork2" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>150</height>
+               </size>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_8">
                <item>
                 <widget class="QPushButton" name="btnFork2">
@@ -1398,8 +1361,20 @@
               </layout>
              </widget>
             </item>
-            <item row="3" column="3">
+            <item row="5" column="3">
              <widget class="ForkView" name="fork1" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>150</height>
+               </size>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_10">
                <item>
                 <widget class="QPushButton" name="btnFork1">
@@ -1454,6 +1429,115 @@
                </item>
                <item>
                 <widget class="QPushButton" name="btnPHolderFork1">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>130</width>
+                   <height>130</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>130</width>
+                   <height>130</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>120</width>
+                   <height>105</height>
+                  </size>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                 <property name="autoDefault">
+                  <bool>false</bool>
+                 </property>
+                 <property name="default">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="3" column="3">
+             <widget class="ForkView" name="fork0" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>150</height>
+               </size>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <item>
+                <widget class="QPushButton" name="btnFork0">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>130</width>
+                   <height>130</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>130</width>
+                   <height>130</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Res.qrc">
+                   <normaloff>:/philosophers/res/philosophers/Fork.png</normaloff>
+                   <normalon>:/philosophers/res/philosophers/Fork.png</normalon>
+                   <disabledoff>:/philosophers/res/philosophers/Fork.png</disabledoff>
+                   <disabledon>:/philosophers/res/philosophers/Fork.png</disabledon>
+                   <activeoff>:/philosophers/res/philosophers/Fork.png</activeoff>
+                   <activeon>:/philosophers/res/philosophers/Fork.png</activeon>
+                   <selectedoff>:/philosophers/res/philosophers/Fork.png</selectedoff>
+                   <selectedon>:/philosophers/res/philosophers/Fork.png</selectedon>:/philosophers/res/philosophers/Fork.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>120</width>
+                   <height>105</height>
+                  </size>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                 <property name="autoDefault">
+                  <bool>false</bool>
+                 </property>
+                 <property name="default">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnPHolderFork0">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>

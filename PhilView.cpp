@@ -82,6 +82,9 @@ void PhilView::Init()
     forkRightPlaceHolder->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
     forkLeftPlaceHolder->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
 
+    forkRight->hide();
+    forkLeft->hide();
+
     isInit = true;
 }
 
