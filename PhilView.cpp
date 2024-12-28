@@ -24,7 +24,7 @@ void PhilView::SlotOnThreadStateChanged()
     case PhilThread::State::Thinking:
         forkNext->hide();
         forkPrev->hide();
-        icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Eating.png"), QIcon::Disabled);
+        icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Thinking.png"), QIcon::Disabled);
         break;
     case PhilThread::State::HungryNoForks:
         forkNext->hide();
