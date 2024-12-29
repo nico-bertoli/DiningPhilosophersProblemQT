@@ -21,12 +21,12 @@ class PhilView : public QWidget
     QWidget* forkRightPlaceHolder;
     QWidget* forkLeftPlaceHolder;
 
-    PhilThread* philThread;
+    std::weak_ptr<PhilThread> philThreadWeak;
 
 //--------------------------------- Methods
 public:
     explicit PhilView(QWidget *parent = nullptr);
-    void AttachToPhilThread(PhilThread* philThread);
+    void AttachToPhilThread(std::shared_ptr<PhilThread> philThread);
 
 protected:
     void showEvent(QShowEvent *event) override;

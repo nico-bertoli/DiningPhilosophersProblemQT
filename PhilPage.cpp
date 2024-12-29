@@ -66,22 +66,52 @@ void PhilPage::StartSimulation(float minSleepDur, float maxSleepDur, float minEa
 {
     for(int i = 0; i < PHILS_COUNT; ++i)
     {
-        philThreads[i] = new PhilThread(i, minSleepDur, maxSleepDur, minEatDur, maxEatDur);
+        philThreads[i] = std::make_shared<PhilThread>(i, minSleepDur, maxSleepDur, minEatDur, maxEatDur);
         philViews[i]->AttachToPhilThread(philThreads[i]);
-
-        forks[i]->AttachToThreadPhil(philThreads[i],Direction::Left);
+        forks[i]->AttachToPhilThread(philThreads[i],Direction::Left);
         int rightForkIndex = i==0 ? PHILS_COUNT-1 : i-1;
-        forks[rightForkIndex]->AttachToThreadPhil(philThreads[i],Direction::Right);
+        forks[rightForkIndex]->AttachToPhilThread(philThreads[i],Direction::Right);
     }
 }
 
 void PhilPage::StopSimulation()
 {
-    for(PhilThread* thread : philThreads)
+    for(auto thread : philThreads)
+    {
         thread->Stop();
+        qInfo()<< thread.use_count();
+        thread = nullptr;
+    }
 }
 
 void PhilPage::SlotOnBackButtonClicked()
 {
     dynamic_cast<Dialog*>(this->parent()->parent())->ShowMainMenu();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

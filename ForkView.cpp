@@ -4,22 +4,34 @@
 
 ForkView::ForkView(QWidget *parent) : QWidget{parent}{ }
 
-void ForkView::AttachToThreadPhil(PhilThread* philThread, Direction philDirection)
+void ForkView::AttachToPhilThread(std::shared_ptr<PhilThread> philThread, Direction philDirection)
 {
     if(philDirection == Direction::Right)
-        rightPhilThread = philThread;
+        rightPhilThreadWeak = philThread;
     else
-        leftPhilThread = philThread;
+        leftPhilThreadWeak = philThread;
 
-    connect(philThread, &PhilThread::SignalStateChanged, this, &ForkView::SlotOnThreadStateChanged);
+    connect(philThread.get(), &PhilThread::SignalStateChanged, this, &ForkView::SlotOnThreadStateChanged);
 }
 
 void ForkView::SlotOnThreadStateChanged()
 {
-    if(leftPhilThread->IsForkAvailable(Direction::Right) && rightPhilThread->IsForkAvailable(Direction::Left))
+    auto leftPhilThread = leftPhilThreadWeak.lock();
+    auto rightPhilThread = rightPhilThreadWeak.lock();
+
+    if
+    (
+        (leftPhilThread == nullptr || leftPhilThread->IsForkAvailable(Direction::Right))
+        &&
+        (rightPhilThread == nullptr || rightPhilThread->IsForkAvailable(Direction::Left))
+    )
+    {
         SetVisible(true);
+    }
     else
+    {
         SetVisible(false);
+    }
 }
 
 void ForkView::SetVisible(bool visibility)

@@ -8,14 +8,19 @@ PhilView::PhilView(QWidget *parent):QWidget{parent}
 
 }
 
-void PhilView::AttachToPhilThread(PhilThread* philThread)
+void PhilView::AttachToPhilThread(std::shared_ptr<PhilThread> philThread)
 {
-    this->philThread = philThread;
-    connect(philThread, &PhilThread::SignalStateChanged, this, &PhilView::SlotOnThreadStateChanged);
+    this->philThreadWeak = philThread;
+    connect(philThread.get(), &PhilThread::SignalStateChanged, this, &PhilView::SlotOnThreadStateChanged);
 }
 
 void PhilView::SlotOnThreadStateChanged()
 {
+    auto philThread = philThreadWeak.lock();
+
+    if(philThread == nullptr)
+        return;
+
     PhilThread::State state = philThread->GetState();
 
     QIcon icon;

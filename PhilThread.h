@@ -6,6 +6,7 @@
 #include <QObject>
 #include "QString"
 #include "DirectionUtils.h"
+#include "QDebug"
 
 class PhilView;
 
@@ -42,6 +43,8 @@ public:
         QObject* parent = nullptr
     );
 
+    ~PhilThread(){qInfo()<<"thread" << index << "destroyed";}
+
     State GetState(){return state;}
     QString GetStateString(State state);
     static void SetupPhilsCount(size_t newPhilsCount){philsCount = newPhilsCount;}
@@ -59,6 +62,7 @@ private:
 
 signals:
     void SignalStateChanged();
+    // void SignalDestroyed();
 };
 
 #endif // PHILTHREAD_H

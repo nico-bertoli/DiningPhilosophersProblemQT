@@ -2,6 +2,7 @@
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/DirectionUtils.h
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/QDebug
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/QObject
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/QString
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/q20functional.h
@@ -162,6 +163,7 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
  mdp:C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThread.h
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/QDebug
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/QObject
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/QString
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/q20functional.h
@@ -322,9 +324,9 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
  mdp:C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.h
  mdp:C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.h
  mdp:C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThread.h
-C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/Singleton.h
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThread.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/QDebug
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/QObject
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/QString
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/q20functional.h
@@ -354,8 +356,10 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qcontainerfwd.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qcontainerinfo.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qcontainertools_impl.h
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qcontiguouscache.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qdarwinhelpers.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qdatastream.h
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qdebug.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qexceptionhandling.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qflags.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qfloat16.h
@@ -365,6 +369,7 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qgenericatomic.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qglobal.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qglobalstatic.h
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qhash.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qhashfunctions.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qiodevicebase.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qiterable.h
@@ -373,6 +378,7 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qlist.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qlogging.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qmalloc.h
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qmap.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qmath.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qmetacontainer.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qmetatype.h
@@ -389,6 +395,11 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qrefcount.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qscopedpointer.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qscopeguard.h
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qset.h
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qshareddata.h
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qshareddata_impl.h
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qsharedpointer.h
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qsharedpointer_impl.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qstring.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qstringalgorithms.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qstringbuilder.h
@@ -412,6 +423,7 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qtdeprecationdefinitions.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qtdeprecationmarkers.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qtenvironmentvariables.h
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qtextstream.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qtnoop.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qtpreprocessorsupport.h
@@ -423,12 +435,15 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qtypeinfo.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qtypes.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qutf8stringview.h
+ mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qvarlengtharray.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/qyieldcpu.h
  mdp:C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/DirectionUtils.h
  mdp:C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThread.h
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/TimeHelper.h
+C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/Singleton.h
+C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/RandomUtils.h
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilView.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/q20functional.h
@@ -587,7 +602,6 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qwidget.h
  mdp:C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/DirectionUtils.h
  mdp:C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilView.h
-C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/RandomUtils.h
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/dialog.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtCore/q20functional.h
@@ -743,8 +757,8 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qwidget.h
  mdp:C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/dialog.h
-C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.cpp
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/main.cpp
+C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.cpp
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.cpp
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThread.cpp
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilView.cpp

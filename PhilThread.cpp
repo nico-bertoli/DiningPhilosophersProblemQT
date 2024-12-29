@@ -36,8 +36,6 @@ PhilThread::PhilThread
 
 void PhilThread::MainThreadSetup()
 {
-    assert(index == 0);
-
     if(forksAvailability == nullptr)
         forksAvailability = new std::atomic<bool>[philsCount];
 
