@@ -75,8 +75,7 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
         SetForkAvailable(Direction::Right, true);
     }
 
-    SetState(State::Thinking);
-    qInfo()<<"thread "<<index<<" stopped";
+    SetState(State::Terminated);
 }
 
 void PhilThread::SetForkAvailable(Direction dir, bool availability)
@@ -125,6 +124,9 @@ QString PhilThread::GetStateString(State state)
         break;
     case State::HungryRightFork:
         stateString = "HungryRightFork";
+        break;
+    case State::Terminated:
+        stateString = "Terminated";
         break;
     }
 

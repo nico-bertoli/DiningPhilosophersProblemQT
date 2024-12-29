@@ -76,10 +76,9 @@ void PhilPage::StartSimulation(float minSleepDur, float maxSleepDur, float minEa
 
 void PhilPage::StopSimulation()
 {
-    for(auto thread : philThreads)
+    for(auto& thread : philThreads)
     {
         thread->Stop();
-        qInfo()<< thread.use_count();
         thread = nullptr;
     }
 }

@@ -18,7 +18,7 @@ class PhilThread : public QObject
 //-------------------------------------------- Fields
 public:
 enum class Algorithm{BusyWaiting};
-enum class State {Thinking, HungryNoForks, HungryLeftFork, HungryRightFork, Eating};
+enum class State {Thinking, HungryNoForks, HungryLeftFork, HungryRightFork, Eating, Terminated};
 // enum class ForkDir{Left,Right};
 
 private:
@@ -43,13 +43,12 @@ public:
         QObject* parent = nullptr
     );
 
-    ~PhilThread(){qInfo()<<"thread" << index << "destroyed";}
-
     State GetState(){return state;}
     QString GetStateString(State state);
     static void SetupPhilsCount(size_t newPhilsCount){philsCount = newPhilsCount;}
     bool IsForkAvailable(Direction dir);
     void Stop(){mustStop = true;}
+    size_t GetIndex(){return index;}
 
 private:
     void PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eatMinTime, float eatMaxTime);
@@ -62,7 +61,7 @@ private:
 
 signals:
     void SignalStateChanged();
-    // void SignalDestroyed();
+    void SignalDestroyed();
 };
 
 #endif // PHILTHREAD_H

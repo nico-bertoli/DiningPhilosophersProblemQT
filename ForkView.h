@@ -19,8 +19,8 @@ private:
     QPushButton* btnFork;
     QPushButton* btnPlaceHolder;
 
-    std::weak_ptr<PhilThread> leftPhilThreadWeak;
-    std::weak_ptr<PhilThread> rightPhilThreadWeak;
+    std::shared_ptr<PhilThread> leftPhilThread;
+    std::shared_ptr<PhilThread> rightPhilThread;
 
 //----------------------------------- Methods
 public:
@@ -32,6 +32,7 @@ protected:
 
 private:
     void Init();
+    void TryDetachFromPhilThreads();
 
 private slots:
     void SlotOnThreadStateChanged();
