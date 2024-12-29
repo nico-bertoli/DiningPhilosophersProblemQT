@@ -21,8 +21,8 @@ void PhilPage::showEvent(QShowEvent *event)
 
 void PhilPage::Init()
 {
-    static bool isSetup = false;
-    if(isSetup)
+    static bool isInit = false;
+    if(isInit)
         return;
 
     for(int i = 0; i < PHILS_COUNT; ++i){
@@ -54,7 +54,7 @@ void PhilPage::Init()
     QPushButton* btnBack = this->findChild<QPushButton*>("btnBack");
     connect(btnBack, &QPushButton::clicked, this, &PhilPage::SlotOnBackButtonClicked);
 
-    isSetup = true;
+    isInit = true;
 }
 
 void PhilPage::StartSimulation(float minSleepDur, float maxSleepDur, float minEatDur, float maxEatDur)
