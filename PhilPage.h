@@ -30,6 +30,7 @@ private:
 public:
     explicit PhilPage(QWidget *parent = nullptr);
     void StartSimulation(float minSleepDur, float maxSleepDur, float minEatDur, float maxEatDur);
+    void StopSimulation();
 
 protected:
     void showEvent(QShowEvent *event) override;

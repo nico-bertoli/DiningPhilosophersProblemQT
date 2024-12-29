@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1020</width>
-    <height>954</height>
+    <height>986</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -191,13 +191,13 @@
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>130</height>
+             <height>200</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>99999</width>
-             <height>100</height>
+             <height>200</height>
             </size>
            </property>
            <property name="frameShape">
@@ -207,11 +207,107 @@
             <enum>QFrame::Shadow::Raised</enum>
            </property>
            <layout class="QGridLayout" name="gridLayout_3">
-            <property name="verticalSpacing">
-             <number>6</number>
+            <property name="horizontalSpacing">
+             <number>15</number>
             </property>
+            <property name="verticalSpacing">
+             <number>5</number>
+            </property>
+            <item row="1" column="0">
+             <widget class="QSpinBox" name="spinBoxSleepMinDur">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="suffix">
+               <string>s</string>
+              </property>
+              <property name="prefix">
+               <string>Sleep min duration: </string>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>2</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QSpinBox" name="spinBoxSleepMaxDur">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="suffix">
+               <string>s</string>
+              </property>
+              <property name="prefix">
+               <string>Sleep max duration: </string>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>4</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="spinBoxEatMaxDur">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="suffix">
+               <string>s</string>
+              </property>
+              <property name="prefix">
+               <string>Eat max duration: </string>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>4</number>
+              </property>
+             </widget>
+            </item>
             <item row="1" column="1">
              <widget class="QSpinBox" name="spinBoxEatMinDur">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
               <property name="font">
                <font>
                 <family>Ubuntu</family>
@@ -245,8 +341,14 @@
               </property>
              </widget>
             </item>
-            <item row="2" column="0">
-             <widget class="QSpinBox" name="spinBoxSleepMaxDur">
+            <item row="5" column="1">
+             <widget class="QPushButton" name="btnStop">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
               <property name="font">
                <font>
                 <family>Ubuntu</family>
@@ -254,22 +356,22 @@
                 <bold>false</bold>
                </font>
               </property>
-              <property name="suffix">
-               <string>s</string>
+              <property name="text">
+               <string>Stop</string>
               </property>
-              <property name="prefix">
-               <string>Sleep max duration: </string>
-              </property>
-              <property name="maximum">
-               <number>99</number>
-              </property>
-              <property name="value">
-               <number>4</number>
+              <property name="autoDefault">
+               <bool>false</bool>
               </property>
              </widget>
             </item>
-            <item row="4" column="0" colspan="2">
+            <item row="5" column="0">
              <widget class="QPushButton" name="btnStart">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
               <property name="font">
                <font>
                 <family>Ubuntu</family>
@@ -285,54 +387,14 @@
               </property>
              </widget>
             </item>
-            <item row="1" column="0">
-             <widget class="QSpinBox" name="spinBoxSleepMinDur">
-              <property name="font">
-               <font>
-                <family>Ubuntu</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="suffix">
-               <string>s</string>
-              </property>
-              <property name="prefix">
-               <string>Sleep min duration: </string>
-              </property>
-              <property name="maximum">
-               <number>99</number>
-              </property>
-              <property name="value">
-               <number>2</number>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QSpinBox" name="spinBoxEatMaxDur">
-              <property name="font">
-               <font>
-                <family>Ubuntu</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="suffix">
-               <string>s</string>
-              </property>
-              <property name="prefix">
-               <string>Eat max duration: </string>
-              </property>
-              <property name="maximum">
-               <number>99</number>
-              </property>
-              <property name="value">
-               <number>4</number>
-              </property>
-             </widget>
-            </item>
             <item row="3" column="0">
              <widget class="QPushButton" name="btnForceDeadlock">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
               <property name="font">
                <font>
                 <family>Ubuntu</family>
@@ -345,6 +407,22 @@
               </property>
               <property name="autoDefault">
                <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QWidget" name="space" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>0</height>
+               </size>
               </property>
              </widget>
             </item>

@@ -21,11 +21,12 @@ enum class State {Thinking, HungryNoForks, HungryLeftFork, HungryRightFork, Eati
 // enum class ForkDir{Left,Right};
 
 private:
+    static std::atomic<bool>* forksAvailability;
+    static size_t philsCount;
+
+    bool mustStop = false;
     State state = State::Thinking;
     size_t index;
-
-    static size_t philsCount;
-    static std::atomic<bool>* forksAvailability;
     std::future<void> threadFuture;
     std::mutex forksAvailabilityMutex;
 
@@ -45,6 +46,7 @@ public:
     QString GetStateString(State state);
     static void SetupPhilsCount(size_t newPhilsCount){philsCount = newPhilsCount;}
     bool IsForkAvailable(Direction dir);
+    void Stop(){mustStop = true;}
 
 private:
     void PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eatMinTime, float eatMaxTime);

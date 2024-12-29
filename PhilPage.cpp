@@ -64,8 +64,6 @@ void PhilPage::Init()
 
 void PhilPage::StartSimulation(float minSleepDur, float maxSleepDur, float minEatDur, float maxEatDur)
 {
-    qInfo("start pressed");
-
     for(int i = 0; i < PHILS_COUNT; ++i)
     {
         philThreads[i] = new PhilThread(i, minSleepDur, maxSleepDur, minEatDur, maxEatDur);
@@ -75,6 +73,12 @@ void PhilPage::StartSimulation(float minSleepDur, float maxSleepDur, float minEa
         int rightForkIndex = i==0 ? PHILS_COUNT-1 : i-1;
         forks[rightForkIndex]->AttachToThreadPhil(philThreads[i],Direction::Right);
     }
+}
+
+void PhilPage::StopSimulation()
+{
+    for(PhilThread* thread : philThreads)
+        thread->Stop();
 }
 
 void PhilPage::SlotOnBackButtonClicked()

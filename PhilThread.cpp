@@ -5,8 +5,6 @@
 #include "QtLogging"
 #include "QDebug"
 
-
-// bool* PhilThread::forksAvailability = nullptr;
 std::atomic<bool>* PhilThread::forksAvailability = nullptr;
 size_t PhilThread::philsCount = 0;
 
@@ -49,13 +47,14 @@ void PhilThread::MainThreadSetup()
 
 void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eatMinTime, float eatMaxTime)
 {
-    while(true)
+    while(mustStop == false)
     {
+        //--------------------think
         SetState(State::Thinking);
-
         double sleepTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
         std::this_thread::sleep_for(std::chrono::duration<double>(sleepTime));
 
+        //--------------------catch left fork
         SetState(State::HungryNoForks);
         while(IsForkAvailable(Direction::Left) == false)
             std::this_thread::sleep_for(std::chrono::duration<double>(0.5));
@@ -64,19 +63,22 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
         //grant deadlock if philosophers wait for the same time
         std::this_thread::sleep_for(std::chrono::duration<double>(0.1));
 
+        //--------------------catch right fork
         SetState(State::HungryLeftFork);
         while(IsForkAvailable(Direction::Right) == false)
             std::this_thread::sleep_for(std::chrono::duration<double>(0.5));
         SetForkAvailable(Direction::Right, false);
 
+        //--------------------eat
         SetState(State::Eating);
-
-        double eatTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
+        double eatTime = mustStop ? 0 : RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
         std::this_thread::sleep_for(std::chrono::duration<double>(eatTime));
-
         SetForkAvailable(Direction::Left, true);
         SetForkAvailable(Direction::Right, true);
     }
+
+    SetState(State::Thinking);
+    qInfo()<<"thread "<<index<<" stopped";
 }
 
 void PhilThread::SetForkAvailable(Direction dir, bool availability)
