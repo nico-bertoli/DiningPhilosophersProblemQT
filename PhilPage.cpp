@@ -85,6 +85,7 @@ void PhilPage::StopSimulation()
 
 void PhilPage::SlotOnBackButtonClicked()
 {
+    StopSimulation();
     dynamic_cast<Dialog*>(this->parent()->parent())->ShowMainMenu();
 }
 

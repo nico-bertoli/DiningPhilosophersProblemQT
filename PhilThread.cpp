@@ -67,7 +67,7 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
         while(IsForkAvailable(Direction::Right) == false)
         {
             //resolve deadlock pressing stop button
-            if(mustStop) goto exit_loop;
+            if(mustStop) goto terminate;
 
             std::this_thread::sleep_for(std::chrono::duration<double>(0.1));
         }
@@ -81,7 +81,7 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
         SetForkAvailable(Direction::Left, true);
         SetForkAvailable(Direction::Right, true);
     }
-    exit_loop:
+    terminate:
     SetState(State::Terminated);
 }
 
