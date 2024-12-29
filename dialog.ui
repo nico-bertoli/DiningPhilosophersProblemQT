@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1020</width>
-    <height>936</height>
+    <height>954</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -29,23 +29,20 @@
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="pageMainMenu">
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_2">
-         <property name="spacing">
-          <number>50</number>
-         </property>
          <property name="leftMargin">
-          <number>10</number>
+          <number>250</number>
          </property>
          <property name="topMargin">
           <number>10</number>
          </property>
          <property name="rightMargin">
-          <number>10</number>
+          <number>250</number>
          </property>
          <property name="bottomMargin">
           <number>10</number>
@@ -64,8 +61,25 @@
              <height>100</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu</family>
+             <pointsize>20</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="text">
             <string>Philosophers</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Res.qrc">
+             <normaloff>:/philosophers/res/philosophers/Icon.png</normaloff>:/philosophers/res/philosophers/Icon.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
            </property>
            <property name="autoDefault">
             <bool>false</bool>
@@ -85,6 +99,13 @@
              <width>16777215</width>
              <height>100</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu</family>
+             <pointsize>20</pointsize>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="text">
             <string>Future app (coming soon)</string>
