@@ -29,7 +29,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="pageMainMenu">
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -191,7 +191,7 @@
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>0</height>
+             <height>130</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -207,6 +207,84 @@
             <enum>QFrame::Shadow::Raised</enum>
            </property>
            <layout class="QGridLayout" name="gridLayout_3">
+            <property name="verticalSpacing">
+             <number>6</number>
+            </property>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="spinBoxEatMinDur">
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="frame">
+               <bool>true</bool>
+              </property>
+              <property name="specialValueText">
+               <string/>
+              </property>
+              <property name="keyboardTracking">
+               <bool>true</bool>
+              </property>
+              <property name="showGroupSeparator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="suffix">
+               <string>s</string>
+              </property>
+              <property name="prefix">
+               <string>Eat min duration: </string>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>2</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QSpinBox" name="spinBoxSleepMaxDur">
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="suffix">
+               <string>s</string>
+              </property>
+              <property name="prefix">
+               <string>Sleep max duration: </string>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>4</number>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0" colspan="2">
+             <widget class="QPushButton" name="btnStart">
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Start</string>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
             <item row="1" column="0">
              <widget class="QSpinBox" name="spinBoxSleepMinDur">
               <property name="font">
@@ -253,31 +331,8 @@
               </property>
              </widget>
             </item>
-            <item row="2" column="0">
-             <widget class="QSpinBox" name="spinBoxSleepMaxDur">
-              <property name="font">
-               <font>
-                <family>Ubuntu</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="suffix">
-               <string>s</string>
-              </property>
-              <property name="prefix">
-               <string>Sleep max duration: </string>
-              </property>
-              <property name="maximum">
-               <number>99</number>
-              </property>
-              <property name="value">
-               <number>4</number>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0" colspan="2">
-             <widget class="QPushButton" name="btnStart">
+            <item row="3" column="0">
+             <widget class="QPushButton" name="btnForceDeadlock">
               <property name="font">
                <font>
                 <family>Ubuntu</family>
@@ -286,45 +341,10 @@
                </font>
               </property>
               <property name="text">
-               <string>Start</string>
+               <string>Force deadlock</string>
               </property>
               <property name="autoDefault">
                <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QSpinBox" name="spinBoxEatMinDur">
-              <property name="font">
-               <font>
-                <family>Ubuntu</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frame">
-               <bool>true</bool>
-              </property>
-              <property name="specialValueText">
-               <string/>
-              </property>
-              <property name="keyboardTracking">
-               <bool>true</bool>
-              </property>
-              <property name="showGroupSeparator" stdset="0">
-               <bool>false</bool>
-              </property>
-              <property name="suffix">
-               <string>s</string>
-              </property>
-              <property name="prefix">
-               <string>Eat min duration: </string>
-              </property>
-              <property name="maximum">
-               <number>99</number>
-              </property>
-              <property name="value">
-               <number>2</number>
               </property>
              </widget>
             </item>

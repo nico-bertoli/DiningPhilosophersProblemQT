@@ -17,12 +17,14 @@ void PhilsControlPanel::Init()
     spinBoxSleepMaxDur = this->findChild<QSpinBox*>("spinBoxSleepMaxDur");
     spinBoxEatMinDur = this->findChild<QSpinBox*>("spinBoxEatMinDur");
     spinBoxEatMaxDur = this->findChild<QSpinBox*>("spinBoxEatMaxDur");
+
     btnStartSimulation = this->findChild<QPushButton*>("btnStart");
+    btnForceDeadlock = this->findChild<QPushButton*>("btnForceDeadlock");
+
     philPage = dynamic_cast<PhilPage*>(this->parent());
 
-    assert(philPage != nullptr);
-
     connect(btnStartSimulation, &QPushButton::pressed, this, &PhilsControlPanel::SlotOnStartButtonPressed);
+    connect(btnForceDeadlock, &QPushButton::pressed, this, &PhilsControlPanel::SlotOnForceDeadlockButtonPressed);
 
     connect(spinBoxSleepMinDur, &QSpinBox::valueChanged, this, &PhilsControlPanel::SlotOnSleepMinDurChanged);
     connect(spinBoxSleepMaxDur, &QSpinBox::valueChanged, this, &PhilsControlPanel::SlotOnSleepMaxDurChanged);
@@ -45,6 +47,12 @@ void PhilsControlPanel::ForceSpinBoxesValid(QSpinBox* spinBoxValChanged, QSpinBo
         if(newVal < spinBoxForceValid->value())
             spinBoxForceValid->setValue(newVal);
     }
+}
+
+void PhilsControlPanel::SlotOnForceDeadlockButtonPressed()
+{
+    spinBoxSleepMaxDur->setValue(1);
+    spinBoxSleepMinDur->setValue(1);
 }
 
 void PhilsControlPanel::SlotOnStartButtonPressed()

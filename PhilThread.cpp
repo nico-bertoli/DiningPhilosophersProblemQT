@@ -61,6 +61,9 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
             std::this_thread::sleep_for(std::chrono::duration<double>(0.5));
         SetForkAvailable(Direction::Left, false);
 
+        //grant deadlock if philosophers wait for the same time
+        std::this_thread::sleep_for(std::chrono::duration<double>(0.1));
+
         SetState(State::HungryLeftFork);
         while(IsForkAvailable(Direction::Right) == false)
             std::this_thread::sleep_for(std::chrono::duration<double>(0.5));

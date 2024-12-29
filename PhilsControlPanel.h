@@ -19,6 +19,7 @@ private:
     QSpinBox* spinBoxEatMinDur;
     QSpinBox* spinBoxEatMaxDur;
     QPushButton* btnStartSimulation;
+    QPushButton* btnForceDeadlock;
     PhilPage* philPage;
 
 //------------------------------- Methods
@@ -34,6 +35,7 @@ private:
 
 private slots:
     void SlotOnStartButtonPressed();
+    void SlotOnForceDeadlockButtonPressed();
     void SlotOnSleepMinDurChanged();
     void SlotOnSleepMaxDurChanged();
     void SlotOnEatMinDurChanged();
