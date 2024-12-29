@@ -55,7 +55,7 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
         //--------------------catch left fork
         SetState(State::HungryNoForks);
         while(IsForkAvailable(Direction::Left) == false)
-            std::this_thread::sleep_for(std::chrono::duration<double>(0.5));
+            std::this_thread::sleep_for(std::chrono::duration<double>(0.1));
         SetForkAvailable(Direction::Left, false);
 
         //grant deadlock if philosophers wait for the same time
@@ -64,7 +64,7 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
         //--------------------catch right fork
         SetState(State::HungryLeftFork);
         while(IsForkAvailable(Direction::Right) == false)
-            std::this_thread::sleep_for(std::chrono::duration<double>(0.5));
+            std::this_thread::sleep_for(std::chrono::duration<double>(0.1));
         SetForkAvailable(Direction::Right, false);
 
         //--------------------eat
@@ -80,8 +80,6 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
 
 void PhilThread::SetForkAvailable(Direction dir, bool availability)
 {
-    std::lock_guard<std::mutex> lock(forksAvailabilityMutex);
-
     if(dir == Direction::Left)
         forksAvailability[GetLeftForkIndex()] = availability;
     else
@@ -90,7 +88,6 @@ void PhilThread::SetForkAvailable(Direction dir, bool availability)
 
 bool PhilThread::IsForkAvailable(Direction dir)
 {
-    std::lock_guard<std::mutex> lock(forksAvailabilityMutex);
     return dir==Direction::Left ? forksAvailability[GetLeftForkIndex()] : forksAvailability[GetRightForkIndex()];
 }
 

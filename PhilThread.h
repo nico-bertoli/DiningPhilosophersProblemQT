@@ -19,7 +19,6 @@ class PhilThread : public QObject
 public:
 enum class Algorithm{BusyWaiting};
 enum class State {Thinking, HungryNoForks, HungryLeftFork, HungryRightFork, Eating, Terminated};
-// enum class ForkDir{Left,Right};
 
 private:
     static std::atomic<bool>* forksAvailability;
@@ -29,7 +28,6 @@ private:
     State state = State::Thinking;
     size_t index;
     std::future<void> threadFuture;
-    std::mutex forksAvailabilityMutex;
 
 //-------------------------------------------- Methods
 public:
