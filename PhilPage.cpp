@@ -17,11 +17,6 @@ PhilPage::PhilPage(QWidget *parent): QWidget(parent)
 void PhilPage::showEvent(QShowEvent *event)
 {
     Init();
-
-    // if(philThreads != nullptr)
-    //     for(auto philThread : philThreads)
-    //         if(philThread != nullptr)
-    //             delete(philThread);
 }
 
 void PhilPage::Init()

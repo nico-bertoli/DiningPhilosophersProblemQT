@@ -142,28 +142,3 @@ QString PhilThread::GetStateString(State state)
 
     return stateString;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
