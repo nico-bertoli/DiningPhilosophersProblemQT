@@ -26,8 +26,8 @@ private:
 
     static size_t philsCount;
     static std::atomic<bool>* forksAvailability;
-
-    std::future<void> future;
+    std::future<void> threadFuture;
+    std::mutex forksAvailabilityMutex;
 
 //-------------------------------------------- Methods
 public:

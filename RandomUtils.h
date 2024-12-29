@@ -2,13 +2,16 @@
 #define RANDOM_UTILS_H
 
 #include <cmath>
+#include <random>
 
 namespace RandomUtils
 {
     inline double GetRandomDouble(double min, double max)
     {
-        double r = rand() / static_cast<double>(RAND_MAX);
-        return ((max - min) * r + min);
+        static std::random_device rd;
+        static std::mt19937 gen(rd());
+        std::uniform_real_distribution<> dis(min, max);
+        return dis(gen);
     }
 
     inline int GetRandomInt(int minInclusive, int maxInclusive)

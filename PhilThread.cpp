@@ -1,8 +1,10 @@
+#include <chrono>
 #include "PhilThread.h"
 #include "RandomUtils.h"
 #include "TimeHelper.h"
 #include "QtLogging"
 #include "QDebug"
+
 
 // bool* PhilThread::forksAvailability = nullptr;
 std::atomic<bool>* PhilThread::forksAvailability = nullptr;
@@ -22,7 +24,7 @@ PhilThread::PhilThread
     if(index == 0)
         MainThreadSetup();
 
-    future = std::async
+    threadFuture = std::async
     (
         std::launch::async,
         &PhilThread::PhilBehaviour,
@@ -50,25 +52,24 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
     while(true)
     {
         SetState(State::Thinking);
-        double stopThinkingTime = TimeHelper::Instance().GetTime() + RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
 
-        while(TimeHelper::Instance().GetTime() < stopThinkingTime)
-            {/*think*/}
+        double sleepTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
+        std::this_thread::sleep_for(std::chrono::duration<double>(sleepTime));
 
         SetState(State::HungryNoForks);
         while(IsForkAvailable(Direction::Left) == false)
-            {/*wait fork*/}
+            std::this_thread::sleep_for(std::chrono::duration<double>(0.5));
         SetForkAvailable(Direction::Left, false);
 
         SetState(State::HungryLeftFork);
         while(IsForkAvailable(Direction::Right) == false)
-            {/*wait fork*/}
+            std::this_thread::sleep_for(std::chrono::duration<double>(0.5));
         SetForkAvailable(Direction::Right, false);
 
         SetState(State::Eating);
-        double stopEatingTime = TimeHelper::Instance().GetTime() + RandomUtils::GetRandomDouble(eatMinTime,eatMaxTime);
-        while(TimeHelper::Instance().GetTime() < stopEatingTime)
-            {/*eat*/}
+
+        double eatTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
+        std::this_thread::sleep_for(std::chrono::duration<double>(eatTime));
 
         SetForkAvailable(Direction::Left, true);
         SetForkAvailable(Direction::Right, true);
@@ -77,6 +78,8 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
 
 void PhilThread::SetForkAvailable(Direction dir, bool availability)
 {
+    std::lock_guard<std::mutex> lock(forksAvailabilityMutex);
+
     if(dir == Direction::Left)
         forksAvailability[GetLeftForkIndex()] = availability;
     else
@@ -85,6 +88,7 @@ void PhilThread::SetForkAvailable(Direction dir, bool availability)
 
 bool PhilThread::IsForkAvailable(Direction dir)
 {
+    std::lock_guard<std::mutex> lock(forksAvailabilityMutex);
     return dir==Direction::Left ? forksAvailability[GetLeftForkIndex()] : forksAvailability[GetRightForkIndex()];
 }
 

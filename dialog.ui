@@ -29,7 +29,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="pageMainMenu">
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -69,7 +69,7 @@
             </font>
            </property>
            <property name="text">
-            <string>Philosophers</string>
+            <string>Dining Philosophers</string>
            </property>
            <property name="icon">
             <iconset resource="Res.qrc">
