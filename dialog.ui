@@ -132,6 +132,13 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu</family>
+              <pointsize>12</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
              <string>Back</string>
             </property>
@@ -202,6 +209,13 @@
            <layout class="QGridLayout" name="gridLayout_3">
             <item row="1" column="0">
              <widget class="QSpinBox" name="spinBoxSleepMinDur">
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="suffix">
                <string>s</string>
               </property>
@@ -218,6 +232,13 @@
             </item>
             <item row="2" column="1">
              <widget class="QSpinBox" name="spinBoxEatMaxDur">
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="suffix">
                <string>s</string>
               </property>
@@ -234,6 +255,13 @@
             </item>
             <item row="2" column="0">
              <widget class="QSpinBox" name="spinBoxSleepMaxDur">
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="suffix">
                <string>s</string>
               </property>
@@ -250,6 +278,13 @@
             </item>
             <item row="3" column="0" colspan="2">
              <widget class="QPushButton" name="btnStart">
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>Start</string>
               </property>
@@ -260,6 +295,13 @@
             </item>
             <item row="1" column="1">
              <widget class="QSpinBox" name="spinBoxEatMinDur">
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="frame">
                <bool>true</bool>
               </property>
