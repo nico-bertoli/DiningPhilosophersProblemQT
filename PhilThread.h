@@ -4,6 +4,7 @@
 #include <future>
 #include <atomic>
 #include <QObject>
+#include <semaphore>
 #include "QString"
 #include "DirectionUtils.h"
 #include "QDebug"
@@ -21,7 +22,7 @@ enum class Algorithm{BusyWaiting};
 enum class State {Thinking, HungryNoForks, HungryLeftFork, HungryRightFork, Eating, Terminated};
 
 private:
-    static std::atomic<bool>* forksAvailability;
+    static std::array<std::counting_semaphore<1>,4> forksSemaphores;
     static size_t philsCount;
 
     bool mustStop = false;
@@ -46,16 +47,18 @@ public:
     State GetState(){return state;}
     QString GetStateString(State state);
     static void SetupPhilsCount(size_t newPhilsCount){philsCount = newPhilsCount;}
-    bool IsForkAvailable(Direction dir);
     void Stop();
     size_t GetIndex(){return index;}
+    bool IsForkAvailable(Direction dir);
 
 private:
     void PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eatMinTime, float eatMaxTime);
 
     size_t GetLeftForkIndex(){return index == 0 ? philsCount - 1 : index -1;}
     size_t GetRightForkIndex(){return index;}
-    void SetForkAvailable(Direction dir, bool availability);
+    void CatchFork(Direction dir);
+    void PutDownFork(Direction dir);
+    void PutDownForks();
     void SetState(State newState);
     void MainThreadSetup();
 

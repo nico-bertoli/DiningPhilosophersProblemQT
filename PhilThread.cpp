@@ -5,7 +5,13 @@
 #include "QtLogging"
 #include "QDebug"
 
-std::atomic<bool>* PhilThread::forksAvailability = nullptr;
+std::array<std::counting_semaphore<1>, 4> PhilThread::forksSemaphores{
+    std::counting_semaphore<1>{1},  // Initialize with count 1 (each fork is available initially)
+    std::counting_semaphore<1>{1},
+    std::counting_semaphore<1>{1},
+    std::counting_semaphore<1>{1}
+};
+
 size_t PhilThread::philsCount = 0;
 
 PhilThread::PhilThread
@@ -36,11 +42,8 @@ PhilThread::PhilThread
 
 void PhilThread::MainThreadSetup()
 {
-    if(forksAvailability == nullptr)
-        forksAvailability = new std::atomic<bool>[philsCount];
-
-    for(int i = 0; i<philsCount; ++i)
-        forksAvailability[i] = true;
+    for(auto& semaphore : forksSemaphores)
+        semaphore.release();
 }
 
 void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eatMinTime, float eatMaxTime)
@@ -55,53 +58,66 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
 
         //--------------------catch left fork
         SetState(State::HungryNoForks);
-        while(IsForkAvailable(Direction::Left) == false)
-            std::this_thread::sleep_for(std::chrono::duration<double>(0.1));
-        SetForkAvailable(Direction::Left, false);
+        CatchFork(Direction::Left);
 
         //grant deadlock if philosophers wait for the same time
         std::this_thread::sleep_for(std::chrono::duration<double>(mustStop ? 0 : 0.1));
 
         //--------------------catch right fork
         SetState(State::HungryLeftFork);
-        while(IsForkAvailable(Direction::Right) == false)
-        {
-            //resolve deadlock pressing stop button
-            if(mustStop) goto terminate;
-
-            std::this_thread::sleep_for(std::chrono::duration<double>(0.1));
-        }
-
-        SetForkAvailable(Direction::Right, false);
+        CatchFork(Direction::Right);
 
         //--------------------eat
         SetState(State::Eating);
-        double eatTime = mustStop ? 0 : RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
+        // double eatTime = false ? 0 : RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
+        double eatTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
         forceThreadStopFuture.wait_for(std::chrono::duration<double>(eatTime));
-        SetForkAvailable(Direction::Left, true);
-        SetForkAvailable(Direction::Right, true);
+        PutDownForks();
     }
-    terminate:
     SetState(State::Terminated);
+}
+
+bool PhilThread::IsForkAvailable(Direction dir)
+{
+    switch(state)
+    {
+    case State::Thinking:
+    case State::HungryNoForks:
+    case State::Terminated:
+        return true;
+    case State::HungryLeftFork:
+        return dir != Direction::Left;
+    case State::HungryRightFork:
+    case State::Eating:
+        return false;
+        break;
+    }
 }
 
 void PhilThread::Stop()
 {
     mustStop = true;
     forceThreadStopPromise.set_value();
+    for(auto& sem : forksSemaphores)
+        sem.release();
 }
 
-void PhilThread::SetForkAvailable(Direction dir, bool availability)
+void PhilThread::CatchFork(Direction dir)
 {
-    if(dir == Direction::Left)
-        forksAvailability[GetLeftForkIndex()] = availability;
-    else
-         forksAvailability[GetRightForkIndex()] = availability;
+    auto& sem = dir == Direction::Right ? forksSemaphores[GetRightForkIndex()] : forksSemaphores[GetLeftForkIndex()];
+    sem.acquire();
 }
 
-bool PhilThread::IsForkAvailable(Direction dir)
+void PhilThread::PutDownFork(Direction dir)
 {
-    return dir==Direction::Left ? forksAvailability[GetLeftForkIndex()] : forksAvailability[GetRightForkIndex()];
+    auto& sem = dir == Direction::Right ? forksSemaphores[GetRightForkIndex()] : forksSemaphores[GetLeftForkIndex()];
+    sem.release();
+}
+
+void PhilThread::PutDownForks()
+{
+    PutDownFork(Direction::Left);
+    PutDownFork(Direction::Right);
 }
 
 void PhilThread::SetState(State newState)

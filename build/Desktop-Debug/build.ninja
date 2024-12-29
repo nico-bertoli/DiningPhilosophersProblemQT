@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_MultithreadingExperiments: phony || Mult
 
 build CMakeFiles\MultithreadingExperiments.dir\MultithreadingExperiments_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__MultithreadingExperiments_unscanned_Debug C$:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\build\Desktop-Debug\MultithreadingExperiments_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_MultithreadingExperiments
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\build\Desktop-Debug\MultithreadingExperiments_autogen\include -external:IC:\Qt\6.8.1\msvc2022_64\include\QtCore -external:IC:\Qt\6.8.1\msvc2022_64\include -external:IC:\Qt\6.8.1\msvc2022_64\mkspecs\win32-msvc -external:IC:\Qt\6.8.1\msvc2022_64\include\QtWidgets -external:IC:\Qt\6.8.1\msvc2022_64\include\QtGui -external:W0
   OBJECT_DIR = CMakeFiles\MultithreadingExperiments.dir
   OBJECT_FILE_DIR = CMakeFiles\MultithreadingExperiments.dir\MultithreadingExperiments_autogen
@@ -60,7 +60,7 @@ build CMakeFiles\MultithreadingExperiments.dir\MultithreadingExperiments_autogen
 
 build CMakeFiles\MultithreadingExperiments.dir\main.cpp.obj: CXX_COMPILER__MultithreadingExperiments_unscanned_Debug C$:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\main.cpp || cmake_object_order_depends_target_MultithreadingExperiments
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\build\Desktop-Debug\MultithreadingExperiments_autogen\include -external:IC:\Qt\6.8.1\msvc2022_64\include\QtCore -external:IC:\Qt\6.8.1\msvc2022_64\include -external:IC:\Qt\6.8.1\msvc2022_64\mkspecs\win32-msvc -external:IC:\Qt\6.8.1\msvc2022_64\include\QtWidgets -external:IC:\Qt\6.8.1\msvc2022_64\include\QtGui -external:W0
   OBJECT_DIR = CMakeFiles\MultithreadingExperiments.dir
   OBJECT_FILE_DIR = CMakeFiles\MultithreadingExperiments.dir
@@ -69,7 +69,7 @@ build CMakeFiles\MultithreadingExperiments.dir\main.cpp.obj: CXX_COMPILER__Multi
 
 build CMakeFiles\MultithreadingExperiments.dir\dialog.cpp.obj: CXX_COMPILER__MultithreadingExperiments_unscanned_Debug C$:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\dialog.cpp || cmake_object_order_depends_target_MultithreadingExperiments
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\build\Desktop-Debug\MultithreadingExperiments_autogen\include -external:IC:\Qt\6.8.1\msvc2022_64\include\QtCore -external:IC:\Qt\6.8.1\msvc2022_64\include -external:IC:\Qt\6.8.1\msvc2022_64\mkspecs\win32-msvc -external:IC:\Qt\6.8.1\msvc2022_64\include\QtWidgets -external:IC:\Qt\6.8.1\msvc2022_64\include\QtGui -external:W0
   OBJECT_DIR = CMakeFiles\MultithreadingExperiments.dir
   OBJECT_FILE_DIR = CMakeFiles\MultithreadingExperiments.dir
@@ -78,7 +78,7 @@ build CMakeFiles\MultithreadingExperiments.dir\dialog.cpp.obj: CXX_COMPILER__Mul
 
 build CMakeFiles\MultithreadingExperiments.dir\PhilPage.cpp.obj: CXX_COMPILER__MultithreadingExperiments_unscanned_Debug C$:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\PhilPage.cpp || cmake_object_order_depends_target_MultithreadingExperiments
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\build\Desktop-Debug\MultithreadingExperiments_autogen\include -external:IC:\Qt\6.8.1\msvc2022_64\include\QtCore -external:IC:\Qt\6.8.1\msvc2022_64\include -external:IC:\Qt\6.8.1\msvc2022_64\mkspecs\win32-msvc -external:IC:\Qt\6.8.1\msvc2022_64\include\QtWidgets -external:IC:\Qt\6.8.1\msvc2022_64\include\QtGui -external:W0
   OBJECT_DIR = CMakeFiles\MultithreadingExperiments.dir
   OBJECT_FILE_DIR = CMakeFiles\MultithreadingExperiments.dir
@@ -87,7 +87,7 @@ build CMakeFiles\MultithreadingExperiments.dir\PhilPage.cpp.obj: CXX_COMPILER__M
 
 build CMakeFiles\MultithreadingExperiments.dir\PhilView.cpp.obj: CXX_COMPILER__MultithreadingExperiments_unscanned_Debug C$:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\PhilView.cpp || cmake_object_order_depends_target_MultithreadingExperiments
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\build\Desktop-Debug\MultithreadingExperiments_autogen\include -external:IC:\Qt\6.8.1\msvc2022_64\include\QtCore -external:IC:\Qt\6.8.1\msvc2022_64\include -external:IC:\Qt\6.8.1\msvc2022_64\mkspecs\win32-msvc -external:IC:\Qt\6.8.1\msvc2022_64\include\QtWidgets -external:IC:\Qt\6.8.1\msvc2022_64\include\QtGui -external:W0
   OBJECT_DIR = CMakeFiles\MultithreadingExperiments.dir
   OBJECT_FILE_DIR = CMakeFiles\MultithreadingExperiments.dir
@@ -96,7 +96,7 @@ build CMakeFiles\MultithreadingExperiments.dir\PhilView.cpp.obj: CXX_COMPILER__M
 
 build CMakeFiles\MultithreadingExperiments.dir\PhilThread.cpp.obj: CXX_COMPILER__MultithreadingExperiments_unscanned_Debug C$:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\PhilThread.cpp || cmake_object_order_depends_target_MultithreadingExperiments
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\build\Desktop-Debug\MultithreadingExperiments_autogen\include -external:IC:\Qt\6.8.1\msvc2022_64\include\QtCore -external:IC:\Qt\6.8.1\msvc2022_64\include -external:IC:\Qt\6.8.1\msvc2022_64\mkspecs\win32-msvc -external:IC:\Qt\6.8.1\msvc2022_64\include\QtWidgets -external:IC:\Qt\6.8.1\msvc2022_64\include\QtGui -external:W0
   OBJECT_DIR = CMakeFiles\MultithreadingExperiments.dir
   OBJECT_FILE_DIR = CMakeFiles\MultithreadingExperiments.dir
@@ -105,7 +105,7 @@ build CMakeFiles\MultithreadingExperiments.dir\PhilThread.cpp.obj: CXX_COMPILER_
 
 build CMakeFiles\MultithreadingExperiments.dir\ForkView.cpp.obj: CXX_COMPILER__MultithreadingExperiments_unscanned_Debug C$:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\ForkView.cpp || cmake_object_order_depends_target_MultithreadingExperiments
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\build\Desktop-Debug\MultithreadingExperiments_autogen\include -external:IC:\Qt\6.8.1\msvc2022_64\include\QtCore -external:IC:\Qt\6.8.1\msvc2022_64\include -external:IC:\Qt\6.8.1\msvc2022_64\mkspecs\win32-msvc -external:IC:\Qt\6.8.1\msvc2022_64\include\QtWidgets -external:IC:\Qt\6.8.1\msvc2022_64\include\QtGui -external:W0
   OBJECT_DIR = CMakeFiles\MultithreadingExperiments.dir
   OBJECT_FILE_DIR = CMakeFiles\MultithreadingExperiments.dir
@@ -114,7 +114,7 @@ build CMakeFiles\MultithreadingExperiments.dir\ForkView.cpp.obj: CXX_COMPILER__M
 
 build CMakeFiles\MultithreadingExperiments.dir\PhilsControlPanel.cpp.obj: CXX_COMPILER__MultithreadingExperiments_unscanned_Debug C$:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\PhilsControlPanel.cpp || cmake_object_order_depends_target_MultithreadingExperiments
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\build\Desktop-Debug\MultithreadingExperiments_autogen\include -external:IC:\Qt\6.8.1\msvc2022_64\include\QtCore -external:IC:\Qt\6.8.1\msvc2022_64\include -external:IC:\Qt\6.8.1\msvc2022_64\mkspecs\win32-msvc -external:IC:\Qt\6.8.1\msvc2022_64\include\QtWidgets -external:IC:\Qt\6.8.1\msvc2022_64\include\QtGui -external:W0
   OBJECT_DIR = CMakeFiles\MultithreadingExperiments.dir
   OBJECT_FILE_DIR = CMakeFiles\MultithreadingExperiments.dir
@@ -123,7 +123,7 @@ build CMakeFiles\MultithreadingExperiments.dir\PhilsControlPanel.cpp.obj: CXX_CO
 
 build CMakeFiles\MultithreadingExperiments.dir\MultithreadingExperiments_autogen\EWIEGA46WW\qrc_Res.cpp.obj: CXX_COMPILER__MultithreadingExperiments_unscanned_Debug C$:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\build\Desktop-Debug\MultithreadingExperiments_autogen\EWIEGA46WW\qrc_Res.cpp || cmake_object_order_depends_target_MultithreadingExperiments
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\nico\Documents\DOC\99CosePesanti\Progetti\C++\QT\MultithreadingExperiments\build\Desktop-Debug\MultithreadingExperiments_autogen\include -external:IC:\Qt\6.8.1\msvc2022_64\include\QtCore -external:IC:\Qt\6.8.1\msvc2022_64\include -external:IC:\Qt\6.8.1\msvc2022_64\mkspecs\win32-msvc -external:IC:\Qt\6.8.1\msvc2022_64\include\QtWidgets -external:IC:\Qt\6.8.1\msvc2022_64\include\QtGui -external:W0
   OBJECT_DIR = CMakeFiles\MultithreadingExperiments.dir
   OBJECT_FILE_DIR = CMakeFiles\MultithreadingExperiments.dir\MultithreadingExperiments_autogen\EWIEGA46WW
