@@ -24,7 +24,7 @@ private:
     //todo remove raw pointers
     ForkView* forks [PHILS_COUNT];
     PhilView* philViews [PHILS_COUNT];
-    PhilThread* philThreads[PHILS_COUNT];
+    std::shared_ptr<PhilThread> philThreads[PHILS_COUNT];
 
 //---------------------------------------- Methods
 public:

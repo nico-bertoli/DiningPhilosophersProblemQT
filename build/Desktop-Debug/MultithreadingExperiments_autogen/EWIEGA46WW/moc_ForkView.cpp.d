@@ -1,4 +1,5 @@
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/build/Desktop-Debug/MultithreadingExperiments_autogen/EWIEGA46WW/moc_ForkView.cpp: C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtCore/QDebug \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/QObject \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/QString \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/q20functional.h \

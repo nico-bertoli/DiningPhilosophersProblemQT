@@ -6,6 +6,7 @@
 #include <QObject>
 #include "QString"
 #include "DirectionUtils.h"
+#include "QDebug"
 
 class PhilView;
 
@@ -17,8 +18,7 @@ class PhilThread : public QObject
 //-------------------------------------------- Fields
 public:
 enum class Algorithm{BusyWaiting};
-enum class State {Thinking, HungryNoForks, HungryLeftFork, HungryRightFork, Eating};
-// enum class ForkDir{Left,Right};
+enum class State {Thinking, HungryNoForks, HungryLeftFork, HungryRightFork, Eating, Terminated};
 
 private:
     static std::atomic<bool>* forksAvailability;
@@ -28,7 +28,6 @@ private:
     State state = State::Thinking;
     size_t index;
     std::future<void> threadFuture;
-    std::mutex forksAvailabilityMutex;
 
 //-------------------------------------------- Methods
 public:
@@ -47,6 +46,7 @@ public:
     static void SetupPhilsCount(size_t newPhilsCount){philsCount = newPhilsCount;}
     bool IsForkAvailable(Direction dir);
     void Stop(){mustStop = true;}
+    size_t GetIndex(){return index;}
 
 private:
     void PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eatMinTime, float eatMaxTime);
@@ -59,6 +59,7 @@ private:
 
 signals:
     void SignalStateChanged();
+    void SignalDestroyed();
 };
 
 #endif // PHILTHREAD_H

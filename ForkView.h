@@ -19,19 +19,20 @@ private:
     QPushButton* btnFork;
     QPushButton* btnPlaceHolder;
 
-    PhilThread* leftPhilThread;
-    PhilThread* rightPhilThread;
+    std::shared_ptr<PhilThread> leftPhilThread;
+    std::shared_ptr<PhilThread> rightPhilThread;
 
 //----------------------------------- Methods
 public:
     explicit ForkView(QWidget *parent = nullptr);
-    void AttachToThreadPhil(PhilThread* philThread, Direction philDirection);
+    void AttachToPhilThread(std::shared_ptr<PhilThread> philThread, Direction philDirection);
 
 protected:
     void showEvent(QShowEvent *event) override;
 
 private:
     void Init();
+    void TryDetachFromPhilThreads();
 
 private slots:
     void SlotOnThreadStateChanged();

@@ -3,44 +3,62 @@
 #include "PhilPage.h"
 #include <QtLogging>
 
+using State = PhilThread::State;
+
 PhilView::PhilView(QWidget *parent):QWidget{parent}
 {
 
 }
 
-void PhilView::AttachToPhilThread(PhilThread* philThread)
+void PhilView::AttachToPhilThread(std::shared_ptr<PhilThread> philThread)
 {
     this->philThread = philThread;
-    connect(philThread, &PhilThread::SignalStateChanged, this, &PhilView::SlotOnThreadStateChanged);
+    connect(philThread.get(), &PhilThread::SignalStateChanged, this, &PhilView::SlotOnThreadStateChanged);
+}
+
+void PhilView::DetachFromPhilThread()
+{
+    assert(philThread->GetState() == State::Terminated);
+    disconnect(philThread.get(), &PhilThread::SignalStateChanged, this, &PhilView::SlotOnThreadStateChanged);
+    philThread = nullptr;
 }
 
 void PhilView::SlotOnThreadStateChanged()
 {
-    PhilThread::State state = philThread->GetState();
+    if(philThread == nullptr)
+        return;
+    State state = philThread->GetState();
 
     QIcon icon;
     switch(state)
     {
-    case PhilThread::State::Thinking:
+    case State::Thinking:
+    case State::Terminated:
         ShowFork(Direction::Left,false);
         ShowFork(Direction::Right,false);
         icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Thinking.png"), QIcon::Disabled);
+        if(state == State::Terminated)
+             DetachFromPhilThread();
         break;
-    case PhilThread::State::HungryNoForks:
+
+    case State::HungryNoForks:
         ShowFork(Direction::Left,false);
         ShowFork(Direction::Right,false);
         icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Hungry.png"), QIcon::Disabled);
         break;
-    case PhilThread::State::HungryLeftFork:
+
+    case State::HungryLeftFork:
         ShowFork(Direction::Left,false);
         ShowFork(Direction::Right,true);
         icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Hungry.png"), QIcon::Disabled);
         break;
-    case PhilThread::State::HungryRightFork:
+
+    case State::HungryRightFork:
         ShowFork(Direction::Left,true);
         ShowFork(Direction::Right,false);
         icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Hungry.png"), QIcon::Disabled);
-    case PhilThread::State::Eating:
+
+    case State::Eating:
         ShowFork(Direction::Left,true);
         ShowFork(Direction::Right,true);
         icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Eating.png"), QIcon::Disabled);
