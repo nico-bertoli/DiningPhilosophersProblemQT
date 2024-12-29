@@ -29,6 +29,8 @@ private:
     size_t index;
     std::future<void> threadFuture;
 
+    std::promise<void> forceThreadStopPromise;
+
 //-------------------------------------------- Methods
 public:
     explicit PhilThread
@@ -45,7 +47,7 @@ public:
     QString GetStateString(State state);
     static void SetupPhilsCount(size_t newPhilsCount){philsCount = newPhilsCount;}
     bool IsForkAvailable(Direction dir);
-    void Stop(){mustStop = true;}
+    void Stop();
     size_t GetIndex(){return index;}
 
 private:

@@ -45,12 +45,13 @@ void PhilThread::MainThreadSetup()
 
 void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eatMinTime, float eatMaxTime)
 {
+    std::future<void> forceThreadStopFuture = forceThreadStopPromise.get_future();
     while(mustStop == false)
     {
         //--------------------think
         SetState(State::Thinking);
         double sleepTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
-        std::this_thread::sleep_for(std::chrono::duration<double>(sleepTime));
+        forceThreadStopFuture.wait_for(std::chrono::duration<double>(sleepTime));
 
         //--------------------catch left fork
         SetState(State::HungryNoForks);
@@ -59,7 +60,7 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
         SetForkAvailable(Direction::Left, false);
 
         //grant deadlock if philosophers wait for the same time
-        std::this_thread::sleep_for(std::chrono::duration<double>(0.1));
+        std::this_thread::sleep_for(std::chrono::duration<double>(mustStop ? 0 : 0.1));
 
         //--------------------catch right fork
         SetState(State::HungryLeftFork);
@@ -70,12 +71,18 @@ void PhilThread::PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eat
         //--------------------eat
         SetState(State::Eating);
         double eatTime = mustStop ? 0 : RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
-        std::this_thread::sleep_for(std::chrono::duration<double>(eatTime));
+        forceThreadStopFuture.wait_for(std::chrono::duration<double>(eatTime));
         SetForkAvailable(Direction::Left, true);
         SetForkAvailable(Direction::Right, true);
     }
 
     SetState(State::Terminated);
+}
+
+void PhilThread::Stop()
+{
+    mustStop = true;
+    forceThreadStopPromise.set_value();
 }
 
 void PhilThread::SetForkAvailable(Direction dir, bool availability)
