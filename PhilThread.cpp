@@ -12,34 +12,6 @@ std::array<std::counting_semaphore<1>, 4> PhilThread::forksSemaphores{
     std::counting_semaphore<1>{1}
 };
 
-size_t PhilThread::philsCount = 0;
-
-PhilThread::PhilThread
-(
-    size_t index,
-    float thinkMinTime,
-    float thinkMaxTime,
-    float eatMinTime,
-    float eatMaxTime,
-    QObject* parent
-)
-    : QObject(parent), index(index)
-{
-    if(index == 0)
-        MainThreadSetup();
-
-    threadFuture = std::async
-    (
-        std::launch::async,
-        &PhilThread::PhilBehaviour,
-        this,
-        thinkMinTime,
-        thinkMaxTime,
-        eatMinTime,
-        eatMaxTime
-    );
-}
-
 void PhilThread::MainThreadSetup()
 {
     for(auto& semaphore : forksSemaphores)
@@ -91,6 +63,8 @@ bool PhilThread::IsForkAvailable(Direction dir)
     case State::Eating:
         return false;
         break;
+    default:
+        throw std::invalid_argument("State not recognized: " + GetStateString(state).toStdString());
     }
 }
 
@@ -118,43 +92,4 @@ void PhilThread::PutDownForks()
 {
     PutDownFork(Direction::Left);
     PutDownFork(Direction::Right);
-}
-
-void PhilThread::SetState(State newState)
-{
-    if(state == newState)
-        return;
-
-    qInfo() << "[phil " << index << "]"<< GetStateString(state) <<" -> "<< GetStateString(newState) << "[" << TimeHelper::Instance().GetTime() << "]";
-    state = newState;
-    SignalStateChanged();
-}
-
-QString PhilThread::GetStateString(State state)
-{
-    QString stateString = "NOT FOUND";
-
-    switch(state)
-    {
-    case State::Thinking:
-        stateString = "Thinking";
-        break;
-    case State::Eating:
-        stateString = "Eating";
-        break;
-    case State::HungryNoForks:
-        stateString = "Hungry";
-        break;
-    case State::HungryLeftFork:
-        stateString = "HungryLeftFork";
-        break;
-    case State::HungryRightFork:
-        stateString = "HungryRightFork";
-        break;
-    case State::Terminated:
-        stateString = "Terminated";
-        break;
-    }
-
-    return stateString;
 }

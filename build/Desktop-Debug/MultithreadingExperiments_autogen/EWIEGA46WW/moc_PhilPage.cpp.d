@@ -156,6 +156,7 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qwidget.h \
+  C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/APhilThread.h \
   C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/DirectionUtils.h \
   C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.h \
   C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThread.h

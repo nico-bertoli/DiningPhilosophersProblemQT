@@ -35,8 +35,6 @@ void PhilPage::Init()
         assert(forks[i] != nullptr);
     }
 
-    PhilThread::SetupPhilsCount(PHILS_COUNT);
-
     //force fixed size for grid layout
     QWidget* philsGridPanel = this->findChild<QWidget*>("PhilsGridPanel");
     philsGridPanel->setFixedSize(800,800);
@@ -61,11 +59,14 @@ void PhilPage::StartSimulation(float minSleepDur, float maxSleepDur, float minEa
 {
     for(int i = 0; i < PHILS_COUNT; ++i)
     {
-        philThreads[i] = std::make_shared<PhilThread>(i, minSleepDur, maxSleepDur, minEatDur, maxEatDur);
+        philThreads[i] = std::make_shared<PhilThread>();
+
         philViews[i]->AttachToPhilThread(philThreads[i]);
         forks[i]->AttachToPhilThread(philThreads[i],Direction::Left);
         int rightForkIndex = i==0 ? PHILS_COUNT-1 : i-1;
         forks[rightForkIndex]->AttachToPhilThread(philThreads[i],Direction::Right);
+
+        philThreads[i]->Run(i, minSleepDur, maxSleepDur, minEatDur, maxEatDur);
     }
 }
 

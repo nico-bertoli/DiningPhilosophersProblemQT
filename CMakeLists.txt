@@ -35,6 +35,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ForkView.h ForkView.cpp
         DirectionUtils.h
         PhilsControlPanel.h PhilsControlPanel.cpp
+        APhilThread.h APhilThread.cpp
+        PhilThreadNoDeadLock.h PhilThreadNoDeadLock.cpp
 
 
     )
