@@ -6,7 +6,7 @@
 #include "DirectionUtils.h"
 
 using Direction = DirectionUtils::Direction;
-class PhilThread;
+class APhilThread;
 
 class PhilView : public QWidget
 {
@@ -21,12 +21,12 @@ class PhilView : public QWidget
     QWidget* forkRightPlaceHolder;
     QWidget* forkLeftPlaceHolder;
 
-    std::shared_ptr<PhilThread> philThread;
+    std::shared_ptr<APhilThread> philThread;
 
 //--------------------------------- Methods
 public:
     explicit PhilView(QWidget *parent = nullptr);
-    void AttachToPhilThread(std::shared_ptr<PhilThread> philThread);
+    void AttachToPhilThread(std::shared_ptr<APhilThread> philThread);
     void DetachFromPhilThread();
 
 protected:

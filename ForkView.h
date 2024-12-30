@@ -2,10 +2,11 @@
 #define FORKVIEW_H
 
 #include <QPushButton>
-#include "PhilThread.h"
 #include "DirectionUtils.h"
 
 using Direction = DirectionUtils::Direction;
+
+class APhilThread;
 
 class ForkView : public QWidget
 {
@@ -19,13 +20,13 @@ private:
     QPushButton* btnFork;
     QPushButton* btnPlaceHolder;
 
-    std::shared_ptr<PhilThread> leftPhilThread;
-    std::shared_ptr<PhilThread> rightPhilThread;
+    std::shared_ptr<APhilThread> leftPhilThread;
+    std::shared_ptr<APhilThread> rightPhilThread;
 
 //----------------------------------- Methods
 public:
     explicit ForkView(QWidget *parent = nullptr);
-    void AttachToPhilThread(std::shared_ptr<PhilThread> philThread, Direction philDirection);
+    void AttachToPhilThread(std::shared_ptr<APhilThread> philThread, Direction philDirection);
 
 protected:
     void showEvent(QShowEvent *event) override;

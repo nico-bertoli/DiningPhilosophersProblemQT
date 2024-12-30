@@ -7,7 +7,7 @@
 #include "ForkView.h"
 
 class PhilView;
-class PhilThread;
+class APhilThread;
 
 class PhilPage : public QWidget
 {
@@ -24,7 +24,7 @@ private:
     //todo remove raw pointers
     ForkView* forks [PHILS_COUNT];
     PhilView* philViews [PHILS_COUNT];
-    std::shared_ptr<PhilThread> philThreads[PHILS_COUNT];
+    std::shared_ptr<APhilThread> philThreads[PHILS_COUNT];
 
 //---------------------------------------- Methods
 public:

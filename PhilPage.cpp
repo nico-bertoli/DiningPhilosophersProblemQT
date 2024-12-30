@@ -1,7 +1,8 @@
 #include "PhilPage.h"
 #include "QPushButton"
 #include "QtLogging"
-#include "PhilThread.h"
+#include "PhilThreadDeadlock.h"
+#include "PhilThreadNoDeadLock.h"
 #include "PhilView.h"
 #include "QFrame"
 #include "QGridLayout"
@@ -59,7 +60,8 @@ void PhilPage::StartSimulation(float minSleepDur, float maxSleepDur, float minEa
 {
     for(int i = 0; i < PHILS_COUNT; ++i)
     {
-        philThreads[i] = std::make_shared<PhilThread>();
+        philThreads[i] = std::make_shared<PhilThreadDeadlock>();
+        // philThreads[i] = std::make_shared<PhilThreadNoDeadlock>();
 
         philViews[i]->AttachToPhilThread(philThreads[i]);
         forks[i]->AttachToPhilThread(philThreads[i],Direction::Left);
