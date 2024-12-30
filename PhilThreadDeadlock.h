@@ -15,10 +15,9 @@ private:
 //-------------------------------------------- Methods
 public:
     void Stop()override;
-    bool IsForkAvailable(Direction dir) override;
 
 protected:
-    void PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eatMinTime, float eatMaxTime)override;
+    void PhilBehaviour()override;
     void MainThreadSetup() override;
 
 private:

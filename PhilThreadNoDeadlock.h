@@ -1,27 +1,35 @@
 #ifndef PHILTHREADNODEADLOCK_H
 #define PHILTHREADNODEADLOCK_H
 
+#include <mutex>
 #include "APhilThread.h"
 
+using State = APhilThread::State;
+using Direction = DirectionUtils::Direction;
+
+//prevents deadlock removing hold and wait
 class PhilThreadNoDeadlock : public APhilThread
 {
 //-------------------------------------------- Fields
 private:
-    // static std::array<std::counting_semaphore<1>,4> forksSemaphores;
+    static std::mutex mutex;
+    static std::array<std::counting_semaphore<1>,4> philsSemaphores;
+    static std::array<PhilThreadNoDeadlock*,4> phils;
 
 //-------------------------------------------- Methods
 public:
     void Stop()override;
-    bool IsForkAvailable(Direction dir) override;
 
 protected:
-    void PhilBehaviour(float thinkMinTime, float thinkMaxTime, float eatMinTime, float eatMaxTime)override;
+    void PhilBehaviour()override;
     void MainThreadSetup() override;
 
 private:
-    // void CatchFork(Direction dir);
-    // void PutDownFork(Direction dir);
-    // void PutDownForks();
+    void Eat();
+    void TryEat();
+    State GetPhilState(Direction dir);
+
+    void OnThreadSetup()override;
 };
 
 #endif // PHILTHREADNODEADLOCK_H
