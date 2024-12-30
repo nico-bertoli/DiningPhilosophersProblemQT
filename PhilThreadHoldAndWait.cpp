@@ -1,24 +1,24 @@
 #include <chrono>
-#include "PhilThreadDeadlock.h"
+#include "PhilThreadHoldAndWait.h"
 #include "RandomUtils.h"
 #include "TimeHelper.h"
 #include "QtLogging"
 #include "QDebug"
 
-std::array<std::counting_semaphore<1>, 4> PhilThreadDeadlock::forksSemaphores{
+std::array<std::counting_semaphore<1>, 4> PhilThreadHoldAndWait::forksSemaphores{
     std::counting_semaphore<1>{1},
     std::counting_semaphore<1>{1},
     std::counting_semaphore<1>{1},
     std::counting_semaphore<1>{1}
 };
 
-void PhilThreadDeadlock::MainThreadSetup()
+void PhilThreadHoldAndWait::MainThreadSetup()
 {
     for(auto& semaphore : forksSemaphores)
         semaphore.release();
 }
 
-void PhilThreadDeadlock::PhilBehaviour()
+void PhilThreadHoldAndWait::PhilBehaviour()
 {
     while(mustStop == false)
     {
@@ -47,26 +47,26 @@ void PhilThreadDeadlock::PhilBehaviour()
     SetState(State::Terminated);
 }
 
-void PhilThreadDeadlock::Stop()
+void PhilThreadHoldAndWait::Stop()
 {
     APhilThread::Stop();
     for(auto& sem : forksSemaphores)
         sem.release();
 }
 
-void PhilThreadDeadlock::CatchFork(Direction dir)
+void PhilThreadHoldAndWait::CatchFork(Direction dir)
 {
     auto& sem = forksSemaphores[GetForkIndexAtDirection(dir)];
     sem.acquire();
 }
 
-void PhilThreadDeadlock::PutDownFork(Direction dir)
+void PhilThreadHoldAndWait::PutDownFork(Direction dir)
 {
     auto& sem = forksSemaphores[GetForkIndexAtDirection(dir)];
     sem.release();
 }
 
-void PhilThreadDeadlock::PutDownForks()
+void PhilThreadHoldAndWait::PutDownForks()
 {
     PutDownFork(Direction::Left);
     PutDownFork(Direction::Right);

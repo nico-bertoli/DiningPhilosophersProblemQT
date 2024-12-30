@@ -1,9 +1,9 @@
-#include "PhilThreadNoDeadlock.h"
+#include "PhilThreadDeadlockFree.h"
 #include "RandomUtils.h"
 
-std::mutex PhilThreadNoDeadlock::philsStatesMutex;
-std::array<State,4> PhilThreadNoDeadlock::philsStates;
-std::array<std::counting_semaphore<1>,4> PhilThreadNoDeadlock::philsSemaphores
+std::mutex PhilThreadDeadlockFree::philsStatesMutex;
+std::array<State,4> PhilThreadDeadlockFree::philsStates;
+std::array<std::counting_semaphore<1>,4> PhilThreadDeadlockFree::philsSemaphores
 {
     std::counting_semaphore<1>{1},
     std::counting_semaphore<1>{1},
@@ -11,18 +11,18 @@ std::array<std::counting_semaphore<1>,4> PhilThreadNoDeadlock::philsSemaphores
     std::counting_semaphore<1>{1}
 };
 
-void PhilThreadNoDeadlock::OnThreadSetup()
+void PhilThreadDeadlockFree::OnThreadSetup()
 {
     // todo delete
 }
 
-void PhilThreadNoDeadlock::MainThreadSetup()
+void PhilThreadDeadlockFree::MainThreadSetup()
 {
     for(auto& semaphore : philsSemaphores)
         semaphore.release();
 }
 
-void PhilThreadNoDeadlock::PhilBehaviour()
+void PhilThreadDeadlockFree::PhilBehaviour()
 {
     this->eatMinTime = eatMinTime;
     this->eatMaxTime = eatMaxTime;
@@ -40,7 +40,7 @@ void PhilThreadNoDeadlock::PhilBehaviour()
     SetState(State::Terminated);
 }
 
-void PhilThreadNoDeadlock::Eat()
+void PhilThreadDeadlockFree::Eat()
 {
     SetState(APhilThread::State::HungryNoForks);
     while(state == State::HungryNoForks)
@@ -52,7 +52,7 @@ void PhilThreadNoDeadlock::Eat()
     }
 }
 
-void PhilThreadNoDeadlock::TryEat()
+void PhilThreadDeadlockFree::TryEat()
 {
     philsStatesMutex.lock();
     if
@@ -79,7 +79,7 @@ void PhilThreadNoDeadlock::TryEat()
     return;
 }
 
-void PhilThreadNoDeadlock::SetState(State newState)
+void PhilThreadDeadlockFree::SetState(State newState)
 {
     philsStatesMutex.lock();
     APhilThread::SetState(newState);
@@ -87,7 +87,7 @@ void PhilThreadNoDeadlock::SetState(State newState)
     philsStatesMutex.unlock();
 }
 
-void PhilThreadNoDeadlock::Stop()
+void PhilThreadDeadlockFree::Stop()
 {
     APhilThread::Stop();
 }

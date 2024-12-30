@@ -342,15 +342,15 @@
 			null
 		],
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlock.h",
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlockFree.h",
 			"MU",
-			"EWIEGA46WW/moc_PhilThreadDeadlock.cpp",
+			"EWIEGA46WW/moc_PhilThreadDeadlockFree.cpp",
 			null
 		],
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadNoDeadlock.h",
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadHoldAndWait.h",
 			"MU",
-			"EWIEGA46WW/moc_PhilThreadNoDeadlock.cpp",
+			"EWIEGA46WW/moc_PhilThreadHoldAndWait.cpp",
 			null
 		],
 		[
@@ -461,12 +461,12 @@
 			null
 		],
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlock.cpp",
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlockFree.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadNoDeadlock.cpp",
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadHoldAndWait.cpp",
 			"MU",
 			null
 		],

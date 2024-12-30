@@ -1,5 +1,5 @@
-#ifndef PHILTHREADNODEADLOCK_H
-#define PHILTHREADNODEADLOCK_H
+#ifndef PHILTHREADDEADLOCKFREE_H
+#define PHILTHREADDEADLOCKFREE_H
 
 #include <mutex>
 #include "APhilThread.h"
@@ -8,7 +8,7 @@ using State = APhilThread::State;
 using Direction = DirectionUtils::Direction;
 
 //prevents deadlock removing hold and wait
-class PhilThreadNoDeadlock : public APhilThread
+class PhilThreadDeadlockFree : public APhilThread
 {
 //-------------------------------------------- Fields
 private:
@@ -32,4 +32,4 @@ private:
     void OnThreadSetup()override;
 };
 
-#endif // PHILTHREADNODEADLOCK_H
+#endif // PHILTHREADDEADLOCKFREE_H

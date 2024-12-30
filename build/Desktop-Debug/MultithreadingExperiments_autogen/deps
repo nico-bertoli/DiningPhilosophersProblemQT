@@ -400,10 +400,10 @@ MultithreadingExperiments_autogen/timestamp: \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.h \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.cpp \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.h \
-	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlock.cpp \
-	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlock.h \
-	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadNoDeadlock.cpp \
-	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadNoDeadlock.h \
+	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlockFree.cpp \
+	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlockFree.h \
+	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadHoldAndWait.cpp \
+	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadHoldAndWait.h \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilView.cpp \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilView.h \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilsControlPanel.cpp \

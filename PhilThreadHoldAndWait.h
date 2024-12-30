@@ -1,11 +1,11 @@
-#ifndef PHILTHREADDEADLOCK_H
-#define PHILTHREADDEADLOCK_H
+#ifndef PHILTHREADHOLDANDWAIT_H
+#define PHILTHREADHOLDANDWAIT_H
 
 #include "APhilThread.h"
 
 class PhilView;
 
-class PhilThreadDeadlock : public APhilThread
+class PhilThreadHoldAndWait : public APhilThread
 {
 
 //-------------------------------------------- Fields
@@ -26,4 +26,4 @@ private:
     void PutDownForks();
 };
 
-#endif // PHILTHREADDEADLOCK_H
+#endif // PHILTHREADHOLDANDWAIT_H
