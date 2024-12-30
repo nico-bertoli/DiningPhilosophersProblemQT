@@ -41,15 +41,6 @@ void PhilPage::Init()
     philsGridPanel->setFixedSize(800,800);
     philsGridPanel->layout()->setAlignment(philsGridPanel->layout()->widget(), Qt::AlignCenter);
 
-    //todo check this is needed
-    auto rootLayout = this->layout();
-    for (int i = 0; i < rootLayout->count(); ++i)
-    {
-        QLayoutItem *item = rootLayout->itemAt(i);
-        if (item->widget())
-            rootLayout->setAlignment(item->widget(), Qt::AlignCenter);
-    }
-
     QPushButton* btnBack = this->findChild<QPushButton*>("btnBack");
     connect(btnBack, &QPushButton::clicked, this, &PhilPage::SlotOnBackButtonClicked);
 

@@ -29,7 +29,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="pageMainMenu">
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -347,6 +347,9 @@
               <property name="prefix">
                <string>Eat min duration: </string>
               </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
               <property name="maximum">
                <number>99</number>
               </property>
@@ -376,6 +379,9 @@
               <property name="prefix">
                <string>Eat max duration: </string>
               </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
               <property name="maximum">
                <number>99</number>
               </property>
@@ -404,6 +410,9 @@
               </property>
               <property name="prefix">
                <string>Sleep max duration: </string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
               </property>
               <property name="maximum">
                <number>99</number>
@@ -456,6 +465,9 @@
               </property>
               <property name="prefix">
                <string>Sleep min duration: </string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
               </property>
               <property name="maximum">
                <number>99</number>
