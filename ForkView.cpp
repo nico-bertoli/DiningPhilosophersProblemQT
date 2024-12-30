@@ -1,19 +1,20 @@
 #include "ForkView.h"
 #include "QPushButton"
 #include "PhilPage.h"
+#include "APhilThread.h"
 
-using State = PhilThread::State;
+using State = APhilThread::State;
 
 ForkView::ForkView(QWidget *parent) : QWidget{parent}{ }
 
-void ForkView::AttachToPhilThread(std::shared_ptr<PhilThread> philThread, Direction philDirection)
+void ForkView::AttachToPhilThread(std::shared_ptr<APhilThread> philThread, Direction philDirection)
 {
     if(philDirection == Direction::Right)
         rightPhilThread = philThread;
     else
         leftPhilThread = philThread;
 
-    connect(philThread.get(), &PhilThread::SignalStateChanged, this, &ForkView::SlotOnThreadStateChanged);
+    connect(philThread.get(), &APhilThread::SignalStateChanged, this, &ForkView::SlotOnThreadStateChanged);
 }
 
 void ForkView::SlotOnThreadStateChanged()
@@ -39,12 +40,12 @@ void ForkView::TryDetachFromPhilThreads()
 {
     if(leftPhilThread != nullptr && leftPhilThread->GetState() == State::Terminated)
     {
-        disconnect(leftPhilThread.get(), &PhilThread::SignalStateChanged, this, &ForkView::SlotOnThreadStateChanged);
+        disconnect(leftPhilThread.get(), &APhilThread::SignalStateChanged, this, &ForkView::SlotOnThreadStateChanged);
         leftPhilThread = nullptr;
     }
     if(rightPhilThread != nullptr && rightPhilThread->GetState() == State::Terminated)
     {
-        disconnect(rightPhilThread.get(), &PhilThread::SignalStateChanged, this, &ForkView::SlotOnThreadStateChanged);
+        disconnect(rightPhilThread.get(), &APhilThread::SignalStateChanged, this, &ForkView::SlotOnThreadStateChanged);
         rightPhilThread = nullptr;
     }
 }

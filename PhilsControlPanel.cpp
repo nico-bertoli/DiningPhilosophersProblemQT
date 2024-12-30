@@ -53,8 +53,8 @@ void PhilsControlPanel::ForceSpinBoxesValid(QSpinBox* spinBoxValChanged, QSpinBo
 
 void PhilsControlPanel::SlotOnForceDeadlockButtonPressed()
 {
-    spinBoxSleepMaxDur->setValue(1);
-    spinBoxSleepMinDur->setValue(1);
+    spinBoxSleepMaxDur->setValue(0);
+    spinBoxSleepMinDur->setValue(0);
 }
 
 void PhilsControlPanel::SlotOnStartButtonPressed()

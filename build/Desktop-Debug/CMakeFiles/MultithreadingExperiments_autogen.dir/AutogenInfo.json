@@ -318,6 +318,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/APhilThread.h",
+			"MU",
+			"EWIEGA46WW/moc_APhilThread.cpp",
+			null
+		],
+		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/DirectionUtils.h",
 			"MU",
 			"EWIEGA46WW/moc_DirectionUtils.cpp",
@@ -336,9 +342,15 @@
 			null
 		],
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThread.h",
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlock.h",
 			"MU",
-			"EWIEGA46WW/moc_PhilThread.cpp",
+			"EWIEGA46WW/moc_PhilThreadDeadlock.cpp",
+			null
+		],
+		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadNoDeadlock.h",
+			"MU",
+			"EWIEGA46WW/moc_PhilThreadNoDeadlock.cpp",
 			null
 		],
 		[
@@ -434,6 +446,11 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/APhilThread.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.cpp",
 			"MU",
 			null
@@ -444,7 +461,12 @@
 			null
 		],
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThread.cpp",
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlock.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadNoDeadlock.cpp",
 			"MU",
 			null
 		],

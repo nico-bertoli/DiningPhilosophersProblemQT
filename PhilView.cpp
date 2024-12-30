@@ -1,25 +1,22 @@
 #include "PhilView.h"
-#include "PhilThread.h"
+#include "APhilThread.h"
 #include "PhilPage.h"
 #include <QtLogging>
 
-using State = PhilThread::State;
+using State = APhilThread::State;
 
-PhilView::PhilView(QWidget *parent):QWidget{parent}
-{
+PhilView::PhilView(QWidget *parent):QWidget{parent} { }
 
-}
-
-void PhilView::AttachToPhilThread(std::shared_ptr<PhilThread> philThread)
+void PhilView::AttachToPhilThread(std::shared_ptr<APhilThread> philThread)
 {
     this->philThread = philThread;
-    connect(philThread.get(), &PhilThread::SignalStateChanged, this, &PhilView::SlotOnThreadStateChanged);
+    connect(philThread.get(), &APhilThread::SignalStateChanged, this, &PhilView::SlotOnThreadStateChanged);
 }
 
 void PhilView::DetachFromPhilThread()
 {
     assert(philThread->GetState() == State::Terminated);
-    disconnect(philThread.get(), &PhilThread::SignalStateChanged, this, &PhilView::SlotOnThreadStateChanged);
+    disconnect(philThread.get(), &APhilThread::SignalStateChanged, this, &PhilView::SlotOnThreadStateChanged);
     philThread = nullptr;
 }
 
