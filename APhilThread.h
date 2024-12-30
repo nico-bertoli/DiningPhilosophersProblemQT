@@ -19,6 +19,7 @@ class APhilThread : public QObject
 public:
     enum class State {Thinking, HungryNoForks, HungryLeftFork, HungryRightFork, Eating, Terminated};
 protected:
+    const size_t PHILS_COUNT = 4;
     static double eatMinTime;
     static double eatMaxTime;
     static double thinkMinTime;
@@ -53,7 +54,8 @@ public:
 protected:
     virtual void MainThreadSetup() = 0;
     virtual void PhilBehaviour() = 0;
-    size_t GetNeighbourIndexAtDirection(Direction dir);
+    size_t GetForkIndexAtDirection(Direction dir);
+    size_t GetPhilIndexAtDirection(Direction dir);
     virtual void SetState(State newState);
 
 private:

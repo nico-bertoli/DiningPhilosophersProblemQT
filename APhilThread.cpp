@@ -79,12 +79,22 @@ void APhilThread::SetState(State newState)
     SignalStateChanged();
 }
 
-size_t APhilThread::GetNeighbourIndexAtDirection(Direction dir)
+size_t APhilThread::GetForkIndexAtDirection(Direction dir)
 {
     if(dir == Direction::Right)
         return index;
     else
-        return index == 0 ? 3 : index -1; //todo remove haard code phils count = 4
+        return index == 0 ? PHILS_COUNT -1  : index -1;
+}
+
+size_t APhilThread::GetPhilIndexAtDirection(Direction dir)
+{
+    qInfo()<<index;
+
+    if(dir == Direction::Right)
+        return (index + 1) % PHILS_COUNT;
+    else
+        return index == 0 ? PHILS_COUNT -1 : index - 1;
 }
 
 void APhilThread::Stop()

@@ -56,13 +56,13 @@ void PhilThreadDeadlock::Stop()
 
 void PhilThreadDeadlock::CatchFork(Direction dir)
 {
-    auto& sem = forksSemaphores[GetNeighbourIndexAtDirection(dir)];
+    auto& sem = forksSemaphores[GetForkIndexAtDirection(dir)];
     sem.acquire();
 }
 
 void PhilThreadDeadlock::PutDownFork(Direction dir)
 {
-    auto& sem = forksSemaphores[GetNeighbourIndexAtDirection(dir)];
+    auto& sem = forksSemaphores[GetForkIndexAtDirection(dir)];
     sem.release();
 }
 
