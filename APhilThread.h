@@ -28,7 +28,8 @@ protected:
     State state = State::Thinking;
     size_t index;
     std::future<void> threadFuture;
-    std::promise<void> forceThreadStopPromise;
+    std::promise<void> threadSleepPromise;//forces thread to wake up if value set
+    std::future<void> threadSleepFuture = threadSleepPromise.get_future();
 
 //-------------------------------------------- Methods
 public:
@@ -53,7 +54,7 @@ protected:
     virtual void MainThreadSetup() = 0;
     virtual void PhilBehaviour() = 0;
     size_t GetNeighbourIndexAtDirection(Direction dir);
-    void SetState(State newState);
+    virtual void SetState(State newState);
 
 private:
     virtual void OnThreadSetup(){};

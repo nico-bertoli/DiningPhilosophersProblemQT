@@ -1,8 +1,8 @@
 #include "PhilThreadNoDeadlock.h"
 #include "RandomUtils.h"
 
-std::mutex PhilThreadNoDeadlock::mutex;
-std::array<PhilThreadNoDeadlock*,4> PhilThreadNoDeadlock::phils;
+std::mutex PhilThreadNoDeadlock::philsStatesMutex;
+std::array<State,4> PhilThreadNoDeadlock::philsStates;
 std::array<std::counting_semaphore<1>,4> PhilThreadNoDeadlock::philsSemaphores
 {
     std::counting_semaphore<1>{1},
@@ -13,7 +13,7 @@ std::array<std::counting_semaphore<1>,4> PhilThreadNoDeadlock::philsSemaphores
 
 void PhilThreadNoDeadlock::OnThreadSetup()
 {
-    phils[index] = this;
+    // todo delete
 }
 
 void PhilThreadNoDeadlock::MainThreadSetup()
@@ -27,19 +27,15 @@ void PhilThreadNoDeadlock::PhilBehaviour()
     this->eatMinTime = eatMinTime;
     this->eatMaxTime = eatMaxTime;
 
-    //todo try make this a variable
-    std::future<void> forceThreadStopFuture = forceThreadStopPromise.get_future();
     SetState(State::Thinking);
 
     while(mustStop == false)
     {
         //--------------------think
         double sleepTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
-        forceThreadStopFuture.wait_for(std::chrono::duration<double>(sleepTime));
+        threadSleepFuture.wait_for(std::chrono::duration<double>(sleepTime));
 
-        // //--------------------catch forks
         Eat();
-        // PutDownForks();
     }
     SetState(State::Terminated);
 }
@@ -49,28 +45,33 @@ void PhilThreadNoDeadlock::Eat()
     SetState(APhilThread::State::HungryNoForks);
     while(state == State::HungryNoForks)
     {
-        // mutex.lock();
         TryEat();
-        // mutex.unlock();
 
         if(state == State::HungryNoForks)
-        {
-            qInfo()<<"thread"<< index <<"sleeping on semaphore";
             philsSemaphores[index].acquire();
-        }
     }
 }
 
 void PhilThreadNoDeadlock::TryEat()
 {
-    if(state != State::HungryNoForks || GetPhilState(Direction::Right) == State::Eating || GetPhilState(Direction::Left) == State::Eating)
+    philsStatesMutex.lock();
+    if
+    (
+        state != State::HungryNoForks ||
+        philsStates[GetNeighbourIndexAtDirection(Direction::Right)] == State::Eating ||
+        philsStates[GetNeighbourIndexAtDirection(Direction::Left)] == State::Eating
+    )
+    {
+        qInfo() << index << "couldn't eat: "<<APhilThread::GetStateString(state).toStdString()<<", "<<APhilThread::GetStateString( philsStates[GetNeighbourIndexAtDirection(Direction::Right)]).toStdString()<<", "<< APhilThread::GetStateString(philsStates[GetNeighbourIndexAtDirection(Direction::Left)]).toStdString();
+        philsStatesMutex.unlock();
         return;
+    }
+    philsStatesMutex.unlock();
 
     SetState(State::Eating);
     double eatTime = RandomUtils::GetRandomDouble(eatMinTime,eatMaxTime);
     qInfo()<<"thread"<< index <<" eating for "<< eatTime;
-    std::future<void> forceThreadStopFuture = forceThreadStopPromise.get_future();
-    forceThreadStopFuture.wait_for(std::chrono::duration<double>(eatTime));
+    threadSleepFuture.wait_for(std::chrono::duration<double>(eatTime));
     qInfo()<<"thread"<< index <<" eat ended";
 
     SetState(State::Thinking);
@@ -81,13 +82,15 @@ void PhilThreadNoDeadlock::TryEat()
     return;
 }
 
+void PhilThreadNoDeadlock::SetState(State newState)
+{
+    philsStatesMutex.lock();
+    APhilThread::SetState(newState);
+    philsStates[index] = newState;
+    philsStatesMutex.unlock();
+}
+
 void PhilThreadNoDeadlock::Stop()
 {
     APhilThread::Stop();
-}
-
-State PhilThreadNoDeadlock::GetPhilState(Direction dir)
-{
-    size_t index = GetNeighbourIndexAtDirection(dir);
-    return phils[index]->GetState();
 }

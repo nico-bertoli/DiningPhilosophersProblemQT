@@ -90,7 +90,7 @@ size_t APhilThread::GetNeighbourIndexAtDirection(Direction dir)
 void APhilThread::Stop()
 {
     mustStop = true;
-    forceThreadStopPromise.set_value();
+    threadSleepPromise.set_value();
 }
 
 bool APhilThread::IsForkAvailable(Direction dir)

@@ -12,9 +12,9 @@ class PhilThreadNoDeadlock : public APhilThread
 {
 //-------------------------------------------- Fields
 private:
-    static std::mutex mutex;
+    static std::mutex philsStatesMutex;
     static std::array<std::counting_semaphore<1>,4> philsSemaphores;
-    static std::array<PhilThreadNoDeadlock*,4> phils;
+    static std::array<State,4> philsStates;
 
 //-------------------------------------------- Methods
 public:
@@ -23,11 +23,11 @@ public:
 protected:
     void PhilBehaviour()override;
     void MainThreadSetup() override;
+    void SetState(State newState)override;
 
 private:
     void Eat();
     void TryEat();
-    State GetPhilState(Direction dir);
 
     void OnThreadSetup()override;
 };

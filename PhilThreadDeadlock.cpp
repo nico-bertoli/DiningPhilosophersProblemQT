@@ -20,13 +20,12 @@ void PhilThreadDeadlock::MainThreadSetup()
 
 void PhilThreadDeadlock::PhilBehaviour()
 {
-    std::future<void> forceThreadStopFuture = forceThreadStopPromise.get_future();
     while(mustStop == false)
     {
         //--------------------think
         SetState(State::Thinking);
         double sleepTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
-        forceThreadStopFuture.wait_for(std::chrono::duration<double>(sleepTime));
+        threadSleepFuture.wait_for(std::chrono::duration<double>(sleepTime));
 
         //--------------------catch left fork
         SetState(State::HungryNoForks);
@@ -41,9 +40,8 @@ void PhilThreadDeadlock::PhilBehaviour()
 
         //--------------------eat
         SetState(State::Eating);
-        // double eatTime = false ? 0 : RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
         double eatTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
-        forceThreadStopFuture.wait_for(std::chrono::duration<double>(eatTime));
+        threadSleepFuture.wait_for(std::chrono::duration<double>(eatTime));
         PutDownForks();
     }
     SetState(State::Terminated);
