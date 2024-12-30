@@ -6,6 +6,7 @@ PhilsControlPanel::PhilsControlPanel(QWidget *parent) : QFrame{parent} {}
 void PhilsControlPanel::showEvent(QShowEvent *event)
 {
     Init();
+    RefreshEnabledWidgets(false);
 }
 
 void PhilsControlPanel::Init()
@@ -43,6 +44,17 @@ void PhilsControlPanel::Init()
     btnStartSimulation->setStyleSheet("QPushButton { background-color: lightgreen; color: black; }");
     btnStopSimulation->setStyleSheet("QPushButton { background-color: lightcoral; color: black; }");
 
+    //--------------------------------- create widget lists
+    widgetsToEnableWehnSimulationRunning.push_back(btnStopSimulation);
+
+    widgetsToEnableWehnSimulationStopped.push_back(spinBoxSleepMinDur);
+    widgetsToEnableWehnSimulationStopped.push_back(spinBoxSleepMaxDur);
+    widgetsToEnableWehnSimulationStopped.push_back(spinBoxEatMinDur);
+    widgetsToEnableWehnSimulationStopped.push_back(spinBoxEatMaxDur);
+    widgetsToEnableWehnSimulationStopped.push_back(btnStartSimulation);
+    widgetsToEnableWehnSimulationStopped.push_back(btnForceDeadlock);
+    widgetsToEnableWehnSimulationStopped.push_back(comboBoxAlgorithm);
+
     isInit = true;
 }
 
@@ -61,6 +73,15 @@ void PhilsControlPanel::ForceSpinBoxesValid(QSpinBox* spinBoxValChanged, QSpinBo
     }
 }
 
+void PhilsControlPanel::RefreshEnabledWidgets(bool isSimulationRunning)
+{
+    for(auto& widget : widgetsToEnableWehnSimulationRunning)
+            widget->setEnabled(isSimulationRunning);
+
+    for(auto& widget : widgetsToEnableWehnSimulationStopped)
+            widget->setEnabled(isSimulationRunning == false);
+}
+
 void PhilsControlPanel::SlotOnForceDeadlockButtonPressed()
 {
     spinBoxSleepMaxDur->setValue(1);
@@ -76,13 +97,13 @@ void PhilsControlPanel::SlotOnStartButtonPressed()
         spinBoxEatMinDur->value(),
         spinBoxEatMaxDur->value()
     );
-
-
+    RefreshEnabledWidgets(true);
 }
 
 void PhilsControlPanel::SlotOnStopButtonPressed()
 {
     philPage->StopSimulation();
+    RefreshEnabledWidgets(false);
 }
 
 void PhilsControlPanel::SlotOnSleepMinDurChanged()

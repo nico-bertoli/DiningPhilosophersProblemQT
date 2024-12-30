@@ -5,6 +5,8 @@
 #include <QSpinBox>
 #include <QPushButton>
 #include <QComboBox>
+#include <list>
+#include <QWidget>
 #include "PhilPage.h"
 
 using Algorithm = PhilPage::Algorithm;
@@ -29,6 +31,9 @@ private:
 
     PhilPage* philPage;
 
+    std::list<QWidget*> widgetsToEnableWehnSimulationRunning;
+    std::list<QWidget*> widgetsToEnableWehnSimulationStopped;
+
 //------------------------------- Methods
 public:
     explicit PhilsControlPanel(QWidget *parent = nullptr);
@@ -39,6 +44,7 @@ protected:
 private:
     void Init();
     void ForceSpinBoxesValid(QSpinBox* spinBoxValChanged, QSpinBox* spinBoxForceValid, bool mustChangedValBeGreater);
+    void RefreshEnabledWidgets(bool isSimulationRunning);
 
 private slots:
     void SlotOnStartButtonPressed();
