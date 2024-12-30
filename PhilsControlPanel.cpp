@@ -13,6 +13,7 @@ void PhilsControlPanel::Init()
     if(isInit)
         return;
 
+    //--------------------------------- link widgets
     spinBoxSleepMinDur = this->findChild<QSpinBox*>("spinBoxSleepMinDur");
     spinBoxSleepMaxDur = this->findChild<QSpinBox*>("spinBoxSleepMaxDur");
     spinBoxEatMinDur = this->findChild<QSpinBox*>("spinBoxEatMinDur");
@@ -26,6 +27,7 @@ void PhilsControlPanel::Init()
 
     philPage = dynamic_cast<PhilPage*>(this->parent());
 
+    //--------------------------------- connections
     connect(btnStartSimulation, &QPushButton::pressed, this, &PhilsControlPanel::SlotOnStartButtonPressed);
     connect(btnStopSimulation, &QPushButton::pressed, this, &PhilsControlPanel::SlotOnStopButtonPressed);
     connect(btnForceDeadlock, &QPushButton::pressed, this, &PhilsControlPanel::SlotOnForceDeadlockButtonPressed);
@@ -36,6 +38,10 @@ void PhilsControlPanel::Init()
     connect(spinBoxEatMaxDur, &QSpinBox::valueChanged, this, &PhilsControlPanel::SlotOnEatMaxDurChanged);
 
     connect(comboBoxAlgorithm, &QComboBox::currentIndexChanged, this, &PhilsControlPanel::SlotOnComboBoxAlgorithmChanged);
+
+    //--------------------------------- customize widgets
+    btnStartSimulation->setStyleSheet("QPushButton { background-color: lightgreen; color: black; }");
+    btnStopSimulation->setStyleSheet("QPushButton { background-color: lightcoral; color: black; }");
 
     isInit = true;
 }

@@ -29,7 +29,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="pageMainMenu">
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -108,7 +108,7 @@
             </font>
            </property>
            <property name="text">
-            <string>Future app (coming soon)</string>
+            <string>Future apps</string>
            </property>
            <property name="autoDefault">
             <bool>false</bool>
@@ -205,6 +205,9 @@
            </property>
            <property name="frameShadow">
             <enum>QFrame::Shadow::Raised</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
            </property>
            <layout class="QGridLayout" name="gridLayout_3">
             <property name="horizontalSpacing">
