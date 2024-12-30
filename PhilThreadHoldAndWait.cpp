@@ -22,23 +22,23 @@ void PhilThreadHoldAndWait::PhilBehaviour()
 {
     while(mustStop == false)
     {
-        //--------------------think
+        //-------------------- think
         SetState(State::Thinking);
         double sleepTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
         threadSleepFuture.wait_for(std::chrono::duration<double>(sleepTime));
 
-        //--------------------catch left fork
+        //-------------------- catch left fork
         SetState(State::HungryNoForks);
         CatchFork(Direction::Left);
 
         //grant deadlock if philosophers wait for the same time
         std::this_thread::sleep_for(std::chrono::duration<double>(mustStop ? 0 : 0.1));
 
-        //--------------------catch right fork
+        //-------------------- catch right fork
         SetState(State::HungryLeftFork);
         CatchFork(Direction::Right);
 
-        //--------------------eat
+        //-------------------- eat
         SetState(State::Eating);
         double eatTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
         threadSleepFuture.wait_for(std::chrono::duration<double>(eatTime));

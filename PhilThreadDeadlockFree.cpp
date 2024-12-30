@@ -19,32 +19,25 @@ void PhilThreadDeadlockFree::MainThreadSetup()
 
 void PhilThreadDeadlockFree::PhilBehaviour()
 {
-    this->eatMinTime = eatMinTime;
-    this->eatMaxTime = eatMaxTime;
-
     SetState(State::Thinking);
 
     while(mustStop == false)
     {
-        //--------------------think
+        //-------------------- think
         double sleepTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
         threadSleepFuture.wait_for(std::chrono::duration<double>(sleepTime));
 
-        Eat();
+        //-------------------- try eat
+        SetState(APhilThread::State::HungryNoForks);
+        while(state == State::HungryNoForks)
+        {
+            TryEat();
+
+            if(state == State::HungryNoForks)
+                philsSemaphores[index].acquire();
+        }
     }
     SetState(State::Terminated);
-}
-
-void PhilThreadDeadlockFree::Eat()
-{
-    SetState(APhilThread::State::HungryNoForks);
-    while(state == State::HungryNoForks)
-    {
-        TryEat();
-
-        if(state == State::HungryNoForks)
-            philsSemaphores[index].acquire();
-    }
 }
 
 void PhilThreadDeadlockFree::TryEat()

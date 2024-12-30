@@ -7,7 +7,6 @@
 using State = APhilThread::State;
 using Direction = DirectionUtils::Direction;
 
-//prevents deadlock removing hold and wait
 class PhilThreadDeadlockFree : public APhilThread
 {
 //-------------------------------------------- Fields
@@ -26,7 +25,6 @@ protected:
     void SetState(State newState)override;
 
 private:
-    void Eat();
     void TryEat();
 };
 

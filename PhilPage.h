@@ -23,7 +23,6 @@ public:
 private:
     static const size_t PHILS_COUNT = 4;
 
-    //todo remove raw pointers
     ForkView* forks [PHILS_COUNT];
     PhilView* philViews [PHILS_COUNT];
     std::shared_ptr<APhilThread> philThreads[PHILS_COUNT];
