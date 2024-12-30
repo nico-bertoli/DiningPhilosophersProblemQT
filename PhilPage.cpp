@@ -60,8 +60,15 @@ void PhilPage::StartSimulation(float minSleepDur, float maxSleepDur, float minEa
 {
     for(int i = 0; i < PHILS_COUNT; ++i)
     {
-        // philThreads[i] = std::make_shared<PhilThreadDeadlock>();
-        philThreads[i] = std::make_shared<PhilThreadNoDeadlock>();
+        switch(algorithm)
+        {
+        case Algorithm::DeadlockFree:
+            philThreads[i] = std::make_shared<PhilThreadNoDeadlock>();
+            break;
+        case Algorithm::HoldAndWait:
+            philThreads[i] = std::make_shared<PhilThreadDeadlock>();
+            break;
+        }
 
         philViews[i]->AttachToPhilThread(philThreads[i]);
         forks[i]->AttachToPhilThread(philThreads[i],Direction::Left);

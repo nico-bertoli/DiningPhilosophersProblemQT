@@ -62,7 +62,6 @@ void PhilThreadNoDeadlock::TryEat()
         philsStates[GetPhilIndexAtDirection(Direction::Left)] == State::Eating
     )
     {
-        qInfo() << index << "couldn't eat: "<<APhilThread::GetStateString(state).toStdString()<<", "<<APhilThread::GetStateString( philsStates[GetForkIndexAtDirection(Direction::Right)]).toStdString()<<", "<< APhilThread::GetStateString(philsStates[GetForkIndexAtDirection(Direction::Left)]).toStdString();
         philsStatesMutex.unlock();
         return;
     }
@@ -75,7 +74,6 @@ void PhilThreadNoDeadlock::TryEat()
     SetState(State::Thinking);
 
     //wake up neighbours
-    qInfo()<<"thread"<< index <<" waking up "<< GetPhilIndexAtDirection(Direction::Right) << "and " << GetPhilIndexAtDirection(Direction::Left);
     philsSemaphores[GetPhilIndexAtDirection(Direction::Right)].release();
     philsSemaphores[GetPhilIndexAtDirection(Direction::Left)].release();
     return;

@@ -89,8 +89,6 @@ size_t APhilThread::GetForkIndexAtDirection(Direction dir)
 
 size_t APhilThread::GetPhilIndexAtDirection(Direction dir)
 {
-    qInfo()<<index;
-
     if(dir == Direction::Right)
         return (index + 1) % PHILS_COUNT;
     else

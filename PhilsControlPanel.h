@@ -4,8 +4,10 @@
 #include <QFrame>
 #include <QSpinBox>
 #include <QPushButton>
+#include <QComboBox>
+#include "PhilPage.h"
 
-class PhilPage;
+using Algorithm = PhilPage::Algorithm;
 
 class PhilsControlPanel : public QFrame
 {
@@ -18,9 +20,13 @@ private:
     QSpinBox* spinBoxSleepMaxDur;
     QSpinBox* spinBoxEatMinDur;
     QSpinBox* spinBoxEatMaxDur;
+
     QPushButton* btnStartSimulation;
     QPushButton* btnStopSimulation;
     QPushButton* btnForceDeadlock;
+
+    QComboBox* comboBoxAlgorithm;
+
     PhilPage* philPage;
 
 //------------------------------- Methods
@@ -43,6 +49,8 @@ private slots:
     void SlotOnSleepMaxDurChanged();
     void SlotOnEatMinDurChanged();
     void SlotOnEatMaxDurChanged();
+
+    void SlotOnComboBoxAlgorithmChanged();
 };
 
 #endif // PHILSCONTROLPANEL_H

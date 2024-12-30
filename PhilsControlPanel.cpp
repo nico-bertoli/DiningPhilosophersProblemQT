@@ -22,6 +22,8 @@ void PhilsControlPanel::Init()
     btnStopSimulation = this->findChild<QPushButton*>("btnStop");
     btnForceDeadlock = this->findChild<QPushButton*>("btnForceDeadlock");
 
+    comboBoxAlgorithm = this->findChild<QComboBox*>("comboBoxAlgorithm");
+
     philPage = dynamic_cast<PhilPage*>(this->parent());
 
     connect(btnStartSimulation, &QPushButton::pressed, this, &PhilsControlPanel::SlotOnStartButtonPressed);
@@ -32,6 +34,8 @@ void PhilsControlPanel::Init()
     connect(spinBoxSleepMaxDur, &QSpinBox::valueChanged, this, &PhilsControlPanel::SlotOnSleepMaxDurChanged);
     connect(spinBoxEatMinDur, &QSpinBox::valueChanged, this, &PhilsControlPanel::SlotOnEatMinDurChanged);
     connect(spinBoxEatMaxDur, &QSpinBox::valueChanged, this, &PhilsControlPanel::SlotOnEatMaxDurChanged);
+
+    connect(comboBoxAlgorithm, &QComboBox::currentIndexChanged, this, &PhilsControlPanel::SlotOnComboBoxAlgorithmChanged);
 
     isInit = true;
 }
@@ -90,5 +94,9 @@ void PhilsControlPanel::SlotOnEatMinDurChanged()
 void PhilsControlPanel::SlotOnEatMaxDurChanged()
 {
     ForceSpinBoxesValid(spinBoxEatMaxDur,spinBoxEatMinDur,false);
+}
+void PhilsControlPanel::SlotOnComboBoxAlgorithmChanged()
+{
+    philPage->SetAlgorithm(static_cast<Algorithm>(comboBoxAlgorithm->currentIndex()));
 }
 

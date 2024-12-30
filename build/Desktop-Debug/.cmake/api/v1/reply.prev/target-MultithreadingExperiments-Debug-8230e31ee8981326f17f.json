@@ -383,11 +383,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "MultithreadingExperiments_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "MultithreadingExperiments_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "MultithreadingExperiments_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "MultithreadingExperiments::@6890427a1f51a3e7e1df",
@@ -678,13 +678,13 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "PhilThreadNoDeadLock.h",
+			"path" : "PhilThreadNoDeadlock.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "PhilThreadNoDeadLock.cpp",
+			"path" : "PhilThreadNoDeadlock.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

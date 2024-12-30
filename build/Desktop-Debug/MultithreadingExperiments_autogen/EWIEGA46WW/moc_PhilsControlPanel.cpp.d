@@ -1,9 +1,11 @@
 C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/build/Desktop-Debug/MultithreadingExperiments_autogen/EWIEGA46WW/moc_PhilsControlPanel.cpp: C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilsControlPanel.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtCore/QObject \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/q20iterator.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/q20memory.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/q20type_traits.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/q23utility.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/qanystringview.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtCore/qarraydata.h \
@@ -147,16 +149,30 @@ C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperime
   C:/Qt/6.8.1/msvc2022_64/include/QtGui/qvalidator.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/QComboBox \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/QFrame \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/QPushButton \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/QSpinBox \
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/QWidget \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qabstractbutton.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qabstractitemdelegate.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qabstractspinbox.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qcombobox.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qframe.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qpushbutton.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qsizepolicy.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qslider.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qspinbox.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qstyle.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qstyleoption.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtabbar.h \
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h \
-  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qwidget.h
+  C:/Qt/6.8.1/msvc2022_64/include/QtWidgets/qwidget.h \
+  C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/DirectionUtils.h \
+  C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.h \
+  C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.h
