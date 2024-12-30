@@ -218,7 +218,7 @@
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="font">
@@ -261,6 +261,12 @@
                </item>
                <item>
                 <widget class="QComboBox" name="comboBoxAlgorithm">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
                    <family>Ubuntu</family>
@@ -310,7 +316,7 @@
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="font">
@@ -351,7 +357,7 @@
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="font">
@@ -380,7 +386,7 @@
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="font">
@@ -409,7 +415,7 @@
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="font">
@@ -432,7 +438,7 @@
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="font">
@@ -461,7 +467,7 @@
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="font">

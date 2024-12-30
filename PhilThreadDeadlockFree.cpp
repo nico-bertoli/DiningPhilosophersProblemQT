@@ -11,11 +11,6 @@ std::array<std::counting_semaphore<1>,4> PhilThreadDeadlockFree::philsSemaphores
     std::counting_semaphore<1>{1}
 };
 
-void PhilThreadDeadlockFree::OnThreadSetup()
-{
-    // todo delete
-}
-
 void PhilThreadDeadlockFree::MainThreadSetup()
 {
     for(auto& semaphore : philsSemaphores)

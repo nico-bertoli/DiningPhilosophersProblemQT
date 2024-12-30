@@ -58,9 +58,6 @@ protected:
     size_t GetPhilIndexAtDirection(Direction dir);
     virtual void SetState(State newState);
 
-private:
-    virtual void OnThreadSetup(){};
-
 signals:
     void SignalStateChanged();
     void SignalDestroyed();

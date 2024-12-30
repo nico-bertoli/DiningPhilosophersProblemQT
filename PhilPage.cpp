@@ -83,6 +83,9 @@ void PhilPage::StopSimulation()
 {
     for(auto& thread : philThreads)
     {
+        if(thread == nullptr)
+            continue;
+
         thread->Stop();
         thread = nullptr;
     }

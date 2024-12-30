@@ -20,6 +20,7 @@ void APhilThread::Run
 {
     //setup
     this->index = index;
+
     if(index == 0)
     {
         this->thinkMinTime = thinkMinTime;
@@ -27,9 +28,7 @@ void APhilThread::Run
         this->eatMinTime = eatMinTime;
         this->eatMaxTime = eatMaxTime;
         MainThreadSetup();
-    }
-
-    OnThreadSetup();
+    };
 
     //run
     threadFuture = std::async

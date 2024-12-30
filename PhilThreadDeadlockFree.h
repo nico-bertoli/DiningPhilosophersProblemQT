@@ -28,8 +28,6 @@ protected:
 private:
     void Eat();
     void TryEat();
-
-    void OnThreadSetup()override;
 };
 
 #endif // PHILTHREADDEADLOCKFREE_H
