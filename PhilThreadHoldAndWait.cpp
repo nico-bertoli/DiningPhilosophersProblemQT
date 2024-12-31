@@ -20,19 +20,19 @@ void PhilThreadHoldAndWait::MainThreadSetup()
 
 void PhilThreadHoldAndWait::PhilBehaviour()
 {
-    while(mustStop == false)
+    while(mustTerminate == false)
     {
         //-------------------- think
         SetState(State::Thinking);
         double sleepTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
-        threadSleepFuture.wait_for(std::chrono::duration<double>(sleepTime));
+        sleepFuture.wait_for(std::chrono::duration<double>(sleepTime));
 
         //-------------------- catch left fork
         SetState(State::HungryNoForks);
         CatchFork(Direction::Left);
 
         //grant deadlock if philosophers wait for the same time
-        std::this_thread::sleep_for(std::chrono::duration<double>(mustStop ? 0 : 0.1));
+        std::this_thread::sleep_for(std::chrono::duration<double>(mustTerminate ? 0 : 0.1));
 
         //-------------------- catch right fork
         SetState(State::HungryLeftFork);
@@ -41,15 +41,15 @@ void PhilThreadHoldAndWait::PhilBehaviour()
         //-------------------- eat
         SetState(State::Eating);
         double eatTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
-        threadSleepFuture.wait_for(std::chrono::duration<double>(eatTime));
+        sleepFuture.wait_for(std::chrono::duration<double>(eatTime));
         PutDownForks();
     }
     SetState(State::Terminated);
 }
 
-void PhilThreadHoldAndWait::Stop()
+void PhilThreadHoldAndWait::Terminate()
 {
-    APhilThread::Stop();
+    APhilThread::Terminate();
     for(auto& sem : forksSemaphores)
         sem.release();
 }

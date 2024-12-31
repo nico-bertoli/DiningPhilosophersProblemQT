@@ -26,7 +26,7 @@ class PhilView : public QWidget
 //--------------------------------- Methods
 public:
     explicit PhilView(QWidget *parent = nullptr);
-    void AttachToPhilThread(std::shared_ptr<APhilThread> philThread);
+    void ConnectToPhilThread(std::shared_ptr<APhilThread> philThread);
     void DetachFromPhilThread();
 
 protected:

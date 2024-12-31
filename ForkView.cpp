@@ -7,7 +7,32 @@ using State = APhilThread::State;
 
 ForkView::ForkView(QWidget *parent) : QWidget{parent}{ }
 
-void ForkView::AttachToPhilThread(std::shared_ptr<APhilThread> philThread, Direction philDirection)
+void ForkView::showEvent(QShowEvent *event)
+{
+    Init();
+    SetVisible(true);
+}
+
+void ForkView::Init()
+{
+    if(isInit)
+        return;
+
+    int index = this->objectName().at(4).digitValue();
+
+    btnFork = this->findChild<QPushButton*>("btnFork"+QString::number(index));
+    btnPlaceHolder = this->findChild<QPushButton*>("btnPHolderFork"+QString::number(index));
+
+    btnFork->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
+    btnPlaceHolder->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
+
+    assert(btnFork != nullptr);
+    assert(btnPlaceHolder != nullptr);
+
+    isInit = true;
+}
+
+void ForkView::ConnectToPhilThread(std::shared_ptr<APhilThread> philThread, Direction philDirection)
 {
     if(philDirection == Direction::Right)
         rightPhilThread = philThread;
@@ -19,24 +44,17 @@ void ForkView::AttachToPhilThread(std::shared_ptr<APhilThread> philThread, Direc
 
 void ForkView::SlotOnThreadStateChanged()
 {
-    if
-    (
-        (leftPhilThread == nullptr || leftPhilThread->IsForkAvailable(Direction::Right))
-        &&
-        (rightPhilThread == nullptr || rightPhilThread->IsForkAvailable(Direction::Left))
-    )
-    {
-        SetVisible(true);
-    }
-    else
-    {
-        SetVisible(false);
-    }
-
-    TryDetachFromPhilThreads();
+    SetVisible(ShouldBeVisible());
+    TryDisconnectFromPhilThreads();
 }
 
-void ForkView::TryDetachFromPhilThreads()
+bool ForkView::ShouldBeVisible()
+{
+    return (leftPhilThread == nullptr || leftPhilThread->IsForkAvailable(Direction::Right)) &&
+           (rightPhilThread == nullptr || rightPhilThread->IsForkAvailable(Direction::Left));
+}
+
+void ForkView::TryDisconnectFromPhilThreads()
 {
     if(leftPhilThread != nullptr && leftPhilThread->GetState() == State::Terminated)
     {
@@ -54,30 +72,4 @@ void ForkView::SetVisible(bool visibility)
 {
     btnFork->setVisible(visibility);
     btnPlaceHolder->setVisible(visibility == false);
-}
-
-void ForkView::showEvent(QShowEvent *event)
-{
-    Init();
-    SetVisible(true);
-}
-
-void ForkView::Init()
-{
-    if(isInit)
-        return;
-
-    auto a = this->objectName();
-    int index = this->objectName().at(4).digitValue();
-
-    btnFork = this->findChild<QPushButton*>("btnFork"+QString::number(index));
-    btnPlaceHolder = this->findChild<QPushButton*>("btnPHolderFork"+QString::number(index));
-
-    btnFork->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
-    btnPlaceHolder->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
-
-    assert(btnFork != nullptr);
-    assert(btnPlaceHolder != nullptr);
-
-    isInit = true;
 }

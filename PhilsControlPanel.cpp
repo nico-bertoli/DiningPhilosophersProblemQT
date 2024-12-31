@@ -38,8 +38,6 @@ void PhilsControlPanel::Init()
     connect(spinBoxEatMinDur, &QSpinBox::valueChanged, this, &PhilsControlPanel::SlotOnEatMinDurChanged);
     connect(spinBoxEatMaxDur, &QSpinBox::valueChanged, this, &PhilsControlPanel::SlotOnEatMaxDurChanged);
 
-    connect(comboBoxAlgorithm, &QComboBox::currentIndexChanged, this, &PhilsControlPanel::SlotOnComboBoxAlgorithmChanged);
-
     //--------------------------------- customize widgets
     btnStartSimulation->setStyleSheet("QPushButton { background-color: lightgreen; color: black; }");
     btnStopSimulation->setStyleSheet("QPushButton { background-color: lightcoral; color: black; }");
@@ -95,7 +93,8 @@ void PhilsControlPanel::SlotOnStartButtonPressed()
         spinBoxSleepMinDur->value(),
         spinBoxSleepMaxDur->value(),
         spinBoxEatMinDur->value(),
-        spinBoxEatMaxDur->value()
+        spinBoxEatMaxDur->value(),
+        static_cast<Algorithm>(comboBoxAlgorithm->currentIndex())
     );
     RefreshEnabledWidgets(true);
 }
@@ -123,9 +122,5 @@ void PhilsControlPanel::SlotOnEatMinDurChanged()
 void PhilsControlPanel::SlotOnEatMaxDurChanged()
 {
     ForceSpinBoxesValid(spinBoxEatMaxDur,spinBoxEatMinDur,false);
-}
-void PhilsControlPanel::SlotOnComboBoxAlgorithmChanged()
-{
-    philPage->SetAlgorithm(static_cast<Algorithm>(comboBoxAlgorithm->currentIndex()));
 }
 

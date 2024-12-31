@@ -1,13 +1,11 @@
 #ifndef PHILPAGE_H
 #define PHILPAGE_H
 
-#include <QObject>
 #include <QWidget>
-#include <QPushButton>
-#include "ForkView.h"
 
 class PhilView;
 class APhilThread;
+class ForkView;
 
 class PhilPage : public QWidget
 {
@@ -23,17 +21,22 @@ public:
 private:
     static const size_t PHILS_COUNT = 4;
 
-    ForkView* forks [PHILS_COUNT];
+    ForkView* forkViews [PHILS_COUNT];
     PhilView* philViews [PHILS_COUNT];
     std::shared_ptr<APhilThread> philThreads[PHILS_COUNT];
-    Algorithm algorithm = Algorithm::DeadlockFree;
 
 //---------------------------------------- Methods
 public:
     explicit PhilPage(QWidget *parent = nullptr);
-    void StartSimulation(float minSleepDur, float maxSleepDur, float minEatDur, float maxEatDur);
     void StopSimulation();
-    void SetAlgorithm(Algorithm algorithm){this->algorithm = algorithm;}
+    void StartSimulation
+    (
+        float minSleepDur,
+        float maxSleepDur,
+        float minEatDur,
+        float maxEatDur,
+        Algorithm algorithm
+    );
 
 protected:
     void showEvent(QShowEvent *event) override;

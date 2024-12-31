@@ -34,7 +34,7 @@
      <widget class="QWidget" name="pageMainMenu">
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
+        <layout class="QVBoxLayout" name="verticalLayoutMainPage">
          <property name="leftMargin">
           <number>250</number>
          </property>
@@ -122,7 +122,7 @@
      <widget class="PhilPage" name="pagePhilosophers">
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QWidget" name="panelTop" native="true">
+        <widget class="QWidget" name="panelTopPhilsPage" native="true">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QPushButton" name="btnBack">
@@ -148,7 +148,7 @@
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_3">
+           <spacer name="topSpace">
             <property name="orientation">
              <enum>Qt::Orientation::Horizontal</enum>
             </property>
@@ -164,7 +164,7 @@
         </widget>
        </item>
        <item>
-        <layout class="QGridLayout" name="gridLayout_2">
+        <layout class="QGridLayout" name="gridLayoutPhilsPage">
          <property name="sizeConstraint">
           <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
          </property>

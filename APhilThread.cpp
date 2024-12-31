@@ -18,9 +18,8 @@ void APhilThread::Run
     float eatMaxTime
 )
 {
-    //setup
+    //---------------- setup
     this->index = index;
-
     if(index == 0)
     {
         this->thinkMinTime = thinkMinTime;
@@ -30,7 +29,7 @@ void APhilThread::Run
         MainThreadSetup();
     };
 
-    //run
+    //---------------- run
     threadFuture = std::async
     (
         std::launch::async,
@@ -39,41 +38,12 @@ void APhilThread::Run
     );
 }
 
-QString APhilThread::GetStateString(State state)
-{
-    QString stateString = "NOT FOUND";
-
-    switch(state)
-    {
-    case State::Thinking:
-        stateString = "Thinking";
-        break;
-    case State::Eating:
-        stateString = "Eating";
-        break;
-    case State::HungryNoForks:
-        stateString = "Hungry";
-        break;
-    case State::HungryLeftFork:
-        stateString = "HungryLeftFork";
-        break;
-    case State::HungryRightFork:
-        stateString = "HungryRightFork";
-        break;
-    case State::Terminated:
-        stateString = "Terminated";
-        break;
-    }
-
-    return stateString;
-}
-
 void APhilThread::SetState(State newState)
 {
     if(state == newState)
         return;
 
-    qInfo() << "[phil " << index << "]"<< GetStateString(state) <<" -> "<< GetStateString(newState) << "[" << TimeHelper::Instance().GetTime() << "]";
+    qInfo() << "[phil " << index << "]"<< StateToQString(state) <<" -> "<< StateToQString(newState) << "[" << TimeHelper::Instance().GetTime() << "]";
     state = newState;
     SignalStateChanged();
 }
@@ -83,7 +53,7 @@ size_t APhilThread::GetForkIndexAtDirection(Direction dir)
     if(dir == Direction::Right)
         return index;
     else
-        return index == 0 ? PHILS_COUNT -1  : index -1;
+        return index == 0 ? PHILS_COUNT-1  : index -1;
 }
 
 size_t APhilThread::GetPhilIndexAtDirection(Direction dir)
@@ -94,10 +64,10 @@ size_t APhilThread::GetPhilIndexAtDirection(Direction dir)
         return index == 0 ? PHILS_COUNT -1 : index - 1;
 }
 
-void APhilThread::Stop()
+void APhilThread::Terminate()
 {
-    mustStop = true;
-    threadSleepPromise.set_value();
+    mustTerminate = true;
+    forceWakeUpPromise.set_value();
 }
 
 bool APhilThread::IsForkAvailable(Direction dir)
@@ -108,13 +78,42 @@ bool APhilThread::IsForkAvailable(Direction dir)
     case State::HungryNoForks:
     case State::Terminated:
         return true;
+
     case State::HungryLeftFork:
         return dir != Direction::Left;
+
     case State::HungryRightFork:
     case State::Eating:
         return false;
-        break;
+
     default:
-        throw std::invalid_argument("State not recognized: " + GetStateString(state).toStdString());
+        throw std::invalid_argument("State not recognized: " + StateToQString(state).toStdString());
     }
+}
+
+QString APhilThread::StateToQString(State state)
+{
+    switch(state)
+    {
+    case State::Thinking:
+        return "Thinking";
+        break;
+    case State::Eating:
+        return "Eating";
+        break;
+    case State::HungryNoForks:
+        return "Hungry";
+        break;
+    case State::HungryLeftFork:
+        return "HungryLeftFork";
+        break;
+    case State::HungryRightFork:
+        return "HungryRightFork";
+        break;
+    case State::Terminated:
+        return "Terminated";
+        break;
+    }
+
+    return "NOT_FOUND";
 }

@@ -26,14 +26,15 @@ private:
 //----------------------------------- Methods
 public:
     explicit ForkView(QWidget *parent = nullptr);
-    void AttachToPhilThread(std::shared_ptr<APhilThread> philThread, Direction philDirection);
+    void ConnectToPhilThread(std::shared_ptr<APhilThread> philThread, Direction philDirection);
 
 protected:
     void showEvent(QShowEvent *event) override;
 
 private:
+    bool ShouldBeVisible();
     void Init();
-    void TryDetachFromPhilThreads();
+    void TryDisconnectFromPhilThreads();
 
 private slots:
     void SlotOnThreadStateChanged();

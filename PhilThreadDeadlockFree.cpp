@@ -21,11 +21,11 @@ void PhilThreadDeadlockFree::PhilBehaviour()
 {
     SetState(State::Thinking);
 
-    while(mustStop == false)
+    while(mustTerminate == false)
     {
         //-------------------- think
         double sleepTime = RandomUtils::GetRandomDouble(thinkMinTime,thinkMaxTime);
-        threadSleepFuture.wait_for(std::chrono::duration<double>(sleepTime));
+        sleepFuture.wait_for(std::chrono::duration<double>(sleepTime));
 
         //-------------------- try eat
         SetState(APhilThread::State::HungryNoForks);
@@ -57,7 +57,7 @@ void PhilThreadDeadlockFree::TryEat()
 
     SetState(State::Eating);
     double eatTime = RandomUtils::GetRandomDouble(eatMinTime,eatMaxTime);
-    threadSleepFuture.wait_for(std::chrono::duration<double>(eatTime));
+    sleepFuture.wait_for(std::chrono::duration<double>(eatTime));
 
     SetState(State::Thinking);
 
@@ -75,7 +75,7 @@ void PhilThreadDeadlockFree::SetState(State newState)
     philsStatesMutex.unlock();
 }
 
-void PhilThreadDeadlockFree::Stop()
+void PhilThreadDeadlockFree::Terminate()
 {
-    APhilThread::Stop();
+    APhilThread::Terminate();
 }

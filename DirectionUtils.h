@@ -7,10 +7,7 @@ namespace DirectionUtils
 
     inline Direction GetOppositeDirection(Direction dir)
     {
-        if(dir == Direction::Left)
-            return Direction::Right;
-
-        return Direction::Left;
+        return dir == Direction::Left ? Direction::Right : Direction::Left;
     }
 }
 

@@ -1,6 +1,7 @@
 #ifndef PHILTHREADHOLDANDWAIT_H
 #define PHILTHREADHOLDANDWAIT_H
 
+#include <semaphore>
 #include "APhilThread.h"
 
 class PhilView;
@@ -14,13 +15,11 @@ private:
 
 //-------------------------------------------- Methods
 public:
-    void Stop()override;
-
-protected:
-    void PhilBehaviour()override;
-    void MainThreadSetup() override;
+    void Terminate()override;
 
 private:
+    void PhilBehaviour()override;
+    void MainThreadSetup() override;
     void CatchFork(Direction dir);
     void PutDownFork(Direction dir);
     void PutDownForks();

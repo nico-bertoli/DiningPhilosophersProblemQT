@@ -7,7 +7,7 @@ using State = APhilThread::State;
 
 PhilView::PhilView(QWidget *parent):QWidget{parent} { }
 
-void PhilView::AttachToPhilThread(std::shared_ptr<APhilThread> philThread)
+void PhilView::ConnectToPhilThread(std::shared_ptr<APhilThread> philThread)
 {
     this->philThread = philThread;
     connect(philThread.get(), &APhilThread::SignalStateChanged, this, &PhilView::SlotOnThreadStateChanged);

@@ -2,6 +2,7 @@
 #define PHILTHREADDEADLOCKFREE_H
 
 #include <mutex>
+#include <semaphore>
 #include "APhilThread.h"
 
 using State = APhilThread::State;
@@ -17,9 +18,9 @@ private:
 
 //-------------------------------------------- Methods
 public:
-    void Stop()override;
+    void Terminate()override;
 
-protected:
+private:
     void PhilBehaviour()override;
     void MainThreadSetup() override;
     void SetState(State newState)override;

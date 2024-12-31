@@ -55,8 +55,6 @@ private slots:
     void SlotOnSleepMaxDurChanged();
     void SlotOnEatMinDurChanged();
     void SlotOnEatMaxDurChanged();
-
-    void SlotOnComboBoxAlgorithmChanged();
 };
 
 #endif // PHILSCONTROLPANEL_H
