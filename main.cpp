@@ -1,4 +1,4 @@
-#include "dialog.h"
+#include "MainPage.h"
 
 #include <QApplication>
 
@@ -10,7 +10,8 @@ int main(int argc, char *argv[])
 
     a.setStyleSheet(styleSheet);
 
-    Dialog w;
+    MainPage w;
+    w.setWindowTitle("Multithreading Experiments");
     w.show();
     return a.exec();
 }

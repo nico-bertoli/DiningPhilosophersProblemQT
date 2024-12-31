@@ -398,6 +398,8 @@ MultithreadingExperiments_autogen/timestamp: \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/DirectionUtils.h \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.cpp \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/ForkView.h \
+	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/MainPage.cpp \
+	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/MainPage.h \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlockFree.cpp \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlockFree.h \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadHoldAndWait.cpp \
@@ -416,8 +418,6 @@ MultithreadingExperiments_autogen/timestamp: \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/build/Desktop-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/build/Desktop-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/build/Desktop-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
-	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/dialog.cpp \
-	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/dialog.h \
 	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/main.cpp \
-	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/dialog.ui \
+	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/MainPage.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

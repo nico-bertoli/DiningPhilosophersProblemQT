@@ -336,6 +336,12 @@
 			null
 		],
 		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/MainPage.h",
+			"MU",
+			"EWIEGA46WW/moc_MainPage.cpp",
+			null
+		],
+		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlockFree.h",
 			"MU",
 			"EWIEGA46WW/moc_PhilThreadDeadlockFree.cpp",
@@ -381,12 +387,6 @@
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/TimeHelper.h",
 			"MU",
 			"EWIEGA46WW/moc_TimeHelper.cpp",
-			null
-		],
-		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/dialog.h",
-			"MU",
-			"EWIEGA46WW/moc_dialog.cpp",
 			null
 		]
 	],
@@ -456,6 +456,11 @@
 			null
 		],
 		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/MainPage.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlockFree.cpp",
 			"MU",
 			null
@@ -477,11 +482,6 @@
 		],
 		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilsPage.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/dialog.cpp",
 			"MU",
 			null
 		],

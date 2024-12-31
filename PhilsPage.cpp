@@ -7,7 +7,7 @@
 #include "ForkView.h"
 #include "QFrame"
 #include "QGridLayout"
-#include "dialog.h"
+#include "MainPage.h"
 
 QString PhilsPage::SIMULATION_ITEMS_BACKGROUND_COLOR = " #46474f;";
 
@@ -90,7 +90,7 @@ void PhilsPage::StopSimulation()
 void PhilsPage::SlotOnBackButtonClicked()
 {
     StopSimulation();
-    dynamic_cast<Dialog*>(this->parent()->parent())->ShowMainMenu();
+    dynamic_cast<MainPage*>(this->parent()->parent())->ShowMainMenu();
 }
 
 
