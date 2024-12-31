@@ -92,3 +92,11 @@
 279	2288	7573084869108046	CMakeFiles/MultithreadingExperiments.dir/dialog.cpp.obj	7a59d3b7dcd72674
 277	2378	7573084870011224	CMakeFiles/MultithreadingExperiments.dir/MultithreadingExperiments_autogen/mocs_compilation.cpp.obj	dc3a190681a51f7e
 2378	2513	7573084871138318	MultithreadingExperiments.exe	9bf441003af4daae
+7	92	7573086291437164	MultithreadingExperiments_autogen/timestamp	16cc9f77811906c0
+7	92	7573086291437164	MultithreadingExperiments_autogen/mocs_compilation.cpp	16cc9f77811906c0
+7	92	7573086291437164	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/build/Desktop-Debug/MultithreadingExperiments_autogen/timestamp	16cc9f77811906c0
+7	92	7573086291437164	C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/build/Desktop-Debug/MultithreadingExperiments_autogen/mocs_compilation.cpp	16cc9f77811906c0
+102	2233	7573086314089441	CMakeFiles/MultithreadingExperiments.dir/PhilThreadDeadlockFree.cpp.obj	cfca5776f4a827fa
+100	2237	7573086314149604	CMakeFiles/MultithreadingExperiments.dir/PhilThreadHoldAndWait.cpp.obj	d19a69adcf5b863a
+98	2263	7573086314381900	CMakeFiles/MultithreadingExperiments.dir/dialog.cpp.obj	7a59d3b7dcd72674
+20	264	7573086548657706	MultithreadingExperiments.exe	9bf441003af4daae

@@ -1,7 +1,6 @@
 #ifndef RANDOM_UTILS_H
 #define RANDOM_UTILS_H
 
-#include <cmath>
 #include <random>
 
 namespace RandomUtils
