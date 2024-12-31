@@ -33,6 +33,7 @@ void PhilThreadDeadlockFree::PhilBehaviour()
         {
             TryEat();
 
+            //if eat failed, sleeps until a neighbour wakes it up
             if(state == State::HungryNoForks)
                 philsSemaphores[index].acquire();
         }
@@ -61,7 +62,7 @@ void PhilThreadDeadlockFree::TryEat()
 
     SetState(State::Thinking);
 
-    //wake up neighbours
+    //try to wake up neighbours
     philsSemaphores[GetPhilIndexAtDirection(Direction::Right)].release();
     philsSemaphores[GetPhilIndexAtDirection(Direction::Left)].release();
     return;
@@ -73,9 +74,4 @@ void PhilThreadDeadlockFree::SetState(State newState)
     APhilThread::SetState(newState);
     philsStates[index] = newState;
     philsStatesMutex.unlock();
-}
-
-void PhilThreadDeadlockFree::Terminate()
-{
-    APhilThread::Terminate();
 }

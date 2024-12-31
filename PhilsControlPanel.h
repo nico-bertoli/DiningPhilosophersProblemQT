@@ -7,9 +7,9 @@
 #include <QComboBox>
 #include <list>
 #include <QWidget>
-#include "PhilPage.h"
+#include "PhilsPage.h"
 
-using Algorithm = PhilPage::Algorithm;
+using Algorithm = PhilsPage::Algorithm;
 
 class PhilsControlPanel : public QFrame
 {
@@ -17,6 +17,7 @@ class PhilsControlPanel : public QFrame
 //------------------------------- Fields
 private:
     bool isInit = false;
+    PhilsPage* philsPage;
 
     QSpinBox* spinBoxSleepMinDur;
     QSpinBox* spinBoxSleepMaxDur;
@@ -28,8 +29,6 @@ private:
     QPushButton* btnForceDeadlock;
 
     QComboBox* comboBoxAlgorithm;
-
-    PhilPage* philPage;
 
     std::list<QWidget*> widgetsToEnableWehnSimulationRunning;
     std::list<QWidget*> widgetsToEnableWehnSimulationStopped;

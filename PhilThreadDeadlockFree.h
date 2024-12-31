@@ -13,19 +13,16 @@ class PhilThreadDeadlockFree : public APhilThread
 //-------------------------------------------- Fields
 private:
     static std::mutex philsStatesMutex;
-    static std::array<std::counting_semaphore<1>,4> philsSemaphores;
     static std::array<State,4> philsStates;
+    //each phil can sleep on its index semaphore
+    static std::array<std::counting_semaphore<1>,4> philsSemaphores;
 
 //-------------------------------------------- Methods
-public:
-    void Terminate()override;
 
 private:
     void PhilBehaviour()override;
     void MainThreadSetup() override;
     void SetState(State newState)override;
-
-private:
     void TryEat();
 };
 

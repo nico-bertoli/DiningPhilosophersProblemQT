@@ -1,6 +1,6 @@
 #include "ForkView.h"
 #include "QPushButton"
-#include "PhilPage.h"
+#include "PhilsPage.h"
 #include "APhilThread.h"
 
 using State = APhilThread::State;
@@ -23,8 +23,8 @@ void ForkView::Init()
     btnFork = this->findChild<QPushButton*>("btnFork"+QString::number(index));
     btnPlaceHolder = this->findChild<QPushButton*>("btnPHolderFork"+QString::number(index));
 
-    btnFork->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
-    btnPlaceHolder->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
+    btnFork->setStyleSheet("background-color:"+PhilsPage::SIMULATION_ITEMS_BACKGROUND_COLOR);
+    btnPlaceHolder->setStyleSheet("background-color:"+PhilsPage::SIMULATION_ITEMS_BACKGROUND_COLOR);
 
     assert(btnFork != nullptr);
     assert(btnPlaceHolder != nullptr);

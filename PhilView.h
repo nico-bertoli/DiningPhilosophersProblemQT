@@ -15,6 +15,7 @@ class PhilView : public QWidget
 //--------------------------------- Fields
     bool isInit = false;
     int index;
+
     QWidget* forkRight;
     QWidget* forkLeft;
     QPushButton* btnPhil;
@@ -27,7 +28,7 @@ class PhilView : public QWidget
 public:
     explicit PhilView(QWidget *parent = nullptr);
     void ConnectToPhilThread(std::shared_ptr<APhilThread> philThread);
-    void DetachFromPhilThread();
+    void DisconnectFromPhilThread();
 
 protected:
     void showEvent(QShowEvent *event) override;

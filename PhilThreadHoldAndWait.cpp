@@ -1,7 +1,6 @@
 #include <chrono>
 #include "PhilThreadHoldAndWait.h"
 #include "RandomUtils.h"
-#include "TimeHelper.h"
 #include "QtLogging"
 #include "QDebug"
 
@@ -32,7 +31,7 @@ void PhilThreadHoldAndWait::PhilBehaviour()
         CatchFork(Direction::Left);
 
         //grant deadlock if philosophers wait for the same time
-        std::this_thread::sleep_for(std::chrono::duration<double>(mustTerminate ? 0 : 0.1));
+        std::this_thread::sleep_for(std::chrono::duration<double>(0.1));
 
         //-------------------- catch right fork
         SetState(State::HungryLeftFork);
@@ -56,14 +55,12 @@ void PhilThreadHoldAndWait::Terminate()
 
 void PhilThreadHoldAndWait::CatchFork(Direction dir)
 {
-    auto& sem = forksSemaphores[GetForkIndexAtDirection(dir)];
-    sem.acquire();
+    forksSemaphores[GetForkIndexAtDirection(dir)].acquire();
 }
 
 void PhilThreadHoldAndWait::PutDownFork(Direction dir)
 {
-    auto& sem = forksSemaphores[GetForkIndexAtDirection(dir)];
-    sem.release();
+    forksSemaphores[GetForkIndexAtDirection(dir)].release();
 }
 
 void PhilThreadHoldAndWait::PutDownForks()

@@ -119,7 +119,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="PhilPage" name="pagePhilosophers">
+     <widget class="PhilsPage" name="pagePhilosophers">
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QWidget" name="panelTopPhilsPage" native="true">
@@ -2011,12 +2011,6 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>PhilPage</class>
-   <extends>QWidget</extends>
-   <header>PhilPage.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>PhilView</class>
    <extends>QWidget</extends>
    <header>philview.h</header>
@@ -2032,6 +2026,12 @@
    <class>PhilsControlPanel</class>
    <extends>QFrame</extends>
    <header>PhilsControlPanel.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PhilsPage</class>
+   <extends>QWidget</extends>
+   <header>PhilsPage.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

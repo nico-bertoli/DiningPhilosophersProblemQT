@@ -26,7 +26,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 
         Res.qrc
         Res.qrc
-        PhilPage.h PhilPage.cpp
+        PhilsPage.h PhilsPage.cpp
         PhilView.h PhilView.cpp
         PhilThreadHoldAndWait.h PhilThreadHoldAndWait.cpp
         RandomUtils.h

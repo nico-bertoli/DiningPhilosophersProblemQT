@@ -336,12 +336,6 @@
 			null
 		],
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.h",
-			"MU",
-			"EWIEGA46WW/moc_PhilPage.cpp",
-			null
-		],
-		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlockFree.h",
 			"MU",
 			"EWIEGA46WW/moc_PhilThreadDeadlockFree.cpp",
@@ -363,6 +357,12 @@
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilsControlPanel.h",
 			"MU",
 			"EWIEGA46WW/moc_PhilsControlPanel.cpp",
+			null
+		],
+		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilsPage.h",
+			"MU",
+			"EWIEGA46WW/moc_PhilsPage.cpp",
 			null
 		],
 		[
@@ -456,11 +456,6 @@
 			null
 		],
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilPage.cpp",
-			"MU",
-			null
-		],
-		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlockFree.cpp",
 			"MU",
 			null
@@ -477,6 +472,11 @@
 		],
 		[
 			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilsControlPanel.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilsPage.cpp",
 			"MU",
 			null
 		],

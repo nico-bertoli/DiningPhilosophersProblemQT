@@ -1,6 +1,6 @@
 #include "PhilView.h"
 #include "APhilThread.h"
-#include "PhilPage.h"
+#include "PhilsPage.h"
 #include <QtLogging>
 
 using State = APhilThread::State;
@@ -13,7 +13,7 @@ void PhilView::ConnectToPhilThread(std::shared_ptr<APhilThread> philThread)
     connect(philThread.get(), &APhilThread::SignalStateChanged, this, &PhilView::SlotOnThreadStateChanged);
 }
 
-void PhilView::DetachFromPhilThread()
+void PhilView::DisconnectFromPhilThread()
 {
     assert(philThread->GetState() == State::Terminated);
     disconnect(philThread.get(), &APhilThread::SignalStateChanged, this, &PhilView::SlotOnThreadStateChanged);
@@ -35,7 +35,7 @@ void PhilView::SlotOnThreadStateChanged()
         ShowFork(Direction::Right,false);
         icon.addPixmap(QPixmap(":/philosophers/res/philosophers/Thinking.png"), QIcon::Disabled);
         if(state == State::Terminated)
-             DetachFromPhilThread();
+             DisconnectFromPhilThread();
         break;
 
     case State::HungryNoForks:
@@ -79,34 +79,27 @@ void PhilView::Init()
 
     int index = this->objectName().at(4).digitValue();
 
-    assert(index != -1);
-
+    //link widgets
     btnPhil = this->findChild<QPushButton*>("btnPhil"+QString::number(index));
     forkRight = this->findChild<QWidget*>("forkRight"+QString::number(index));
     forkLeft = this->findChild<QWidget*>("forkLeft"+QString::number(index));
     forkRightPlaceHolder = this->findChild<QWidget*>("forkRightPlaceHolder"+QString::number(index));
     forkLeftPlaceHolder = this->findChild<QWidget*>("forkLeftPlaceHolder"+QString::number(index));
 
-    assert(btnPhil != nullptr);
-    assert(forkRight != nullptr);
-    assert(forkLeft != nullptr);
-
-    btnPhil->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
-    forkRight->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
-    forkLeft->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
-    forkRightPlaceHolder->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
-    forkLeftPlaceHolder->setStyleSheet("background-color:"+PhilPage::BUTTONS_BACKGROUND_COLOR);
-
-    forkRight->hide();
-    forkLeft->hide();
+    //set background color
+    btnPhil->setStyleSheet("background-color:"+PhilsPage::SIMULATION_ITEMS_BACKGROUND_COLOR);
+    forkRight->setStyleSheet("background-color:"+PhilsPage::SIMULATION_ITEMS_BACKGROUND_COLOR);
+    forkLeft->setStyleSheet("background-color:"+PhilsPage::SIMULATION_ITEMS_BACKGROUND_COLOR);
+    forkRightPlaceHolder->setStyleSheet("background-color:"+PhilsPage::SIMULATION_ITEMS_BACKGROUND_COLOR);
+    forkLeftPlaceHolder->setStyleSheet("background-color:"+PhilsPage::SIMULATION_ITEMS_BACKGROUND_COLOR);
 
     isInit = true;
 }
 
 void PhilView::ShowFork(Direction direction, bool show)
 {
-    QWidget* fork = direction == Direction::Right ? forkRight : forkLeft;
-    QWidget* placeHolder = direction == Direction::Right ? forkRightPlaceHolder : forkLeftPlaceHolder;
+    auto& fork = direction == Direction::Right ? forkRight : forkLeft;
+    auto& placeHolder = direction == Direction::Right ? forkRightPlaceHolder : forkLeftPlaceHolder;
 
     fork->setVisible(show);
     placeHolder->setVisible(show == false);

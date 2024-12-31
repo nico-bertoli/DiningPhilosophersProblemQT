@@ -1,5 +1,5 @@
 #include "PhilsControlPanel.h"
-#include "PhilPage.h"
+#include "PhilsPage.h"
 
 PhilsControlPanel::PhilsControlPanel(QWidget *parent) : QFrame{parent} {}
 
@@ -26,7 +26,7 @@ void PhilsControlPanel::Init()
 
     comboBoxAlgorithm = this->findChild<QComboBox*>("comboBoxAlgorithm");
 
-    philPage = dynamic_cast<PhilPage*>(this->parent());
+    philsPage = dynamic_cast<PhilsPage*>(this->parent());
 
     //--------------------------------- connections
     connect(btnStartSimulation, &QPushButton::pressed, this, &PhilsControlPanel::SlotOnStartButtonPressed);
@@ -88,7 +88,7 @@ void PhilsControlPanel::SlotOnForceDeadlockButtonPressed()
 
 void PhilsControlPanel::SlotOnStartButtonPressed()
 {
-    philPage->StartSimulation
+    philsPage->StartSimulation
     (
         spinBoxSleepMinDur->value(),
         spinBoxSleepMaxDur->value(),
@@ -101,7 +101,7 @@ void PhilsControlPanel::SlotOnStartButtonPressed()
 
 void PhilsControlPanel::SlotOnStopButtonPressed()
 {
-    philPage->StopSimulation();
+    philsPage->StopSimulation();
     RefreshEnabledWidgets(false);
 }
 
