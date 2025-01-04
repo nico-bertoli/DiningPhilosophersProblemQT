@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-be337e42a4a839a4e7bb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MultithreadingExperiments",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "MultithreadingExperiments::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MultithreadingExperiments-Debug-8f233a6ae3ae95506111.json",
+					"name" : "MultithreadingExperiments",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MultithreadingExperiments_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MultithreadingExperiments_autogen-Debug-8c5458c427b885ada2e5.json",
+					"name" : "MultithreadingExperiments_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MultithreadingExperiments_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MultithreadingExperiments_autogen_timestamp_deps-Debug-bc860da788869d379eac.json",
+					"name" : "MultithreadingExperiments_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/build/Desktop-Debug",
+		"source" : "C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

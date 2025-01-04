@@ -342,9 +342,9 @@
 			null
 		],
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlockFree.h",
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadChandyMisra.h",
 			"MU",
-			"EWIEGA46WW/moc_PhilThreadDeadlockFree.cpp",
+			"EWIEGA46WW/moc_PhilThreadChandyMisra.cpp",
 			null
 		],
 		[
@@ -461,7 +461,7 @@
 			null
 		],
 		[
-			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadDeadlockFree.cpp",
+			"C:/Users/nico/Documents/DOC/99CosePesanti/Progetti/C++/QT/MultithreadingExperiments/PhilThreadChandyMisra.cpp",
 			"MU",
 			null
 		],

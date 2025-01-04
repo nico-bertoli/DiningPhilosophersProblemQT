@@ -36,7 +36,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         DirectionUtils.h
         PhilsControlPanel.h PhilsControlPanel.cpp
         APhilThread.h APhilThread.cpp
-        PhilThreadDeadlockFree.h PhilThreadDeadlockFree.cpp
+        PhilThreadChandyMisra.h PhilThreadChandyMisra.cpp
 
 
     )

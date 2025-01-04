@@ -2,7 +2,7 @@
 #include "QPushButton"
 #include "QtLogging"
 #include "PhilThreadHoldAndWait.h"
-#include "PhilThreadDeadlockFree.h"
+#include "PhilThreadChandyMisra.h"
 #include "PhilView.h"
 #include "ForkView.h"
 #include "QFrame"
@@ -59,7 +59,7 @@ void PhilsPage::StartSimulation
         switch(algorithm)
         {
         case Algorithm::DeadlockFree:
-            phil = std::make_shared<PhilThreadDeadlockFree>();
+            phil = std::make_shared<PhilThreadChandyMisra>();
             break;
         case Algorithm::HoldAndWait:
             phil = std::make_shared<PhilThreadHoldAndWait>();

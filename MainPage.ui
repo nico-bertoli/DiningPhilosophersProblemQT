@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1020</width>
+    <width>1177</width>
     <height>1056</height>
    </rect>
   </property>
@@ -29,7 +29,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="pageMainMenu">
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -362,7 +362,7 @@
                  </property>
                  <item>
                   <property name="text">
-                   <string>Deadlock free</string>
+                   <string>Chandy/Misra algorithm</string>
                   </property>
                  </item>
                  <item>
