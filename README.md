@@ -1,6 +1,4 @@
-The objective of this ongoing project is to develop a series of programs demonstrating various multithreading techniques and synchronization strategies using C++ and the QT framework.
-
-## 1) Dining Philosophers Problem
+This project explores the implementation of the classic Dining Philosophers Problem using C++ and the Qt framework.
 
 Two algorithms were implemented:
 - Hold and wait, that demonstrates how deadlocks can occur when resources are held while waiting for others.
