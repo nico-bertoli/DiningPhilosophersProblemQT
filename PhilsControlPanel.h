@@ -9,8 +9,6 @@
 #include <QWidget>
 #include "PhilsPage.h"
 
-using Algorithm = PhilsPage::Algorithm;
-
 class PhilsControlPanel : public QFrame
 {
     Q_OBJECT

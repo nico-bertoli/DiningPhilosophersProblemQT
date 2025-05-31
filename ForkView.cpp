@@ -4,6 +4,7 @@
 #include "APhilThread.h"
 
 using State = APhilThread::State;
+using DirectionUtils::Direction;
 
 ForkView::ForkView(QWidget *parent) : QWidget{parent}{ }
 

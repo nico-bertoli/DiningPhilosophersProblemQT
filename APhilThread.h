@@ -7,8 +7,6 @@
 #include "DirectionUtils.h"
 #include "QDebug"
 
-using Direction = DirectionUtils::Direction;
-
 class APhilThread : public QObject
 {
     Q_OBJECT
@@ -48,12 +46,12 @@ public:
 
     State GetState(){return state;}
     QString StateToQString(State state);
-    bool IsForkAvailable(Direction dir);
+    bool IsForkAvailable(DirectionUtils::Direction dir);
     virtual void Terminate();
 
 protected:
-    size_t GetForkIndexAtDirection(Direction dir);
-    size_t GetPhilIndexAtDirection(Direction dir);
+    size_t GetForkIndexAtDirection(DirectionUtils::Direction dir);
+    size_t GetPhilIndexAtDirection(DirectionUtils::Direction dir);
     virtual void SetState(State newState);
 
 private:

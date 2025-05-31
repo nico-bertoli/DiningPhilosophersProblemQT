@@ -1,6 +1,8 @@
 #include "PhilsControlPanel.h"
 #include "PhilsPage.h"
 
+using Algorithm = PhilsPage::Algorithm;
+
 PhilsControlPanel::PhilsControlPanel(QWidget *parent) : QFrame{parent} {}
 
 void PhilsControlPanel::showEvent(QShowEvent *event)

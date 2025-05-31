@@ -2,6 +2,8 @@
 #include "QtLogging"
 #include "TimeHelper.h"
 
+using DirectionUtils::Direction;
+
 double APhilThread::eatMinTime;
 double APhilThread::eatMaxTime;
 double APhilThread::thinkMinTime;

@@ -9,6 +9,8 @@
 #include "QGridLayout"
 #include "MainPage.h"
 
+using DirectionUtils::Direction;
+
 QString PhilsPage::SIMULATION_ITEMS_BACKGROUND_COLOR = " #46474f;";
 
 PhilsPage::PhilsPage(QWidget *parent): QWidget(parent){ }

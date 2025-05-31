@@ -1,6 +1,9 @@
 #include "PhilThreadChandyMisra.h"
 #include "RandomUtils.h"
 
+using State = APhilThread::State;
+using Direction = DirectionUtils::Direction;
+
 std::mutex PhilThreadChandyMisra::philsStatesMutex;
 std::array<State,4> PhilThreadChandyMisra::philsStates;
 std::array<std::counting_semaphore<1>,4> PhilThreadChandyMisra::philsSemaphores

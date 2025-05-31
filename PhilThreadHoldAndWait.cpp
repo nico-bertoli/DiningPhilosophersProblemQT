@@ -4,6 +4,8 @@
 #include "QtLogging"
 #include "QDebug"
 
+using DirectionUtils::Direction;
+
 std::array<std::counting_semaphore<1>, 4> PhilThreadHoldAndWait::forksSemaphores{
     std::counting_semaphore<1>{1},
     std::counting_semaphore<1>{1},

@@ -5,7 +5,6 @@
 #include <QPushButton>
 #include "DirectionUtils.h"
 
-using Direction = DirectionUtils::Direction;
 class APhilThread;
 
 class PhilView : public QWidget
@@ -35,7 +34,7 @@ protected:
 
 private:
     void Init();
-    void ShowFork(Direction direction, bool show);
+    void ShowFork(DirectionUtils::Direction direction, bool show);
 
 private slots:
     void SlotOnThreadStateChanged();

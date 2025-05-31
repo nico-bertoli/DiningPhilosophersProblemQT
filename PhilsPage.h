@@ -11,8 +11,6 @@ class PhilsPage : public QWidget
 {
     Q_OBJECT
 
-template<typename T> using unique_ptr = std::unique_ptr<T>;
-
 //---------------------------------------- Fields
 public:
     static QString SIMULATION_ITEMS_BACKGROUND_COLOR;

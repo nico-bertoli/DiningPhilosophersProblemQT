@@ -4,8 +4,6 @@
 #include <QPushButton>
 #include "DirectionUtils.h"
 
-using Direction = DirectionUtils::Direction;
-
 class APhilThread;
 
 class ForkView : public QWidget
@@ -26,7 +24,7 @@ private:
 //----------------------------------- Methods
 public:
     explicit ForkView(QWidget *parent = nullptr);
-    void ConnectToPhilThread(std::shared_ptr<APhilThread> philThread, Direction philDirection);
+    void ConnectToPhilThread(std::shared_ptr<APhilThread> philThread, DirectionUtils::Direction philDirection);
 
 protected:
     void showEvent(QShowEvent *event) override;

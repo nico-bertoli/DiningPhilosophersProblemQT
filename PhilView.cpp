@@ -4,6 +4,7 @@
 #include <QtLogging>
 
 using State = APhilThread::State;
+using DirectionUtils::Direction;
 
 PhilView::PhilView(QWidget *parent):QWidget{parent} { }
 

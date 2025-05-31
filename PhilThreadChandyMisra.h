@@ -5,9 +5,6 @@
 #include <semaphore>
 #include "APhilThread.h"
 
-using State = APhilThread::State;
-using Direction = DirectionUtils::Direction;
-
 class PhilThreadChandyMisra : public APhilThread
 {
 //-------------------------------------------- Fields

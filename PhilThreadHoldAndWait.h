@@ -20,8 +20,8 @@ public:
 private:
     void PhilBehaviour()override;
     void MainThreadSetup() override;
-    void CatchFork(Direction dir);
-    void PutDownFork(Direction dir);
+    void CatchFork(DirectionUtils::Direction dir);
+    void PutDownFork(DirectionUtils::Direction dir);
     void PutDownForks();
 };
 
