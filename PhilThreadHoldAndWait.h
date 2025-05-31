@@ -11,7 +11,14 @@ class PhilThreadHoldAndWait : public APhilThread
 
 //-------------------------------------------- Fields
 private:
-    static std::array<std::counting_semaphore<1>,4> forksSemaphores;
+    static inline std::array<std::counting_semaphore<1>,4> forksSemaphores
+    {
+        std::counting_semaphore<1>{1},
+        std::counting_semaphore<1>{1},
+        std::counting_semaphore<1>{1},
+        std::counting_semaphore<1>{1}
+    };
+
 
 //-------------------------------------------- Methods
 public:

@@ -13,7 +13,7 @@ class PhilsPage : public QWidget
 
 //---------------------------------------- Fields
 public:
-    static QString SIMULATION_ITEMS_BACKGROUND_COLOR;
+    static const inline QString SIMULATION_ITEMS_BACKGROUND_COLOR = " #46474f;";
     enum Algorithm {DeadlockFree, HoldAndWait};
 
 private:

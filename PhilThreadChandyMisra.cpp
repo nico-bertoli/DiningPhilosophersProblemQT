@@ -4,16 +4,6 @@
 using State = APhilThread::State;
 using Direction = DirectionUtils::Direction;
 
-std::mutex PhilThreadChandyMisra::philsStatesMutex;
-std::array<State,4> PhilThreadChandyMisra::philsStates;
-std::array<std::counting_semaphore<1>,4> PhilThreadChandyMisra::philsSemaphores
-{
-    std::counting_semaphore<1>{1},
-    std::counting_semaphore<1>{1},
-    std::counting_semaphore<1>{1},
-    std::counting_semaphore<1>{1}
-};
-
 void PhilThreadChandyMisra::MainThreadSetup()
 {
     for(auto& semaphore : philsSemaphores)

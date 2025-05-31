@@ -3,7 +3,6 @@
 #include "QPushButton"
 #include "QtLogging"
 
-
 MainPage::MainPage(QWidget *parent):QDialog(parent), ui(new Ui::Dialog)
 {
     ui->setupUi(this);

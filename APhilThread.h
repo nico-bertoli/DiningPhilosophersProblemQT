@@ -16,10 +16,10 @@ public:
     enum class State {Thinking, HungryNoForks, HungryLeftFork, HungryRightFork, Eating, Terminated};
 protected:
     const size_t PHILS_COUNT = 4;   //todo this should be configurable at runtime
-    static double eatMinTime;
-    static double eatMaxTime;
-    static double thinkMinTime;
-    static double thinkMaxTime;
+    static inline double eatMinTime;
+    static inline double eatMaxTime;
+    static inline double thinkMinTime;
+    static inline double thinkMaxTime;
 
     bool mustTerminate = false;
     State state = State::Thinking;

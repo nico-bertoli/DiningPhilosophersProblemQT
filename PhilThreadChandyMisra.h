@@ -9,10 +9,17 @@ class PhilThreadChandyMisra : public APhilThread
 {
 //-------------------------------------------- Fields
 private:
-    static std::mutex philsStatesMutex;
-    static std::array<State,4> philsStates;
+    static inline std::mutex philsStatesMutex;
+    static inline std::array<State,4> philsStates;
+
     //each phil can sleep on its index semaphore
-    static std::array<std::counting_semaphore<1>,4> philsSemaphores;
+    static inline std::array<std::counting_semaphore<1>,4> philsSemaphores
+    {
+        std::counting_semaphore<1>{1},
+        std::counting_semaphore<1>{1},
+        std::counting_semaphore<1>{1},
+        std::counting_semaphore<1>{1}
+    };
 
 //-------------------------------------------- Methods
 

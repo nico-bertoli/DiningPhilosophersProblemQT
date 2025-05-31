@@ -4,11 +4,6 @@
 
 using DirectionUtils::Direction;
 
-double APhilThread::eatMinTime;
-double APhilThread::eatMaxTime;
-double APhilThread::thinkMinTime;
-double APhilThread::thinkMaxTime;
-
 APhilThread::APhilThread(QObject* parent): QObject(parent){ }
 
 void APhilThread::Run
